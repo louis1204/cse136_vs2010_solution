@@ -1,0 +1,5 @@
+C:\Users\Tablet\Desktop\136 summer 2012\cse136_vs2010_solution\MVCMobileHtml5\bin\MVCMobileHtml5.dll
+C:\Users\Tablet\Desktop\136 summer 2012\cse136_vs2010_solution\MVCMobileHtml5\bin\MVCMobileHtml5.pdb
+C:\Users\Tablet\Desktop\136 summer 2012\cse136_vs2010_solution\MVCMobileHtml5\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Tablet\Desktop\136 summer 2012\cse136_vs2010_solution\MVCMobileHtml5\obj\Debug\MVCMobileHtml5.dll
+C:\Users\Tablet\Desktop\136 summer 2012\cse136_vs2010_solution\MVCMobileHtml5\obj\Debug\MVCMobileHtml5.pdb

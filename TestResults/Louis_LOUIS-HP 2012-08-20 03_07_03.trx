@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="4002b872-2eb4-437b-9e50-6dd584f48d56" name="Louis@LOUIS-HP 2012-08-20 03:07:03" runUser="Louis-HP\Louis" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="53e514f0-4a59-4535-81eb-4649f33ffbf9">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment userDeploymentRoot="C:\Users\Louis\Documents\School\UCSD\cse136\cse136_vs2010_solution\TestResults" useDefaultDeploymentRoot="false" enabled="false" runDeploymentRoot="Louis_LOUIS-HP 2012-08-20 03_07_03">
+      <DeploymentItem filename="C:\Users\Louis\Documents\School\UCSD\cse136\cse136_vs2010_solution\cse136\bin\Debug\cse136.dll" />
+      <DeploymentItem filename="C:\Users\Louis\Documents\School\UCSD\cse136\cse136_vs2010_solution\MVC3\bin\MVC3.dll" />
+      <DeploymentItem filename="C:\Users\Louis\Documents\School\UCSD\cse136\cse136_vs2010_solution\DomainModel\bin\Debug\DomainModel.dll" />
+      <DeploymentItem filename="C:\Users\Louis\Documents\School\UCSD\cse136\cse136_vs2010_solution\BL\bin\Debug\BL.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-08-20T03:07:03.4764148-07:00" queuing="2012-08-20T03:07:07.0746206-07:00" start="2012-08-20T03:07:07.1976276-07:00" finish="2012-08-20T03:11:34.9559425-07:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="6" executed="6" passed="2" error="0" failed="4" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="StudentInsertAndSelectTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\bltest\bin\debug\bltest.dll" id="b45d1266-5bf1-9771-b554-dfed2bcf9dcb">
+      <Execution id="4e0b892c-9abf-43fa-b60f-a940f15fb9d8" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/BLTest/bin/Debug/BLTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BLTest.BLStudentTest, BLTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="StudentInsertAndSelectTest" />
+    </UnitTest>
+    <UnitTest name="UpdateProductColorTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\daltest\bin\debug\daltest.dll" id="d2d432c7-3f05-a63e-32da-befa6b8a3c7d">
+      <Execution id="d77da423-55fe-42d8-9932-f545e815f1c7" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/DALTest/bin/Debug/DALTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="DALTest.DALProductVariationInfoTest, DALTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="UpdateProductColorTest" />
+    </UnitTest>
+    <UnitTest name="UpdateProductCuttingTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\daltest\bin\debug\daltest.dll" id="43e76ea6-89b4-eac5-0286-0ae39a94b4de">
+      <Execution id="9e7f7469-e0e0-48d0-a086-a1cd917918e9" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/DALTest/bin/Debug/DALTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="DALTest.DALProductVariationInfoTest, DALTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="UpdateProductCuttingTest" />
+    </UnitTest>
+    <UnitTest name="UpdateProductTypeTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\daltest\bin\debug\daltest.dll" id="0ec447f2-07d5-179e-7774-18ff32d77d50">
+      <Execution id="57511985-67b4-4e48-a798-a49dd5b5ec89" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/DALTest/bin/Debug/DALTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="DALTest.DALProductVariationInfoTest, DALTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="UpdateProductTypeTest" />
+    </UnitTest>
+    <UnitTest name="CreateStudentTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\mvc3.tests\bin\debug\mvc3.tests.dll" id="0a9faab6-c2ff-6cfa-e314-2f6d98eb74e4">
+      <Execution id="ab2af073-930b-43eb-b05d-2209756a0181" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/MVC3.Tests/bin/Debug/MVC3.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="MVC3.Tests.Controllers.StudentControllerTest, MVC3.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CreateStudentTest" />
+    </UnitTest>
+    <UnitTest name="GetScheduleList" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\daltest\bin\debug\daltest.dll" id="a6da2ac7-b6f3-c7ab-8ebc-0359fef40ad9">
+      <Execution id="b82bc641-1660-46a7-bd72-f525010fe89e" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/DALTest/bin/Debug/DALTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="DALTest.DALScheduleTest, DALTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetScheduleList" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="a6da2ac7-b6f3-c7ab-8ebc-0359fef40ad9" executionId="b82bc641-1660-46a7-bd72-f525010fe89e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d2d432c7-3f05-a63e-32da-befa6b8a3c7d" executionId="d77da423-55fe-42d8-9932-f545e815f1c7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0ec447f2-07d5-179e-7774-18ff32d77d50" executionId="57511985-67b4-4e48-a798-a49dd5b5ec89" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0a9faab6-c2ff-6cfa-e314-2f6d98eb74e4" executionId="ab2af073-930b-43eb-b05d-2209756a0181" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b45d1266-5bf1-9771-b554-dfed2bcf9dcb" executionId="4e0b892c-9abf-43fa-b60f-a940f15fb9d8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="43e76ea6-89b4-eac5-0286-0ae39a94b4de" executionId="9e7f7469-e0e0-48d0-a086-a1cd917918e9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="b82bc641-1660-46a7-bd72-f525010fe89e" testId="a6da2ac7-b6f3-c7ab-8ebc-0359fef40ad9" testName="GetScheduleList" computerName="LOUIS-HP" duration="00:00:13.5083607" startTime="2012-08-20T03:07:07.2976333-07:00" endTime="2012-08-20T03:07:23.5535631-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b82bc641-1660-46a7-bd72-f525010fe89e">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.AreEqual failed. Expected:&lt;0&gt;. Actual:&lt;1&gt;. </Message>
+          <StackTrace>   at DALTest.DALScheduleTest.GetScheduleList() in C:\Users\Louis\Documents\School\UCSD\cse136\cse136_vs2010_solution\DALTest\DALScheduleTest.cs:line 21
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="d77da423-55fe-42d8-9932-f545e815f1c7" testId="d2d432c7-3f05-a63e-32da-befa6b8a3c7d" testName="UpdateProductColorTest" computerName="LOUIS-HP" duration="00:03:07.7276290" startTime="2012-08-20T03:07:23.5635637-07:00" endTime="2012-08-20T03:10:31.3063020-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d77da423-55fe-42d8-9932-f545e815f1c7">
+      <Output>
+        <DebugTrace>THIS IS THE ERROR: System.Data.SqlClient.SqlException (0x80131904): Error while trying to update brand. Color id does not fall in range
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlDataReader.HasMoreRows()
+   at System.Data.SqlClient.SqlDataReader.ReadInternal(Boolean setTimeout)
+   at System.Data.SqlClient.SqlDataReader.NextResult()
+   at System.Data.ProviderBase.DataReaderContainer.NextResult()
+   at System.Data.Common.DataAdapter.FillNextResult(DataReaderContainer dataReader)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at DAL.DALProductVariationInfo.UpdateProductColor(Int32 product_color_id, String product_color_name, List`1&amp; errors) in C:\Users\Louis\Documents\School\UCSD\cse136\cse136_vs2010_solution\cse136\DALProductVariation.cs:line 353</DebugTrace>
+        <ErrorInfo>
+          <Message>Assert.AreEqual failed. Expected:&lt;1&gt;. Actual:&lt;-1&gt;. </Message>
+          <StackTrace>   at DALTest.DALProductVariationInfoTest.UpdateProductColorTest()
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="57511985-67b4-4e48-a798-a49dd5b5ec89" testId="0ec447f2-07d5-179e-7774-18ff32d77d50" testName="UpdateProductTypeTest" computerName="LOUIS-HP" duration="00:00:00.0072590" startTime="2012-08-20T03:10:31.3213028-07:00" endTime="2012-08-20T03:10:31.3493044-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="57511985-67b4-4e48-a798-a49dd5b5ec89">
+    </UnitTestResult>
+    <UnitTestResult executionId="ab2af073-930b-43eb-b05d-2209756a0181" testId="0a9faab6-c2ff-6cfa-e314-2f6d98eb74e4" testName="CreateStudentTest" computerName="LOUIS-HP" duration="00:00:47.0798410" startTime="2012-08-20T03:10:31.3603050-07:00" endTime="2012-08-20T03:11:20.7851320-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ab2af073-930b-43eb-b05d-2209756a0181">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method MVC3.Tests.Controllers.StudentControllerTest.CreateStudentTest threw exception: 
+System.NullReferenceException: Object reference not set to an instance of an object.</Message>
+          <StackTrace>    at MVC3.Models.StudentClientService.DTO_to_PL(Student student) in C:\Users\Louis\Documents\School\UCSD\cse136\cse136_vs2010_solution\MVC3\Models\StudentModels.cs:line 147
+   at MVC3.Models.StudentClientService.GetStudentDetail(String id) in C:\Users\Louis\Documents\School\UCSD\cse136\cse136_vs2010_solution\MVC3\Models\StudentModels.cs:line 101
+   at MVC3.Controllers.StudentController.Edit(String id) in C:\Users\Louis\Documents\School\UCSD\cse136\cse136_vs2010_solution\MVC3\Controllers\StudentController.cs:line 97
+   at MVC3.Tests.Controllers.StudentControllerTest.CreateStudentTest() in C:\Users\Louis\Documents\School\UCSD\cse136\cse136_vs2010_solution\MVC3.Tests\Controllers\StudentControllerTest.cs:line 50
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="4e0b892c-9abf-43fa-b60f-a940f15fb9d8" testId="b45d1266-5bf1-9771-b554-dfed2bcf9dcb" testName="StudentInsertAndSelectTest" computerName="LOUIS-HP" duration="00:00:11.2465772" startTime="2012-08-20T03:11:20.8291345-07:00" endTime="2012-08-20T03:11:34.4669145-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4e0b892c-9abf-43fa-b60f-a940f15fb9d8">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.AreEqual failed. Expected:&lt;0&gt;. Actual:&lt;1&gt;. </Message>
+          <StackTrace>   at BLTest.BLStudentTest.StudentInsertAndSelectTest() in C:\Users\Louis\Documents\School\UCSD\cse136\cse136_vs2010_solution\BLTest\BLStudentTest.cs:line 113
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="9e7f7469-e0e0-48d0-a086-a1cd917918e9" testId="43e76ea6-89b4-eac5-0286-0ae39a94b4de" testName="UpdateProductCuttingTest" computerName="LOUIS-HP" duration="00:00:00.0061939" startTime="2012-08-20T03:11:34.4789152-07:00" endTime="2012-08-20T03:11:34.5009165-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9e7f7469-e0e0-48d0-a086-a1cd917918e9">
+    </UnitTestResult>
+  </Results>
+</TestRun>

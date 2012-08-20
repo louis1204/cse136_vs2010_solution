@@ -1,0 +1,17 @@
+﻿@model MVC3.Models.PLStudent
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <h2>Details</h2>
+
+    <!--Note, this will call the Student/DisplayTemplates/PLStudent.cshtml 
+    because we created a PLStudent.cshtml and customized it --> 
+    @Html.DisplayForModel() 
+
+    @Html.Partial("StudentEnrollment", Model)
+    <p>
+        @Html.ActionLink("Back to List", "Index") 
+    </p>

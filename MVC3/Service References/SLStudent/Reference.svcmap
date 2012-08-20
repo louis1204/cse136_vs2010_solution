@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="0d4823c0-a46f-43f9-ae2f-a9a3567d8c54" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:51845/SLStudent.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SLStudent.wsdl" MetadataType="Wsdl" ID="dd884da0-2daa-4773-a60f-f45982cf9017" SourceId="1" SourceUrl="http://localhost:51845/SLStudent.svc?wsdl" />
+    <MetadataFile FileName="SLStudent.xsd" MetadataType="Schema" ID="0679d760-5b4b-4a2b-b340-2215cdb866f4" SourceId="1" SourceUrl="http://localhost:51845/SLStudent.svc?xsd=xsd1" />
+    <MetadataFile FileName="SLStudent1.xsd" MetadataType="Schema" ID="c927bbc6-ad74-4c0b-b482-7f1f3a0236d8" SourceId="1" SourceUrl="http://localhost:51845/SLStudent.svc?xsd=xsd0" />
+    <MetadataFile FileName="SLStudent2.xsd" MetadataType="Schema" ID="47498649-804b-4397-b2af-fb61951b3d1c" SourceId="1" SourceUrl="http://localhost:51845/SLStudent.svc?xsd=xsd3" />
+    <MetadataFile FileName="SLStudent3.xsd" MetadataType="Schema" ID="197cf8a2-bbdf-4d8b-957c-7fe07f949359" SourceId="1" SourceUrl="http://localhost:51845/SLStudent.svc?xsd=xsd2" />
+    <MetadataFile FileName="SLStudent.disco" MetadataType="Disco" ID="04c5cdb0-22e4-4272-8572-def89cfc7de4" SourceId="1" SourceUrl="http://localhost:51845/SLStudent.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

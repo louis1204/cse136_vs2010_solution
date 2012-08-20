@@ -1,0 +1,502 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="cse132aModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="cse132aModelStoreContainer">
+    <EntitySet Name="brand" EntityType="cse132aModel.Store.brand" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="customer" EntityType="cse132aModel.Store.customer" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MSpeer_lsns" EntityType="cse132aModel.Store.MSpeer_lsns" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MSpeer_originatorid_history" EntityType="cse132aModel.Store.MSpeer_originatorid_history" store:Type="Tables" store:Schema="dbo" store:Name="MSpeer_originatorid_history">
+      <DefiningQuery>SELECT 
+      [MSpeer_originatorid_history].[originator_publication] AS [originator_publication], 
+      [MSpeer_originatorid_history].[originator_id] AS [originator_id], 
+      [MSpeer_originatorid_history].[originator_node] AS [originator_node], 
+      [MSpeer_originatorid_history].[originator_db] AS [originator_db], 
+      [MSpeer_originatorid_history].[originator_db_version] AS [originator_db_version], 
+      [MSpeer_originatorid_history].[originator_version] AS [originator_version], 
+      [MSpeer_originatorid_history].[inserted_date] AS [inserted_date]
+      FROM [dbo].[MSpeer_originatorid_history] AS [MSpeer_originatorid_history]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="order_item" EntityType="cse132aModel.Store.order_item" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="orders" EntityType="cse132aModel.Store.orders" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="product" EntityType="cse132aModel.Store.product" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="product_color" EntityType="cse132aModel.Store.product_color" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="product_cutting" EntityType="cse132aModel.Store.product_cutting" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="product_type" EntityType="cse132aModel.Store.product_type" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="product_variation" EntityType="cse132aModel.Store.product_variation" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="sysdiagrams" EntityType="cse132aModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="users" EntityType="cse132aModel.Store.users" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_order_item_orders" Association="cse132aModel.Store.FK_order_item_orders">
+      <End Role="orders" EntitySet="orders" />
+      <End Role="order_item" EntitySet="order_item" />
+    </AssociationSet>
+    <AssociationSet Name="FK_order_item_product_variation" Association="cse132aModel.Store.FK_order_item_product_variation">
+      <End Role="product_variation" EntitySet="product_variation" />
+      <End Role="order_item" EntitySet="order_item" />
+    </AssociationSet>
+    <AssociationSet Name="FK_orders_customer" Association="cse132aModel.Store.FK_orders_customer">
+      <End Role="customer" EntitySet="customer" />
+      <End Role="orders" EntitySet="orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_product_variation_brand" Association="cse132aModel.Store.FK_product_variation_brand">
+      <End Role="brand" EntitySet="brand" />
+      <End Role="product_variation" EntitySet="product_variation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_product_variation_product" Association="cse132aModel.Store.FK_product_variation_product">
+      <End Role="product" EntitySet="product" />
+      <End Role="product_variation" EntitySet="product_variation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_product_variation_product_color" Association="cse132aModel.Store.FK_product_variation_product_color">
+      <End Role="product_color" EntitySet="product_color" />
+      <End Role="product_variation" EntitySet="product_variation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_product_variation_product_cutting" Association="cse132aModel.Store.FK_product_variation_product_cutting">
+      <End Role="product_cutting" EntitySet="product_cutting" />
+      <End Role="product_variation" EntitySet="product_variation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_product_variation_product_type" Association="cse132aModel.Store.FK_product_variation_product_type">
+      <End Role="product_type" EntitySet="product_type" />
+      <End Role="product_variation" EntitySet="product_variation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_user_customer" Association="cse132aModel.Store.FK_user_customer">
+      <End Role="customer" EntitySet="customer" />
+      <End Role="users" EntitySet="users" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="brand">
+    <Key>
+      <PropertyRef Name="brand_id" />
+    </Key>
+    <Property Name="brand_id" Type="int" Nullable="false" />
+    <Property Name="brand_name" Type="varchar" Nullable="false" MaxLength="60" />
+  </EntityType>
+  <EntityType Name="customer">
+    <Key>
+      <PropertyRef Name="customer_id" />
+    </Key>
+    <Property Name="customer_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="first_name" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="last_name" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="address1" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="city" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="state" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="zip" Type="float" Nullable="false" />
+    <Property Name="age" Type="float" Nullable="false" />
+    <Property Name="gender" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="hobby" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="income" Type="float" Nullable="false" />
+    <Property Name="children" Type="float" Nullable="false" />
+    <Property Name="degree" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="ownHouse" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MSpeer_lsns">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="last_updated" Type="datetime" />
+    <Property Name="originator" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="originator_db" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="originator_publication" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="originator_publication_id" Type="int" />
+    <Property Name="originator_db_version" Type="int" />
+    <Property Name="originator_lsn" Type="varbinary" MaxLength="16" />
+    <Property Name="originator_version" Type="int" />
+    <Property Name="originator_id" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'cse132a.dbo.MSpeer_originatorid_history' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="MSpeer_originatorid_history">
+    <Key>
+      <PropertyRef Name="originator_publication" />
+      <PropertyRef Name="originator_id" />
+      <PropertyRef Name="originator_node" />
+      <PropertyRef Name="originator_db" />
+      <PropertyRef Name="originator_db_version" />
+      <PropertyRef Name="originator_version" />
+      <PropertyRef Name="inserted_date" />
+    </Key>
+    <Property Name="originator_publication" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="originator_id" Type="int" Nullable="false" />
+    <Property Name="originator_node" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="originator_db" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="originator_db_version" Type="int" Nullable="false" />
+    <Property Name="originator_version" Type="int" Nullable="false" />
+    <Property Name="inserted_date" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="order_item">
+    <Key>
+      <PropertyRef Name="order_id" />
+      <PropertyRef Name="product_variation_id" />
+    </Key>
+    <Property Name="order_id" Type="int" Nullable="false" />
+    <Property Name="product_variation_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="tax" Type="float" Nullable="false" />
+    <Property Name="quantity" Type="int" Nullable="false" />
+    <Property Name="sale_price" Type="float" Nullable="false" />
+    <Property Name="condition" Type="char" Nullable="false" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="orders">
+    <Key>
+      <PropertyRef Name="order_id" />
+    </Key>
+    <Property Name="order_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="customer_id" Type="int" Nullable="false" />
+    <Property Name="subtotal" Type="float" Nullable="false" />
+    <Property Name="tax_total" Type="float" Nullable="false" />
+    <Property Name="grand_total" Type="float" Nullable="false" />
+    <Property Name="date_created" Type="datetime" Nullable="false" />
+    <Property Name="condition" Type="char" Nullable="false" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="product">
+    <Key>
+      <PropertyRef Name="product_id" />
+    </Key>
+    <Property Name="product_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="product_name" Type="varchar" Nullable="false" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="product_color">
+    <Key>
+      <PropertyRef Name="product_color_id" />
+    </Key>
+    <Property Name="product_color_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="product_color_name" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="product_cutting">
+    <Key>
+      <PropertyRef Name="product_cutting_id" />
+    </Key>
+    <Property Name="product_cutting_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="product_cutting_name" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="product_type">
+    <Key>
+      <PropertyRef Name="product_type_id" />
+    </Key>
+    <Property Name="product_type_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="product_type_name" Type="varchar" Nullable="false" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="product_variation">
+    <Key>
+      <PropertyRef Name="product_variation_id" />
+    </Key>
+    <Property Name="product_variation_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="product_id" Type="int" Nullable="false" />
+    <Property Name="product_brand_id" Type="int" Nullable="false" />
+    <Property Name="product_cutting_id" Type="int" Nullable="false" />
+    <Property Name="product_color_id" Type="int" Nullable="false" />
+    <Property Name="product_type_id" Type="int" Nullable="false" />
+    <Property Name="sex" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="size" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="stock" Type="int" Nullable="false" />
+    <Property Name="price" Type="float" Nullable="false" />
+    <Property Name="condition" Type="char" Nullable="false" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="users">
+    <Key>
+      <PropertyRef Name="users_id" />
+    </Key>
+    <Property Name="users_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="customer_id" Type="int" Nullable="false" />
+    <Property Name="username" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="password" Type="varchar(max)" Nullable="false" />
+    <Property Name="user_level" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="email" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="last_login" Type="datetime" Nullable="false" />
+    <Property Name="create_date" Type="datetime" Nullable="false" />
+    <Property Name="condition" Type="char" Nullable="false" MaxLength="1" />
+  </EntityType>
+  <Association Name="FK_order_item_orders">
+    <End Role="orders" Type="cse132aModel.Store.orders" Multiplicity="1" />
+    <End Role="order_item" Type="cse132aModel.Store.order_item" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="orders">
+        <PropertyRef Name="order_id" />
+      </Principal>
+      <Dependent Role="order_item">
+        <PropertyRef Name="order_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_order_item_product_variation">
+    <End Role="product_variation" Type="cse132aModel.Store.product_variation" Multiplicity="1" />
+    <End Role="order_item" Type="cse132aModel.Store.order_item" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product_variation">
+        <PropertyRef Name="product_variation_id" />
+      </Principal>
+      <Dependent Role="order_item">
+        <PropertyRef Name="product_variation_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_orders_customer">
+    <End Role="customer" Type="cse132aModel.Store.customer" Multiplicity="1" />
+    <End Role="orders" Type="cse132aModel.Store.orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customer">
+        <PropertyRef Name="customer_id" />
+      </Principal>
+      <Dependent Role="orders">
+        <PropertyRef Name="customer_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_product_variation_brand">
+    <End Role="brand" Type="cse132aModel.Store.brand" Multiplicity="1" />
+    <End Role="product_variation" Type="cse132aModel.Store.product_variation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="brand">
+        <PropertyRef Name="brand_id" />
+      </Principal>
+      <Dependent Role="product_variation">
+        <PropertyRef Name="product_brand_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_product_variation_product">
+    <End Role="product" Type="cse132aModel.Store.product" Multiplicity="1" />
+    <End Role="product_variation" Type="cse132aModel.Store.product_variation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="product_id" />
+      </Principal>
+      <Dependent Role="product_variation">
+        <PropertyRef Name="product_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_product_variation_product_color">
+    <End Role="product_color" Type="cse132aModel.Store.product_color" Multiplicity="1" />
+    <End Role="product_variation" Type="cse132aModel.Store.product_variation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product_color">
+        <PropertyRef Name="product_color_id" />
+      </Principal>
+      <Dependent Role="product_variation">
+        <PropertyRef Name="product_color_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_product_variation_product_cutting">
+    <End Role="product_cutting" Type="cse132aModel.Store.product_cutting" Multiplicity="1" />
+    <End Role="product_variation" Type="cse132aModel.Store.product_variation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product_cutting">
+        <PropertyRef Name="product_cutting_id" />
+      </Principal>
+      <Dependent Role="product_variation">
+        <PropertyRef Name="product_cutting_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_product_variation_product_type">
+    <End Role="product_type" Type="cse132aModel.Store.product_type" Multiplicity="1" />
+    <End Role="product_variation" Type="cse132aModel.Store.product_variation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product_type">
+        <PropertyRef Name="product_type_id" />
+      </Principal>
+      <Dependent Role="product_variation">
+        <PropertyRef Name="product_type_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_user_customer">
+    <End Role="customer" Type="cse132aModel.Store.customer" Multiplicity="1" />
+    <End Role="users" Type="cse132aModel.Store.users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customer">
+        <PropertyRef Name="customer_id" />
+      </Principal>
+      <Dependent Role="users">
+        <PropertyRef Name="customer_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="create_customer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="first_name" Type="nvarchar" Mode="In" />
+    <Parameter Name="last_name" Type="nvarchar" Mode="In" />
+    <Parameter Name="address1" Type="nvarchar" Mode="In" />
+    <Parameter Name="city" Type="nvarchar" Mode="In" />
+    <Parameter Name="state" Type="nvarchar" Mode="In" />
+    <Parameter Name="zip" Type="float" Mode="In" />
+    <Parameter Name="age" Type="float" Mode="In" />
+    <Parameter Name="gender" Type="nvarchar" Mode="In" />
+    <Parameter Name="hobby" Type="nvarchar" Mode="In" />
+    <Parameter Name="income" Type="float" Mode="In" />
+    <Parameter Name="children" Type="float" Mode="In" />
+    <Parameter Name="degree" Type="nvarchar" Mode="In" />
+    <Parameter Name="ownHouse" Type="float" Mode="In" />
+    <Parameter Name="customer_id" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="create_order_item" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="order_id" Type="int" Mode="In" />
+    <Parameter Name="product_variation_id" Type="int" Mode="In" />
+    <Parameter Name="tax" Type="float" Mode="In" />
+    <Parameter Name="quantity" Type="int" Mode="In" />
+    <Parameter Name="condition" Type="char" Mode="In" />
+  </Function>
+  <Function Name="create_orders" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="order_id" Type="int" Mode="InOut" />
+    <Parameter Name="customer_id" Type="int" Mode="In" />
+    <Parameter Name="condition" Type="char" Mode="In" />
+  </Function>
+  <Function Name="create_profile" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="first_name" Type="nvarchar" Mode="In" />
+    <Parameter Name="last_name" Type="nvarchar" Mode="In" />
+    <Parameter Name="address1" Type="nvarchar" Mode="In" />
+    <Parameter Name="city" Type="nvarchar" Mode="In" />
+    <Parameter Name="state" Type="nvarchar" Mode="In" />
+    <Parameter Name="zip" Type="float" Mode="In" />
+    <Parameter Name="age" Type="float" Mode="In" />
+    <Parameter Name="gender" Type="nvarchar" Mode="In" />
+    <Parameter Name="hobby" Type="nvarchar" Mode="In" />
+    <Parameter Name="income" Type="float" Mode="In" />
+    <Parameter Name="children" Type="float" Mode="In" />
+    <Parameter Name="degree" Type="nvarchar" Mode="In" />
+    <Parameter Name="ownHouse" Type="float" Mode="In" />
+    <Parameter Name="username" Type="varchar" Mode="In" />
+    <Parameter Name="password" Type="varchar(max)" Mode="In" />
+    <Parameter Name="email" Type="varchar" Mode="In" />
+    <Parameter Name="user_level" Type="char" Mode="In" />
+  </Function>
+  <Function Name="create_pv" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="product_id" Type="int" Mode="In" />
+    <Parameter Name="product_brand_id" Type="int" Mode="In" />
+    <Parameter Name="product_cutting_id" Type="int" Mode="In" />
+    <Parameter Name="product_color_id" Type="int" Mode="In" />
+    <Parameter Name="product_type_id" Type="int" Mode="In" />
+    <Parameter Name="sex" Type="char" Mode="In" />
+    <Parameter Name="size" Type="char" Mode="In" />
+    <Parameter Name="stock" Type="int" Mode="In" />
+    <Parameter Name="price" Type="float" Mode="In" />
+    <Parameter Name="condition" Type="char" Mode="In" />
+    <Parameter Name="product_variation_id_output" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="create_user" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="username" Type="varchar" Mode="In" />
+    <Parameter Name="password" Type="varchar(max)" Mode="In" />
+    <Parameter Name="customer_id" Type="int" Mode="In" />
+    <Parameter Name="users_id" Type="int" Mode="InOut" />
+    <Parameter Name="email" Type="varchar" Mode="In" />
+    <Parameter Name="user_level" Type="char" Mode="In" />
+  </Function>
+  <Function Name="delete_order_item" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="order_id" Type="int" Mode="In" />
+    <Parameter Name="product_variation_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="delete_orders" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="order_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="delete_pv" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="product_variation_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="delete_user" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="users_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="fn_diagramobjects" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="update_brand" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="brand_id" Type="int" Mode="In" />
+    <Parameter Name="brand_name" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="update_customer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="customer_id" Type="int" Mode="In" />
+    <Parameter Name="first_name" Type="nvarchar" Mode="In" />
+    <Parameter Name="last_name" Type="nvarchar" Mode="In" />
+    <Parameter Name="address1" Type="nvarchar" Mode="In" />
+    <Parameter Name="city" Type="nvarchar" Mode="In" />
+    <Parameter Name="state" Type="nvarchar" Mode="In" />
+    <Parameter Name="zip" Type="float" Mode="In" />
+    <Parameter Name="age" Type="float" Mode="In" />
+    <Parameter Name="gender" Type="nvarchar" Mode="In" />
+    <Parameter Name="hobby" Type="nvarchar" Mode="In" />
+    <Parameter Name="income" Type="float" Mode="In" />
+    <Parameter Name="children" Type="float" Mode="In" />
+    <Parameter Name="degree" Type="nvarchar" Mode="In" />
+    <Parameter Name="ownhouse" Type="float" Mode="In" />
+  </Function>
+  <Function Name="update_order_item" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="order_id" Type="int" Mode="In" />
+    <Parameter Name="product_variation_id" Type="int" Mode="In" />
+    <Parameter Name="quantity" Type="int" Mode="In" />
+  </Function>
+  <Function Name="update_orders" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="order_id" Type="int" Mode="In" />
+    <Parameter Name="condition" Type="char" Mode="In" />
+  </Function>
+  <Function Name="update_product" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="product_id" Type="int" Mode="In" />
+    <Parameter Name="product_name" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="update_product_color" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="product_color_id" Type="int" Mode="In" />
+    <Parameter Name="product_color_name" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="update_product_cutting" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="product_cutting_id" Type="int" Mode="In" />
+    <Parameter Name="product_cutting_name" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="update_product_type" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="product_type_id" Type="int" Mode="In" />
+    <Parameter Name="product_type_name" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="update_pv" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="product_variation_id" Type="int" Mode="In" />
+    <Parameter Name="product_id" Type="int" Mode="In" />
+    <Parameter Name="product_brand_id" Type="int" Mode="In" />
+    <Parameter Name="product_cutting_id" Type="int" Mode="In" />
+    <Parameter Name="product_color_id" Type="int" Mode="In" />
+    <Parameter Name="product_type_id" Type="int" Mode="In" />
+    <Parameter Name="sex" Type="char" Mode="In" />
+    <Parameter Name="size" Type="char" Mode="In" />
+    <Parameter Name="stock" Type="int" Mode="In" />
+    <Parameter Name="price" Type="float" Mode="In" />
+    <Parameter Name="condition" Type="char" Mode="In" />
+  </Function>
+  <Function Name="update_user" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="users_id" Type="int" Mode="In" />
+    <Parameter Name="customer_id" Type="int" Mode="In" />
+    <Parameter Name="password" Type="varchar(max)" Mode="In" />
+    <Parameter Name="email" Type="varchar" Mode="In" />
+  </Function>
+</Schema>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="960f0228-514e-48f8-98f7-a95357fef269" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:51845/SLAuth.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SLAuth.disco" MetadataType="Disco" ID="08768f4a-c608-41e7-b70c-5cb053fc57b3" SourceId="1" SourceUrl="http://localhost:51845/SLAuth.svc?disco" />
+    <MetadataFile FileName="SLAuth.wsdl" MetadataType="Wsdl" ID="8066e6f5-3e16-41cf-b2a1-be330a7dcd63" SourceId="1" SourceUrl="http://localhost:51845/SLAuth.svc?wsdl" />
+    <MetadataFile FileName="SLAuth.xsd" MetadataType="Schema" ID="20392ace-ec27-477e-b3a4-1507f4133dcf" SourceId="1" SourceUrl="http://localhost:51845/SLAuth.svc?xsd=xsd3" />
+    <MetadataFile FileName="SLAuth1.xsd" MetadataType="Schema" ID="bcdb786d-bd79-4246-be98-26cbc9a9fe60" SourceId="1" SourceUrl="http://localhost:51845/SLAuth.svc?xsd=xsd2" />
+    <MetadataFile FileName="SLAuth2.xsd" MetadataType="Schema" ID="ccf71a22-85b8-40ad-9a6e-72fc46b3c6d5" SourceId="1" SourceUrl="http://localhost:51845/SLAuth.svc?xsd=xsd1" />
+    <MetadataFile FileName="SLAuth3.xsd" MetadataType="Schema" ID="7558dc26-21df-413d-91bb-a4d6bcdf1142" SourceId="1" SourceUrl="http://localhost:51845/SLAuth.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7575c01c-e4d5-4ce0-a0e5-918e25c20f76" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:51845/SLSchedule.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SLSchedule.disco" MetadataType="Disco" ID="acda63bd-bfef-4995-b3c4-ced4f7b59153" SourceId="1" SourceUrl="http://localhost:51845/SLSchedule.svc?disco" />
+    <MetadataFile FileName="SLSchedule.xsd" MetadataType="Schema" ID="b170b37d-64c2-4457-9206-789968baa4c7" SourceId="1" SourceUrl="http://localhost:51845/SLSchedule.svc?xsd=xsd1" />
+    <MetadataFile FileName="SLSchedule1.xsd" MetadataType="Schema" ID="897345ed-48f2-4c55-8fc0-2b107d0411d5" SourceId="1" SourceUrl="http://localhost:51845/SLSchedule.svc?xsd=xsd0" />
+    <MetadataFile FileName="SLSchedule.wsdl" MetadataType="Wsdl" ID="643bbd08-2a53-4499-920f-64f007dc15aa" SourceId="1" SourceUrl="http://localhost:51845/SLSchedule.svc?wsdl" />
+    <MetadataFile FileName="SLSchedule2.xsd" MetadataType="Schema" ID="483f1982-b2a9-43e9-9c39-6ea14702a583" SourceId="1" SourceUrl="http://localhost:51845/SLSchedule.svc?xsd=xsd2" />
+    <MetadataFile FileName="SLSchedule3.xsd" MetadataType="Schema" ID="49403b94-9fa3-4e6a-bced-459aa1480b9e" SourceId="1" SourceUrl="http://localhost:51845/SLSchedule.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

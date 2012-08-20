@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="cse132aModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="cse132aEntities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="brand" EntityType="cse132aModel.brand" />
+    <EntitySet Name="customer" EntityType="cse132aModel.customer" />
+    <EntitySet Name="MSpeer_lsns" EntityType="cse132aModel.MSpeer_lsns" />
+    <EntitySet Name="MSpeer_originatorid_history" EntityType="cse132aModel.MSpeer_originatorid_history" />
+    <EntitySet Name="order_item" EntityType="cse132aModel.order_item" />
+    <EntitySet Name="orders" EntityType="cse132aModel.orders" />
+    <EntitySet Name="product" EntityType="cse132aModel.product" />
+    <EntitySet Name="product_color" EntityType="cse132aModel.product_color" />
+    <EntitySet Name="product_cutting" EntityType="cse132aModel.product_cutting" />
+    <EntitySet Name="product_type" EntityType="cse132aModel.product_type" />
+    <EntitySet Name="product_variation" EntityType="cse132aModel.product_variation" />
+    <EntitySet Name="sysdiagrams" EntityType="cse132aModel.sysdiagrams" />
+    <EntitySet Name="users" EntityType="cse132aModel.users" />
+    <AssociationSet Name="FK_product_variation_brand" Association="cse132aModel.FK_product_variation_brand">
+      <End Role="brand" EntitySet="brand" />
+      <End Role="product_variation" EntitySet="product_variation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_orders_customer" Association="cse132aModel.FK_orders_customer">
+      <End Role="customer" EntitySet="customer" />
+      <End Role="orders" EntitySet="orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_user_customer" Association="cse132aModel.FK_user_customer">
+      <End Role="customer" EntitySet="customer" />
+      <End Role="users" EntitySet="users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_order_item_orders" Association="cse132aModel.FK_order_item_orders">
+      <End Role="orders" EntitySet="orders" />
+      <End Role="order_item" EntitySet="order_item" />
+    </AssociationSet>
+    <AssociationSet Name="FK_order_item_product_variation" Association="cse132aModel.FK_order_item_product_variation">
+      <End Role="product_variation" EntitySet="product_variation" />
+      <End Role="order_item" EntitySet="order_item" />
+    </AssociationSet>
+    <AssociationSet Name="FK_product_variation_product" Association="cse132aModel.FK_product_variation_product">
+      <End Role="product" EntitySet="product" />
+      <End Role="product_variation" EntitySet="product_variation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_product_variation_product_color" Association="cse132aModel.FK_product_variation_product_color">
+      <End Role="product_color" EntitySet="product_color" />
+      <End Role="product_variation" EntitySet="product_variation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_product_variation_product_cutting" Association="cse132aModel.FK_product_variation_product_cutting">
+      <End Role="product_cutting" EntitySet="product_cutting" />
+      <End Role="product_variation" EntitySet="product_variation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_product_variation_product_type" Association="cse132aModel.FK_product_variation_product_type">
+      <End Role="product_type" EntitySet="product_type" />
+      <End Role="product_variation" EntitySet="product_variation" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="brand">
+    <Key>
+      <PropertyRef Name="brand_id" />
+    </Key>
+    <Property Name="brand_id" Type="Int32" Nullable="false" />
+    <Property Name="brand_name" Type="String" Nullable="false" MaxLength="60" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="product_variation" Relationship="cse132aModel.FK_product_variation_brand" FromRole="brand" ToRole="product_variation" />
+  </EntityType>
+  <EntityType Name="customer">
+    <Key>
+      <PropertyRef Name="customer_id" />
+    </Key>
+    <Property Name="customer_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="first_name" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="last_name" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="address1" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="city" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="state" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="zip" Type="Double" Nullable="false" />
+    <Property Name="age" Type="Double" Nullable="false" />
+    <Property Name="gender" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="hobby" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="income" Type="Double" Nullable="false" />
+    <Property Name="children" Type="Double" Nullable="false" />
+    <Property Name="degree" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="ownHouse" Type="Double" Nullable="false" />
+    <NavigationProperty Name="orders" Relationship="cse132aModel.FK_orders_customer" FromRole="customer" ToRole="orders" />
+    <NavigationProperty Name="users" Relationship="cse132aModel.FK_user_customer" FromRole="customer" ToRole="users" />
+  </EntityType>
+  <EntityType Name="MSpeer_lsns">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="last_updated" Type="DateTime" />
+    <Property Name="originator" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="originator_db" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="originator_publication" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="originator_publication_id" Type="Int32" />
+    <Property Name="originator_db_version" Type="Int32" />
+    <Property Name="originator_lsn" Type="Binary" MaxLength="16" FixedLength="false" />
+    <Property Name="originator_version" Type="Int32" />
+    <Property Name="originator_id" Type="Int32" />
+  </EntityType>
+  <EntityType Name="MSpeer_originatorid_history">
+    <Key>
+      <PropertyRef Name="originator_publication" />
+      <PropertyRef Name="originator_id" />
+      <PropertyRef Name="originator_node" />
+      <PropertyRef Name="originator_db" />
+      <PropertyRef Name="originator_db_version" />
+      <PropertyRef Name="originator_version" />
+      <PropertyRef Name="inserted_date" />
+    </Key>
+    <Property Name="originator_publication" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="originator_id" Type="Int32" Nullable="false" />
+    <Property Name="originator_node" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="originator_db" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="originator_db_version" Type="Int32" Nullable="false" />
+    <Property Name="originator_version" Type="Int32" Nullable="false" />
+    <Property Name="inserted_date" Type="DateTime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="order_item">
+    <Key>
+      <PropertyRef Name="order_id" />
+      <PropertyRef Name="product_variation_id" />
+    </Key>
+    <Property Name="order_id" Type="Int32" Nullable="false" />
+    <Property Name="product_variation_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tax" Type="Double" Nullable="false" />
+    <Property Name="quantity" Type="Int32" Nullable="false" />
+    <Property Name="sale_price" Type="Double" Nullable="false" />
+    <Property Name="condition" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+    <NavigationProperty Name="orders" Relationship="cse132aModel.FK_order_item_orders" FromRole="order_item" ToRole="orders" />
+    <NavigationProperty Name="product_variation" Relationship="cse132aModel.FK_order_item_product_variation" FromRole="order_item" ToRole="product_variation" />
+  </EntityType>
+  <EntityType Name="orders">
+    <Key>
+      <PropertyRef Name="order_id" />
+    </Key>
+    <Property Name="order_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="customer_id" Type="Int32" Nullable="false" />
+    <Property Name="subtotal" Type="Double" Nullable="false" />
+    <Property Name="tax_total" Type="Double" Nullable="false" />
+    <Property Name="grand_total" Type="Double" Nullable="false" />
+    <Property Name="date_created" Type="DateTime" Nullable="false" />
+    <Property Name="condition" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+    <NavigationProperty Name="customer" Relationship="cse132aModel.FK_orders_customer" FromRole="orders" ToRole="customer" />
+    <NavigationProperty Name="order_item" Relationship="cse132aModel.FK_order_item_orders" FromRole="orders" ToRole="order_item" />
+  </EntityType>
+  <EntityType Name="product">
+    <Key>
+      <PropertyRef Name="product_id" />
+    </Key>
+    <Property Name="product_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="product_name" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="product_variation" Relationship="cse132aModel.FK_product_variation_product" FromRole="product" ToRole="product_variation" />
+  </EntityType>
+  <EntityType Name="product_color">
+    <Key>
+      <PropertyRef Name="product_color_id" />
+    </Key>
+    <Property Name="product_color_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="product_color_name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="product_variation" Relationship="cse132aModel.FK_product_variation_product_color" FromRole="product_color" ToRole="product_variation" />
+  </EntityType>
+  <EntityType Name="product_cutting">
+    <Key>
+      <PropertyRef Name="product_cutting_id" />
+    </Key>
+    <Property Name="product_cutting_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="product_cutting_name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="product_variation" Relationship="cse132aModel.FK_product_variation_product_cutting" FromRole="product_cutting" ToRole="product_variation" />
+  </EntityType>
+  <EntityType Name="product_type">
+    <Key>
+      <PropertyRef Name="product_type_id" />
+    </Key>
+    <Property Name="product_type_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="product_type_name" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="product_variation" Relationship="cse132aModel.FK_product_variation_product_type" FromRole="product_type" ToRole="product_variation" />
+  </EntityType>
+  <EntityType Name="product_variation">
+    <Key>
+      <PropertyRef Name="product_variation_id" />
+    </Key>
+    <Property Name="product_variation_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="product_id" Type="Int32" Nullable="false" />
+    <Property Name="product_brand_id" Type="Int32" Nullable="false" />
+    <Property Name="product_cutting_id" Type="Int32" Nullable="false" />
+    <Property Name="product_color_id" Type="Int32" Nullable="false" />
+    <Property Name="product_type_id" Type="Int32" Nullable="false" />
+    <Property Name="sex" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="size" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="true" />
+    <Property Name="stock" Type="Int32" Nullable="false" />
+    <Property Name="price" Type="Double" Nullable="false" />
+    <Property Name="condition" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+    <NavigationProperty Name="brand" Relationship="cse132aModel.FK_product_variation_brand" FromRole="product_variation" ToRole="brand" />
+    <NavigationProperty Name="order_item" Relationship="cse132aModel.FK_order_item_product_variation" FromRole="product_variation" ToRole="order_item" />
+    <NavigationProperty Name="product" Relationship="cse132aModel.FK_product_variation_product" FromRole="product_variation" ToRole="product" />
+    <NavigationProperty Name="product_color" Relationship="cse132aModel.FK_product_variation_product_color" FromRole="product_variation" ToRole="product_color" />
+    <NavigationProperty Name="product_cutting" Relationship="cse132aModel.FK_product_variation_product_cutting" FromRole="product_variation" ToRole="product_cutting" />
+    <NavigationProperty Name="product_type" Relationship="cse132aModel.FK_product_variation_product_type" FromRole="product_variation" ToRole="product_type" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="users">
+    <Key>
+      <PropertyRef Name="users_id" />
+    </Key>
+    <Property Name="users_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="customer_id" Type="Int32" Nullable="false" />
+    <Property Name="username" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="password" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="user_level" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="email" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="last_login" Type="DateTime" Nullable="false" />
+    <Property Name="create_date" Type="DateTime" Nullable="false" />
+    <Property Name="condition" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+    <NavigationProperty Name="customer" Relationship="cse132aModel.FK_user_customer" FromRole="users" ToRole="customer" />
+  </EntityType>
+  <Association Name="FK_product_variation_brand">
+    <End Role="brand" Type="cse132aModel.brand" Multiplicity="1" />
+    <End Role="product_variation" Type="cse132aModel.product_variation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="brand">
+        <PropertyRef Name="brand_id" />
+      </Principal>
+      <Dependent Role="product_variation">
+        <PropertyRef Name="product_brand_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_orders_customer">
+    <End Role="customer" Type="cse132aModel.customer" Multiplicity="1" />
+    <End Role="orders" Type="cse132aModel.orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customer">
+        <PropertyRef Name="customer_id" />
+      </Principal>
+      <Dependent Role="orders">
+        <PropertyRef Name="customer_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_user_customer">
+    <End Role="customer" Type="cse132aModel.customer" Multiplicity="1" />
+    <End Role="users" Type="cse132aModel.users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customer">
+        <PropertyRef Name="customer_id" />
+      </Principal>
+      <Dependent Role="users">
+        <PropertyRef Name="customer_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_order_item_orders">
+    <End Role="orders" Type="cse132aModel.orders" Multiplicity="1" />
+    <End Role="order_item" Type="cse132aModel.order_item" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="orders">
+        <PropertyRef Name="order_id" />
+      </Principal>
+      <Dependent Role="order_item">
+        <PropertyRef Name="order_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_order_item_product_variation">
+    <End Role="product_variation" Type="cse132aModel.product_variation" Multiplicity="1" />
+    <End Role="order_item" Type="cse132aModel.order_item" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product_variation">
+        <PropertyRef Name="product_variation_id" />
+      </Principal>
+      <Dependent Role="order_item">
+        <PropertyRef Name="product_variation_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_product_variation_product">
+    <End Role="product" Type="cse132aModel.product" Multiplicity="1" />
+    <End Role="product_variation" Type="cse132aModel.product_variation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="product_id" />
+      </Principal>
+      <Dependent Role="product_variation">
+        <PropertyRef Name="product_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_product_variation_product_color">
+    <End Role="product_color" Type="cse132aModel.product_color" Multiplicity="1" />
+    <End Role="product_variation" Type="cse132aModel.product_variation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product_color">
+        <PropertyRef Name="product_color_id" />
+      </Principal>
+      <Dependent Role="product_variation">
+        <PropertyRef Name="product_color_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_product_variation_product_cutting">
+    <End Role="product_cutting" Type="cse132aModel.product_cutting" Multiplicity="1" />
+    <End Role="product_variation" Type="cse132aModel.product_variation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product_cutting">
+        <PropertyRef Name="product_cutting_id" />
+      </Principal>
+      <Dependent Role="product_variation">
+        <PropertyRef Name="product_cutting_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_product_variation_product_type">
+    <End Role="product_type" Type="cse132aModel.product_type" Multiplicity="1" />
+    <End Role="product_variation" Type="cse132aModel.product_variation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product_type">
+        <PropertyRef Name="product_type_id" />
+      </Principal>
+      <Dependent Role="product_variation">
+        <PropertyRef Name="product_type_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

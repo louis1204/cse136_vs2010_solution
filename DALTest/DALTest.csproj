@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B518E855-771F-4A7B-99B6-DABD2C02CC29}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DALTest</RootNamespace>
+    <AssemblyName>DALTest</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Synchronization, Version=1.0.0.0" />
+    <Reference Include="Microsoft.Synchronization.Data, Version=2.0.0.0" />
+    <Reference Include="Microsoft.Synchronization.Data.Server, Version=2.0.0.0" />
+    <Reference Include="Microsoft.Synchronization.Data.SqlServerCe, Version=2.0.0.0" />
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.SqlServerCe, Version=3.5.1.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDependentAssemblyPaths Condition=" '$(VS100COMNTOOLS)' != '' " Include="$(VS100COMNTOOLS)..\IDE\PrivateAssemblies">
+      <Visible>False</Visible>
+    </CodeAnalysisDependentAssemblyPaths>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="cse132aCache.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cse132aCache.sync</DependentUpon>
+    </Compile>
+    <Compile Include="cse132aDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cse132aDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DALProductVariationInfoTest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\cse136\DAL.csproj">
+      <Project>{4BC7CC26-2421-40C6-B51E-30CC2248D80B}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DomainModel\DomainModel.csproj">
+      <Project>{CAD86DCF-512D-4E0F-A568-0E8882202106}</Project>
+      <Name>DomainModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cse132aCache.sync">
+      <Generator>MSDataSyncGenerator</Generator>
+      <LastGenOutput>cse132aCache.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cse132aDataSet.xsc">
+      <DependentUpon>cse132aDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="cse132aDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cse132aDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cse132aDataSet.xss">
+      <DependentUpon>cse132aDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="cse132a.sdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQLScripts\cse132aCache.cse132a.sql" />
+    <Content Include="SQLScripts\cse132aCache.dbo.brand.sql" />
+    <Content Include="SQLScripts\cse132aCache.dbo.customer.sql" />
+    <Content Include="SQLScripts\cse132aCache.dbo.orders.sql" />
+    <Content Include="SQLScripts\cse132aCache.dbo.order_item.sql" />
+    <Content Include="SQLScripts\cse132aCache.dbo.product.sql" />
+    <Content Include="SQLScripts\cse132aCache.dbo.product_color.sql" />
+    <Content Include="SQLScripts\cse132aCache.dbo.product_cutting.sql" />
+    <Content Include="SQLScripts\cse132aCache.dbo.product_type.sql" />
+    <Content Include="SQLScripts\cse132aCache.dbo.product_variation.sql" />
+    <Content Include="SQLScripts\cse132aCache.dbo.users.sql" />
+    <Content Include="SQLUndoScripts\cse132aCache.cse132a.disable.sql" />
+    <Content Include="SQLUndoScripts\cse132aCache.dbo.brand.disable.sql" />
+    <Content Include="SQLUndoScripts\cse132aCache.dbo.customer.disable.sql" />
+    <Content Include="SQLUndoScripts\cse132aCache.dbo.orders.disable.sql" />
+    <Content Include="SQLUndoScripts\cse132aCache.dbo.order_item.disable.sql" />
+    <Content Include="SQLUndoScripts\cse132aCache.dbo.product.disable.sql" />
+    <Content Include="SQLUndoScripts\cse132aCache.dbo.product_color.disable.sql" />
+    <Content Include="SQLUndoScripts\cse132aCache.dbo.product_cutting.disable.sql" />
+    <Content Include="SQLUndoScripts\cse132aCache.dbo.product_type.disable.sql" />
+    <Content Include="SQLUndoScripts\cse132aCache.dbo.product_variation.disable.sql" />
+    <Content Include="SQLUndoScripts\cse132aCache.dbo.users.disable.sql" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,11 @@
+﻿@if (HttpContext.Current.Session["email"] != null) {
+
+  @:Welcome <b>@HttpContext.Current.Session["email"].ToString()</b>
+        using (Html.BeginForm("LogOff", "Login"))
+        {
+          @:<input type="submit" value="Logout" />
+        }
+}
+else {
+  @Html.ActionLink("Log On", "Index", "Login")
+}

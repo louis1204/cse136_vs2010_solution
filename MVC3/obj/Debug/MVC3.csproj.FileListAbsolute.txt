@@ -1,0 +1,15 @@
+C:\Users\Tablet\Desktop\136 summer 2012\cse136_vs2010_solution\MVC3\bin\MVC3.dll
+C:\Users\Tablet\Desktop\136 summer 2012\cse136_vs2010_solution\MVC3\bin\MVC3.pdb
+C:\Users\Tablet\Desktop\136 summer 2012\cse136_vs2010_solution\MVC3\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Tablet\Desktop\136 summer 2012\cse136_vs2010_solution\MVC3\obj\Debug\MVC3.dll
+C:\Users\Tablet\Desktop\136 summer 2012\cse136_vs2010_solution\MVC3\obj\Debug\MVC3.pdb
+C:\Users\owner\Desktop\cse136_vs2010_solution\MVC3\bin\MVC3.dll
+C:\Users\owner\Desktop\cse136_vs2010_solution\MVC3\bin\MVC3.pdb
+C:\Users\owner\Desktop\cse136_vs2010_solution\MVC3\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\owner\Desktop\cse136_vs2010_solution\MVC3\obj\Debug\MVC3.dll
+C:\Users\owner\Desktop\cse136_vs2010_solution\MVC3\obj\Debug\MVC3.pdb
+C:\Users\Louis\Documents\School\UCSD\cse136\cse136_vs2010_solution\MVC3\bin\MVC3.dll
+C:\Users\Louis\Documents\School\UCSD\cse136\cse136_vs2010_solution\MVC3\bin\MVC3.pdb
+C:\Users\Louis\Documents\School\UCSD\cse136\cse136_vs2010_solution\MVC3\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Louis\Documents\School\UCSD\cse136\cse136_vs2010_solution\MVC3\obj\Debug\MVC3.dll
+C:\Users\Louis\Documents\School\UCSD\cse136\cse136_vs2010_solution\MVC3\obj\Debug\MVC3.pdb

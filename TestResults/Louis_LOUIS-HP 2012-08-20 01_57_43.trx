@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="12f6773e-25bb-4740-98e9-016f98d87305" name="Louis@LOUIS-HP 2012-08-20 01:57:43" runUser="Louis-HP\Louis" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="53e514f0-4a59-4535-81eb-4649f33ffbf9">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="Louis_LOUIS-HP 2012-08-20 01_57_43">
+      <DeploymentItem filename="C:\Users\Louis\Documents\School\UCSD\cse136\cse136_vs2010_solution\cse136\bin\Debug\cse136.dll" />
+      <DeploymentItem filename="C:\Users\Louis\Documents\School\UCSD\cse136\cse136_vs2010_solution\DomainModel\bin\Debug\DomainModel.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-08-20T01:57:43.8810890-07:00" queuing="2012-08-20T01:57:46.1312177-07:00" start="2012-08-20T01:57:46.2022218-07:00" finish="2012-08-20T01:57:48.4183486-07:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="1" executed="1" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="UpdateProductVariationInfoTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\daltest\bin\debug\daltest.dll" id="c68b8238-9415-4bac-14f0-0a40a7e90643">
+      <Execution id="81d984b5-53eb-4b32-8585-9ae764936419" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/DALTest/bin/Debug/DALTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="DALTest.DALProductVariationInfoTest, DALTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="UpdateProductVariationInfoTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="c68b8238-9415-4bac-14f0-0a40a7e90643" executionId="81d984b5-53eb-4b32-8585-9ae764936419" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="81d984b5-53eb-4b32-8585-9ae764936419" testId="c68b8238-9415-4bac-14f0-0a40a7e90643" testName="UpdateProductVariationInfoTest" computerName="LOUIS-HP" duration="00:00:00.1226579" startTime="2012-08-20T01:57:46.2202228-07:00" endTime="2012-08-20T01:57:46.8842608-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="81d984b5-53eb-4b32-8585-9ae764936419">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method DALTest.DALProductVariationInfoTest.UpdateProductVariationInfoTest threw exception: 
+System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index</Message>
+          <StackTrace>    at System.ThrowHelper.ThrowArgumentOutOfRangeException()
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at DALTest.DALProductVariationInfoTest.UpdateProductVariationInfoTest() in C:\Users\Louis\Documents\School\UCSD\cse136\cse136_vs2010_solution\DALTest\DALProductVariationInfoTest.cs:line 104
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>
