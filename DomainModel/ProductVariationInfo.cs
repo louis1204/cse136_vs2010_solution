@@ -14,7 +14,7 @@ namespace DomainModel
         public int product_color_id { get; set; }
         public int product_type_id { get; set; }
         public char sex { get; set; }
-        public char size { get; set; }
+        public string size { get; set; }
         public int stock { get; set; }
         public float price { get; set; }
         public char condition { get; set; }
@@ -22,7 +22,7 @@ namespace DomainModel
         public ProductVariationInfo(int product_variation_id_in, int product_id_in,
             int product_brand_id_in, int product_cutting_id_in,
             int product_color_id_in, int product_type_id_in,
-            char sex_in, char size_in, int stock_in, float price_in, char condition_in)
+            char sex_in, string size_in, int stock_in, float price_in, char condition_in)
         {
             this.product_variation_id = product_variation_id_in;
             this.product_id = product_color_id_in;

@@ -13,7 +13,7 @@ namespace DomainModel
         {
             for (int i = 0; i < 10; i++)
             {
-                product_variations.Add(new ProductVariationInfo(i, i, i, i, i, i, 'M', 'L', i, (float)i, 'a' ));
+                product_variations.Add(new ProductVariationInfo(i, i, i, i, i, i, 'M', "L", i, (float)i, 'a' ));
             }
         }
 

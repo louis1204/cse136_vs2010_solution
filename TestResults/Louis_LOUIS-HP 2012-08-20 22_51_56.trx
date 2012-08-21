@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="54f6c3b6-924a-481a-9cc1-01780fba879f" name="Louis@LOUIS-HP 2012-08-20 22:51:56" runUser="Louis-HP\Louis" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="53e514f0-4a59-4535-81eb-4649f33ffbf9">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="Louis_LOUIS-HP 2012-08-20 22_51_56">
+      <DeploymentItem filename="C:\Users\Louis\Documents\School\UCSD\cse136\cse136_vs2010_solution\cse136\bin\Debug\cse136.dll" />
+      <DeploymentItem filename="C:\Users\Louis\Documents\School\UCSD\cse136\cse136_vs2010_solution\DomainModel\bin\Debug\DomainModel.dll" />
+      <DeploymentItem filename="C:\Users\Louis\Documents\School\UCSD\cse136\cse136_vs2010_solution\BL\bin\Debug\BL.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-08-20T22:51:56.0939598-07:00" queuing="2012-08-20T22:51:57.9600666-07:00" start="2012-08-20T22:51:57.9760675-07:00" finish="2012-08-20T22:51:58.4520947-07:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="3" executed="3" passed="3" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="UpdatePVErrorTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\bltest\bin\debug\bltest.dll" id="6d47a2f3-39c9-19d7-afae-f0a10e6b6730">
+      <Execution id="f274cfde-0ff9-4cc0-8483-07bd3c816486" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/BLTest/bin/Debug/BLTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BLTest.BLProductVariationTest, BLTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="UpdatePVErrorTest" />
+    </UnitTest>
+    <UnitTest name="CreatePVErrorTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\bltest\bin\debug\bltest.dll" id="9ea66d23-33d8-5207-a8ad-fb09aacd8091">
+      <Execution id="3e3dee4e-bd4d-4bc9-9b12-c7ef0768586d" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/BLTest/bin/Debug/BLTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BLTest.BLProductVariationTest, BLTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CreatePVErrorTest" />
+    </UnitTest>
+    <UnitTest name="DeletePVErrorTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\bltest\bin\debug\bltest.dll" id="97f51d42-11f8-ce9c-b79e-c3d976edc662">
+      <Execution id="6b77e15c-816c-4f2f-9c13-90c6615cd699" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/BLTest/bin/Debug/BLTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BLTest.BLProductVariationTest, BLTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="DeletePVErrorTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="6d47a2f3-39c9-19d7-afae-f0a10e6b6730" executionId="f274cfde-0ff9-4cc0-8483-07bd3c816486" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="97f51d42-11f8-ce9c-b79e-c3d976edc662" executionId="6b77e15c-816c-4f2f-9c13-90c6615cd699" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9ea66d23-33d8-5207-a8ad-fb09aacd8091" executionId="3e3dee4e-bd4d-4bc9-9b12-c7ef0768586d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="f274cfde-0ff9-4cc0-8483-07bd3c816486" testId="6d47a2f3-39c9-19d7-afae-f0a10e6b6730" testName="UpdatePVErrorTest" computerName="LOUIS-HP" duration="00:00:00.0276240" startTime="2012-08-20T22:51:57.9820678-07:00" endTime="2012-08-20T22:51:58.4080922-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f274cfde-0ff9-4cc0-8483-07bd3c816486">
+    </UnitTestResult>
+    <UnitTestResult executionId="6b77e15c-816c-4f2f-9c13-90c6615cd699" testId="97f51d42-11f8-ce9c-b79e-c3d976edc662" testName="DeletePVErrorTest" computerName="LOUIS-HP" duration="00:00:00.0008174" startTime="2012-08-20T22:51:58.4110924-07:00" endTime="2012-08-20T22:51:58.4170927-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6b77e15c-816c-4f2f-9c13-90c6615cd699">
+    </UnitTestResult>
+    <UnitTestResult executionId="3e3dee4e-bd4d-4bc9-9b12-c7ef0768586d" testId="9ea66d23-33d8-5207-a8ad-fb09aacd8091" testName="CreatePVErrorTest" computerName="LOUIS-HP" duration="00:00:00.0024363" startTime="2012-08-20T22:51:58.4200929-07:00" endTime="2012-08-20T22:51:58.4280933-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3e3dee4e-bd4d-4bc9-9b12-c7ef0768586d">
+    </UnitTestResult>
+  </Results>
+</TestRun>

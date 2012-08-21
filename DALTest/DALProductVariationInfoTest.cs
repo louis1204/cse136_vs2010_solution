@@ -74,9 +74,8 @@ namespace DALTest
         {
             char gender = 'M';
             char condition = 'a';
-            char size = 'L';
 
-            ProductVariationInfo ProductVariationInfo = new ProductVariationInfo(1, 1, 1, 1, 1, 1, gender, size, 1, (float)1, condition);// TODO: Initialize to an appropriate value
+            ProductVariationInfo ProductVariationInfo = new ProductVariationInfo(1, 1, 1, 1, 1, 1, gender, "L", 1, (float)1, condition);// TODO: Initialize to an appropriate value
             List<string> errors = new List<string>(); // TODO: Initialize to an appropriate value
             List<string> errorsExpected = new List<string>(); // TODO: Initialize to an appropriate value
             int result = DALProductVariationInfo.CreatePV(ProductVariationInfo, ref errors);
@@ -92,9 +91,8 @@ namespace DALTest
         {
             char gender = 'M';
             char condition = 'a';
-            char size = 'L';
 
-            ProductVariationInfo ProductVariationInfo = new ProductVariationInfo(1, 1, 1, 1, 1, 1, gender, size, 1, (float)1.0, condition); // TODO: Initialize to an appropriate value
+            ProductVariationInfo ProductVariationInfo = new ProductVariationInfo(1, 1, 1, 1, 1, 1, gender, "L", 1, (float)1.0, condition); // TODO: Initialize to an appropriate value
             List<string> errors = new List<string>(); // TODO: Initialize to an appropriate value
             List<string> errorsExpected = new List<string>(); // TODO: Initialize to an appropriate value
             int result = DALProductVariationInfo.UpdateProductVariationInfo(ProductVariationInfo, ref errors);

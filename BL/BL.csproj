@@ -41,9 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BLAuth.cs" />
-    <Compile Include="BLSchedule.cs" />
-    <Compile Include="BLStudent.cs" />
+    <Compile Include="BLProductVariation.cs" />
     <Compile Include="ErrorLogging.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
