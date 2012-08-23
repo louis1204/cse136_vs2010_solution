@@ -51,7 +51,7 @@ namespace DAL
 
                 DataSet myDS = new DataSet();
                 mySA.Fill(myDS);
-                return 1;
+                return (int)pvIdParmOut.Value;
             }
 
             catch (Exception e)
@@ -86,23 +86,27 @@ namespace DAL
                 mySA.Fill(myDS);
 
                 if (myDS.Tables[0].Rows.Count == 0)
+                {
+                    System.Diagnostics.Debug.WriteLine("REACHED");
                     return null;
+                }
 
-                pv = new ProductVariationInfo((int)myDS.Tables[0].Rows[0]["product_variation_id"],
-                    (int)myDS.Tables[0].Rows[0]["product_id"],
-                    (int)myDS.Tables[0].Rows[0]["product_brand_id"],
-                    (int)myDS.Tables[0].Rows[0]["product_cutting_id"],
-                    (int)myDS.Tables[0].Rows[0]["product_color_id"],
-                    (int)myDS.Tables[0].Rows[0]["product_type_id"],
-                    (char)myDS.Tables[0].Rows[0]["sex"],
-                    myDS.Tables[0].Rows[0]["size"].ToString(),
-                    (int)myDS.Tables[0].Rows[0]["stock"],
-                    (float)myDS.Tables[0].Rows[0]["price"],
-                    (char)myDS.Tables[0].Rows[0]["condition"]);
+                pv = new ProductVariationInfo(int.Parse(myDS.Tables[0].Rows[0]["product_variation_id"].ToString()),
+                    int.Parse(myDS.Tables[0].Rows[0]["product_id"].ToString()),
+                    int.Parse(myDS.Tables[0].Rows[0]["product_brand_id"].ToString()),
+                    int.Parse(myDS.Tables[0].Rows[0]["product_cutting_id"].ToString()),
+                    int.Parse(myDS.Tables[0].Rows[0]["product_color_id"].ToString()),
+                    int.Parse(myDS.Tables[0].Rows[0]["product_type_id"].ToString()),
+                    char.Parse(myDS.Tables[0].Rows[0]["sex"].ToString()),
+                    myDS.Tables[0].Rows[0]["size"].ToString().Replace(" ", ""),
+                    int.Parse(myDS.Tables[0].Rows[0]["stock"].ToString()),
+                    float.Parse(myDS.Tables[0].Rows[0]["price"].ToString()),
+                    char.Parse(myDS.Tables[0].Rows[0]["condition"].ToString()));
             }
             catch (Exception e)
             {
                 errors.Add("Error: " + e.ToString());
+                System.Diagnostics.Debug.WriteLine("THIS IS THE ERROR:" + e);
             }
             finally
             {
@@ -134,17 +138,17 @@ namespace DAL
 
                 for (int i = 0; i < myDS.Tables[0].Rows.Count; i++)
                 {
-                    pv = new ProductVariationInfo((int)myDS.Tables[0].Rows[i]["product_variation_id"],
-                        (int)myDS.Tables[0].Rows[i]["product_id"],
-                        (int)myDS.Tables[0].Rows[i]["product_brand_id"],
-                        (int)myDS.Tables[0].Rows[i]["product_cutting_id"],
-                        (int)myDS.Tables[0].Rows[i]["product_color_id"],
-                        (int)myDS.Tables[0].Rows[i]["product_type_id"],
-                        (char)myDS.Tables[0].Rows[i]["sex"],
+                    pv = new ProductVariationInfo(int.Parse(myDS.Tables[0].Rows[i]["product_variation_id"].ToString()),
+                        int.Parse(myDS.Tables[0].Rows[i]["product_id"].ToString()),
+                        int.Parse(myDS.Tables[0].Rows[i]["product_brand_id"].ToString()),
+                        int.Parse(myDS.Tables[0].Rows[i]["product_cutting_id"].ToString()),
+                        int.Parse(myDS.Tables[0].Rows[i]["product_color_id"].ToString()),
+                        int.Parse(myDS.Tables[0].Rows[i]["product_type_id"].ToString()),
+                        char.Parse(myDS.Tables[0].Rows[i]["sex"].ToString()),
                         myDS.Tables[0].Rows[i]["size"].ToString(),
-                        (int)myDS.Tables[0].Rows[i]["stock"],
-                        (float)myDS.Tables[0].Rows[i]["price"],
-                        (char)myDS.Tables[0].Rows[i]["condition"]);
+                        int.Parse(myDS.Tables[0].Rows[i]["stock"].ToString()),
+                        float.Parse(myDS.Tables[0].Rows[i]["price"].ToString()),
+                        char.Parse(myDS.Tables[0].Rows[i]["condition"].ToString()));
                     pvList.Add(pv);
                 }
             }

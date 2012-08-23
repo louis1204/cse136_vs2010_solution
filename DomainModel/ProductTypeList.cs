@@ -7,7 +7,7 @@ namespace DomainModel
 {
     public class ProductTypeList
     {
-        List<ProductTypeInfo> ProductTypes = new List<ProductTypeInfo>();
+        public List<ProductTypeInfo> ProductTypes = new List<ProductTypeInfo>();
 
         public ProductTypeList()
         {

@@ -33,7 +33,7 @@ namespace DAL
 
                 DataSet myDS = new DataSet();
                 mySA.Fill(myDS);
-                return 1;
+                return (int)ProductColorIdParmOut.Value;
             }
 
             catch (Exception e)
@@ -70,7 +70,7 @@ namespace DAL
                 if (myDS.Tables[0].Rows.Count == 0)
                     return null;
 
-                ProductColor = new ProductColorInfo((int)myDS.Tables[0].Rows[0]["product_color_id"],
+                ProductColor = new ProductColorInfo(int.Parse(myDS.Tables[0].Rows[0]["product_color_id"].ToString()),
                     myDS.Tables[0].Rows[0]["product_color_name"].ToString());
             }
             catch (Exception e)
@@ -107,7 +107,7 @@ namespace DAL
 
                 for (int i = 0; i < myDS.Tables[0].Rows.Count; i++)
                 {
-                    ProductColor = new ProductColorInfo((int)myDS.Tables[0].Rows[i]["product_color_id"],
+                    ProductColor = new ProductColorInfo(int.Parse(myDS.Tables[0].Rows[i]["product_color_id"].ToString()),
                         myDS.Tables[0].Rows[i]["product_color_name"].ToString());
                     ProductColorList.Add(ProductColor);
                 }

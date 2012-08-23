@@ -140,7 +140,7 @@ namespace BL
             if (errors.Count > 0)
                 return;
 
-            DALProductVariationInfo.UpdateProduct(productId, productName, ref errors);
+            DALProduct.UpdateProduct(productId, productName, ref errors);
         }
 
         public static void UpdateBrand(int brandId, string brandName, ref List<string> errors)
@@ -153,7 +153,7 @@ namespace BL
             if (errors.Count > 0)
                 return;
 
-            DALProductVariationInfo.UpdateBrand(brandId, brandName, ref errors);
+            DALBrand.UpdateBrand(brandId, brandName, ref errors);
         }
 
         public static void UpdateProductColor(int productColorId, string productColorName, ref List<string> errors)
@@ -166,7 +166,7 @@ namespace BL
             if (errors.Count > 0)
                 return;
 
-            DALProductVariationInfo.UpdateProductColor(productColorId, productColorName, ref errors);
+            DALProductColor.UpdateProductColor(productColorId, productColorName, ref errors);
         }
 
         public static void UpdateProductCutting(int productCuttingId, string productCuttingName, ref List<string> errors)
@@ -179,7 +179,7 @@ namespace BL
             if (errors.Count > 0)
                 return;
 
-            DALProductVariationInfo.UpdateProductCutting(productCuttingId, productCuttingName, ref errors);
+            DALProductCutting.UpdateProductCutting(productCuttingId, productCuttingName, ref errors);
         }
 
         public static void UpdateProductType(int productTypeId, string productTypeName, ref List<string> errors)
@@ -192,7 +192,7 @@ namespace BL
             if (errors.Count > 0)
                 return;
 
-            DALProductVariationInfo.UpdateProductType(productTypeId, productTypeName, ref errors);
+            DALType.UpdateProductType(productTypeId, productTypeName, ref errors);
         }
     }
 }

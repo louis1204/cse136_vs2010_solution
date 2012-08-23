@@ -6,11 +6,11 @@ using DomainModel;
 
 namespace DALTest
 {
-    
-    
+
+
     /// <summary>
-    ///This is a test class for DALBrandTest and is intended
-    ///to contain all DALBrandTest Unit Tests
+    ///This is a test class for DALProductTest and is intended
+    ///to contain all DALProductTest Unit Tests
     ///</summary>
     [TestClass()]
     public class DALBrandTest
@@ -72,64 +72,37 @@ namespace DALTest
         [TestMethod()]
         public void CreateBrandTest()
         {
-            string brand_name = string.Empty; // TODO: Initialize to an appropriate value
-            List<string> errors = null; // TODO: Initialize to an appropriate value
-            List<string> errorsExpected = null; // TODO: Initialize to an appropriate value
-            int expected = 0; // TODO: Initialize to an appropriate value
-            int actual;
-            actual = DALBrand.CreateBrand(brand_name, ref errors);
-            Assert.AreEqual(errorsExpected, errors);
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
-        }
-
-        /// <summary>
-        ///A test for ReadBrandDetail
-        ///</summary>
-        [TestMethod()]
-        public void ReadBrandDetailTest()
-        {
-            int brand_id = 0; // TODO: Initialize to an appropriate value
-            List<string> errors = null; // TODO: Initialize to an appropriate value
-            List<string> errorsExpected = null; // TODO: Initialize to an appropriate value
-            BrandInfo expected = null; // TODO: Initialize to an appropriate value
-            BrandInfo actual;
-            actual = DALBrand.ReadBrandDetail(brand_id, ref errors);
-            Assert.AreEqual(errorsExpected, errors);
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
-        }
-
-        /// <summary>
-        ///A test for ReadBrandList
-        ///</summary>
-        [TestMethod()]
-        public void ReadBrandListTest()
-        {
-            List<string> errors = null; // TODO: Initialize to an appropriate value
-            List<string> errorsExpected = null; // TODO: Initialize to an appropriate value
-            List<BrandInfo> expected = null; // TODO: Initialize to an appropriate value
-            List<BrandInfo> actual;
-            actual = DALBrand.ReadBrandList(ref errors);
-            Assert.AreEqual(errorsExpected, errors);
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
-        }
-
-        /// <summary>
-        ///A test for UpdateBrand
-        ///</summary>
-        [TestMethod()]
-        public void UpdateBrandTest()
-        {
-            int brand_id = 1; // TODO: Initialize to an appropriate value
-            string brand_name = "Hello Kitty"; // TODO: Initialize to an appropriate value
+            Random rand = new Random();
+            string Brand_name = "Hello Kitty" + rand.Next(10000); // TODO: Initialize to an appropriate value
             List<string> errors = new List<string>(); // TODO: Initialize to an appropriate value
             List<string> errorsExpected = new List<string>(); // TODO: Initialize to an appropriate value
-            int expected = 1; // TODO: Initialize to an appropriate value
+
             int actual;
-            actual = DALBrand.UpdateBrand(brand_id, brand_name, ref errors);
-            Assert.AreEqual(expected, actual);
+            actual = DALBrand.CreateBrand(Brand_name, ref errors);
+            BrandInfo pi = DALBrand.ReadBrandDetail(actual, ref errors);
+            Assert.AreEqual(pi.brand_name, Brand_name);
+            Assert.AreEqual(pi.brand_id, actual);
+        }
+
+        /// <summary>
+        ///A test for UpdateProductCutting
+        ///</summary>
+        [TestMethod()]
+        public void UpdateProductBrandTest()
+        {
+            int myId = 1;
+            Random rand = new Random();
+            BrandInfo Brand = new BrandInfo(myId, "Sanrio " + rand.Next(10000));
+            List<string> errors = new List<string>();
+            int result = DALBrand.UpdateBrand(Brand.brand_id, Brand.brand_name, ref errors);
+            Assert.AreEqual(0, errors.Count);
+            Assert.AreNotEqual(-1, result);
+
+            BrandInfo verifyBrand = DALBrand.ReadBrandDetail(myId, ref errors);
+            Assert.AreEqual(0, errors.Count);
+
+            Assert.AreEqual(Brand.brand_id, verifyBrand.brand_id);
+            Assert.AreEqual(Brand.brand_name, verifyBrand.brand_name);
         }
     }
 }

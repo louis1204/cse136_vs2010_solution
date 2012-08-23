@@ -6,8 +6,8 @@ using DomainModel;
 
 namespace DALTest
 {
-    
-    
+
+
     /// <summary>
     ///This is a test class for DALProductCuttingTest and is intended
     ///to contain all DALProductCuttingTest Unit Tests
@@ -72,48 +72,18 @@ namespace DALTest
         [TestMethod()]
         public void CreateProductCuttingTest()
         {
-            string product_cutting_name = string.Empty; // TODO: Initialize to an appropriate value
-            List<string> errors = null; // TODO: Initialize to an appropriate value
-            List<string> errorsExpected = null; // TODO: Initialize to an appropriate value
-            int expected = 0; // TODO: Initialize to an appropriate value
-            int actual;
-            actual = DALProductCutting.CreateProductCutting(product_cutting_name, ref errors);
-            Assert.AreEqual(errorsExpected, errors);
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
-        }
+            Random rand = new Random();
+            string product_cutting_name = "super deep v sweater " + rand.Next(10000);
+            List<string> errors = new List<string>();
+            int result = DALProductCutting.CreateProductCutting(product_cutting_name, ref errors);
+            Assert.AreEqual(0, errors.Count);
+            Assert.AreNotEqual(-1, result);
 
-        /// <summary>
-        ///A test for ReadProductCuttingDetail
-        ///</summary>
-        [TestMethod()]
-        public void ReadProductCuttingDetailTest()
-        {
-            int product_cutting_id = 0; // TODO: Initialize to an appropriate value
-            List<string> errors = null; // TODO: Initialize to an appropriate value
-            List<string> errorsExpected = null; // TODO: Initialize to an appropriate value
-            ProductCuttingInfo expected = null; // TODO: Initialize to an appropriate value
-            ProductCuttingInfo actual;
-            actual = DALProductCutting.ReadProductCuttingDetail(product_cutting_id, ref errors);
-            Assert.AreEqual(errorsExpected, errors);
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
-        }
+            ProductCuttingInfo verifyCutting = DALProductCutting.ReadProductCuttingDetail(result, ref errors);
+            Assert.AreEqual(0, errors.Count);
 
-        /// <summary>
-        ///A test for ReadProductCuttingList
-        ///</summary>
-        [TestMethod()]
-        public void ReadProductCuttingListTest()
-        {
-            List<string> errors = null; // TODO: Initialize to an appropriate value
-            List<string> errorsExpected = null; // TODO: Initialize to an appropriate value
-            List<ProductCuttingInfo> expected = null; // TODO: Initialize to an appropriate value
-            List<ProductCuttingInfo> actual;
-            actual = DALProductCutting.ReadProductCuttingList(ref errors);
-            Assert.AreEqual(errorsExpected, errors);
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            Assert.AreEqual(result, verifyCutting.product_cutting_id);
+            Assert.AreEqual(product_cutting_name, verifyCutting.product_cutting_name);
         }
 
         /// <summary>
@@ -122,14 +92,19 @@ namespace DALTest
         [TestMethod()]
         public void UpdateProductCuttingTest()
         {
-            int product_cutting_id = 1; // TODO: Initialize to an appropriate value
-            string product_cutting_name = "Midget"; // TODO: Initialize to an appropriate value
-            List<string> errors = new List<string>(); // TODO: Initialize to an appropriate value
-            List<string> errorsExpected = new List<string>(); // TODO: Initialize to an appropriate value
-            int expected = 1; // TODO: Initialize to an appropriate value
-            int actual;
-            actual = DALProductCutting.UpdateProductCutting(product_cutting_id, product_cutting_name, ref errors);
-            Assert.AreEqual(expected, actual);
+            int myId = 1;
+            Random rand = new Random();
+            ProductCuttingInfo cutting= new ProductCuttingInfo(myId,"turtle neck " + rand.Next(10000));
+            List<string> errors = new List<string>();
+            int result = DALProductCutting.UpdateProductCutting(cutting.product_cutting_id, cutting.product_cutting_name, ref errors);
+            Assert.AreEqual(0, errors.Count);
+            Assert.AreNotEqual(-1, result);
+
+            ProductCuttingInfo verifyCutting = DALProductCutting.ReadProductCuttingDetail(myId, ref errors);
+            Assert.AreEqual(0, errors.Count);
+
+            Assert.AreEqual(cutting.product_cutting_id, verifyCutting.product_cutting_id);
+            Assert.AreEqual(cutting.product_cutting_name, verifyCutting.product_cutting_name);
         }
     }
 }

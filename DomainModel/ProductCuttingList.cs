@@ -7,7 +7,7 @@ namespace DomainModel
 {
     public class ProductCuttingList
     {
-        List<ProductCuttingInfo> ProductCuttings = new List<ProductCuttingInfo>();
+        public List<ProductCuttingInfo> ProductCuttings = new List<ProductCuttingInfo>();
 
         public ProductCuttingList()
         {

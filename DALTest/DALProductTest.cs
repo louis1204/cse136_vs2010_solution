@@ -72,64 +72,37 @@ namespace DALTest
         [TestMethod()]
         public void CreateProductTest()
         {
-            string product_name = string.Empty; // TODO: Initialize to an appropriate value
-            List<string> errors = null; // TODO: Initialize to an appropriate value
-            List<string> errorsExpected = null; // TODO: Initialize to an appropriate value
-            int expected = 0; // TODO: Initialize to an appropriate value
+            Random rand = new Random();
+            string product_name = "Hello Kitty" + rand.Next(10000); // TODO: Initialize to an appropriate value
+            List<string> errors = new List<string>(); // TODO: Initialize to an appropriate value
+            List<string> errorsExpected = new List<string>(); // TODO: Initialize to an appropriate value
+            
             int actual;
             actual = DALProduct.CreateProduct(product_name, ref errors);
-            Assert.AreEqual(errorsExpected, errors);
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            ProductInfo pi = DALProduct.ReadProductDetail(actual, ref errors);
+            Assert.AreEqual(pi.product_name, product_name);
+            Assert.AreEqual(pi.product_id, actual);
         }
 
         /// <summary>
-        ///A test for ReadProductDetail
-        ///</summary>
-        [TestMethod()]
-        public void ReadProductDetailTest()
-        {
-            int product_id = 0; // TODO: Initialize to an appropriate value
-            List<string> errors = null; // TODO: Initialize to an appropriate value
-            List<string> errorsExpected = null; // TODO: Initialize to an appropriate value
-            ProductInfo expected = null; // TODO: Initialize to an appropriate value
-            ProductInfo actual;
-            actual = DALProduct.ReadProductDetail(product_id, ref errors);
-            Assert.AreEqual(errorsExpected, errors);
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
-        }
-
-        /// <summary>
-        ///A test for ReadProductList
-        ///</summary>
-        [TestMethod()]
-        public void ReadProductListTest()
-        {
-            List<string> errors = null; // TODO: Initialize to an appropriate value
-            List<string> errorsExpected = null; // TODO: Initialize to an appropriate value
-            List<ProductInfo> expected = null; // TODO: Initialize to an appropriate value
-            List<ProductInfo> actual;
-            actual = DALProduct.ReadProductList(ref errors);
-            Assert.AreEqual(errorsExpected, errors);
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
-        }
-
-        /// <summary>
-        ///A test for UpdateProduct
+        ///A test for UpdateProductCutting
         ///</summary>
         [TestMethod()]
         public void UpdateProductTest()
         {
-            int product_id = 1; // TODO: Initialize to an appropriate value
-            string product_name = "Hello Kitty"; // TODO: Initialize to an appropriate value
-            List<string> errors = new List<string>(); // TODO: Initialize to an appropriate value
-            List<string> errorsExpected = new List<string>(); // TODO: Initialize to an appropriate value
-            int expected = 1; // TODO: Initialize to an appropriate value
-            int actual;
-            actual = DALProduct.UpdateProduct(product_id, product_name, ref errors);
-            Assert.AreEqual(expected, actual);
+            int myId = 1;
+            Random rand = new Random();
+            ProductInfo pi = new ProductInfo(myId, "turtle neck " + rand.Next(10000));
+            List<string> errors = new List<string>();
+            int result = DALProduct.UpdateProduct(pi.product_id, pi.product_name, ref errors);
+            Assert.AreEqual(0, errors.Count);
+            Assert.AreNotEqual(-1, result);
+
+            ProductInfo verify = DALProduct.ReadProductDetail(myId, ref errors);
+            Assert.AreEqual(0, errors.Count);
+
+            Assert.AreEqual(pi.product_id, verify.product_id);
+            Assert.AreEqual(pi.product_name, verify.product_name);
         }
     }
 }

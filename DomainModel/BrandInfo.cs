@@ -7,8 +7,8 @@ namespace DomainModel
 {
     public class BrandInfo
     {
-        private int brand_id { get; set; }
-        private String brand_name { get; set; }
+        public int brand_id { get; set; }
+        public String brand_name { get; set; }
 
         public BrandInfo(int brand_id_in, String brand_name_in)
         {

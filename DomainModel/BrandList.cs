@@ -7,7 +7,7 @@ namespace DomainModel
 {
     public class BrandList
     {
-        List<BrandInfo> brands = new List<BrandInfo>();
+        public List<BrandInfo> brands = new List<BrandInfo>();
 
         public BrandList()
         {

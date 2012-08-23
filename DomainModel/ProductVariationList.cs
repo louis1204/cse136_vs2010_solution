@@ -7,7 +7,7 @@ namespace DomainModel
 {
     public class ProductVariationList
     {
-        List<ProductVariationInfo> product_variations = new List<ProductVariationInfo>();
+        public List<ProductVariationInfo> product_variations = new List<ProductVariationInfo>();
 
         public ProductVariationList()
         {

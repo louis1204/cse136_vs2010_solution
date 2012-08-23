@@ -47,6 +47,7 @@ C:\Users\owner\Desktop\cse136_vs2010_solution\cse136\bin\Debug\DomainModel.pdb
 C:\Users\owner\Desktop\cse136_vs2010_solution\cse136\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\owner\Desktop\cse136_vs2010_solution\cse136\obj\Debug\cse136.dll
 C:\Users\owner\Desktop\cse136_vs2010_solution\cse136\obj\Debug\cse136.pdb
+C:\Users\Louis\Documents\School\UCSD\cse136\cse136_vs2010_solution\cse136\bin\Debug\cse136.dll.config
 C:\Users\Louis\Documents\School\UCSD\cse136\cse136_vs2010_solution\cse136\bin\Debug\cse136.dll
 C:\Users\Louis\Documents\School\UCSD\cse136\cse136_vs2010_solution\cse136\bin\Debug\cse136.pdb
 C:\Users\Louis\Documents\School\UCSD\cse136\cse136_vs2010_solution\cse136\bin\Debug\DomainModel.dll
@@ -54,4 +55,3 @@ C:\Users\Louis\Documents\School\UCSD\cse136\cse136_vs2010_solution\cse136\bin\De
 C:\Users\Louis\Documents\School\UCSD\cse136\cse136_vs2010_solution\cse136\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Louis\Documents\School\UCSD\cse136\cse136_vs2010_solution\cse136\obj\Debug\cse136.dll
 C:\Users\Louis\Documents\School\UCSD\cse136\cse136_vs2010_solution\cse136\obj\Debug\cse136.pdb
-C:\Users\Louis\Documents\School\UCSD\cse136\cse136_vs2010_solution\cse136\bin\Debug\cse136.dll.config

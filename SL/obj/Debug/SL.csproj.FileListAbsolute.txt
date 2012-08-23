@@ -75,14 +75,4 @@ C:\Users\owner\Desktop\cse136_vs2010_solution\SL\bin\cse136.pdb
 C:\Users\owner\Desktop\cse136_vs2010_solution\SL\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\owner\Desktop\cse136_vs2010_solution\SL\obj\Debug\SL.dll
 C:\Users\owner\Desktop\cse136_vs2010_solution\SL\obj\Debug\SL.pdb
-C:\Users\Louis\Documents\School\UCSD\cse136\cse136_vs2010_solution\SL\bin\SL.dll
-C:\Users\Louis\Documents\School\UCSD\cse136\cse136_vs2010_solution\SL\bin\SL.pdb
-C:\Users\Louis\Documents\School\UCSD\cse136\cse136_vs2010_solution\SL\bin\BL.dll
-C:\Users\Louis\Documents\School\UCSD\cse136\cse136_vs2010_solution\SL\bin\DomainModel.dll
-C:\Users\Louis\Documents\School\UCSD\cse136\cse136_vs2010_solution\SL\bin\cse136.dll
-C:\Users\Louis\Documents\School\UCSD\cse136\cse136_vs2010_solution\SL\bin\BL.pdb
-C:\Users\Louis\Documents\School\UCSD\cse136\cse136_vs2010_solution\SL\bin\DomainModel.pdb
-C:\Users\Louis\Documents\School\UCSD\cse136\cse136_vs2010_solution\SL\bin\cse136.pdb
 C:\Users\Louis\Documents\School\UCSD\cse136\cse136_vs2010_solution\SL\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\Louis\Documents\School\UCSD\cse136\cse136_vs2010_solution\SL\obj\Debug\SL.dll
-C:\Users\Louis\Documents\School\UCSD\cse136\cse136_vs2010_solution\SL\obj\Debug\SL.pdb

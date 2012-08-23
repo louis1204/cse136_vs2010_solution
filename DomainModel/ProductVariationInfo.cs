@@ -20,6 +20,21 @@ namespace DomainModel
         public float price { get; set; }
         public char condition { get; set; }
 
+        public ProductVariationInfo(ProductVariationInfo pv)
+        {
+            this.product_variation_id = pv.product_variation_id;
+            this.product_id = pv.product_color_id;
+            this.product_brand_id = pv.product_brand_id;
+            this.product_cutting_id = pv.product_cutting_id;
+            this.product_color_id = pv.product_color_id;
+            this.product_type_id = pv.product_type_id;
+            this.sex = pv.sex;
+            this.size = pv.size;
+            this.stock = pv.stock;
+            this.price = pv.price;
+            this.condition = pv.condition;
+        }
+
         public ProductVariationInfo(int product_variation_id_in, int product_id_in,
             int product_brand_id_in, int product_cutting_id_in,
             int product_color_id_in, int product_type_id_in,

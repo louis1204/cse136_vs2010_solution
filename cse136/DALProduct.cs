@@ -33,7 +33,7 @@ namespace DAL
 
                 DataSet myDS = new DataSet();
                 mySA.Fill(myDS);
-                return 1;
+                return (int)productIdParmOut.Value;
             }
 
             catch (Exception e)
@@ -70,7 +70,7 @@ namespace DAL
                 if (myDS.Tables[0].Rows.Count == 0)
                     return null;
 
-                Product = new ProductInfo((int)myDS.Tables[0].Rows[0]["product_id"],
+                Product = new ProductInfo(int.Parse(myDS.Tables[0].Rows[0]["product_id"].ToString()),
                     myDS.Tables[0].Rows[0]["product_name"].ToString());
             }
             catch (Exception e)
@@ -107,7 +107,7 @@ namespace DAL
 
                 for (int i = 0; i < myDS.Tables[0].Rows.Count; i++)
                 {
-                    Product = new ProductInfo((int)myDS.Tables[0].Rows[i]["product_id"],
+                    Product = new ProductInfo(int.Parse(myDS.Tables[0].Rows[i]["product_id"].ToString()),
                         myDS.Tables[0].Rows[i]["product_name"].ToString());
                     ProductList.Add(Product);
                 }

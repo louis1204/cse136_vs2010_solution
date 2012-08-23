@@ -7,8 +7,8 @@ namespace DomainModel
 {
     public class ProductCuttingInfo
     {
-        int product_cutting_id { get; set; }
-        String product_cutting_name { get; set; }
+        public int product_cutting_id { get; set; }
+        public String product_cutting_name { get; set; }
 
         public ProductCuttingInfo(int product_cutting_id_in, String product_cutting_name_in)
         {

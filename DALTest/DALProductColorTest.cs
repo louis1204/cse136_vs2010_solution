@@ -6,11 +6,11 @@ using DomainModel;
 
 namespace DALTest
 {
-    
-    
+
+
     /// <summary>
-    ///This is a test class for DALProductColorTest and is intended
-    ///to contain all DALProductColorTest Unit Tests
+    ///This is a test class for DALProductTest and is intended
+    ///to contain all DALProductTest Unit Tests
     ///</summary>
     [TestClass()]
     public class DALProductColorTest
@@ -72,64 +72,37 @@ namespace DALTest
         [TestMethod()]
         public void CreateProductColorTest()
         {
-            string product_color_name = string.Empty; // TODO: Initialize to an appropriate value
-            List<string> errors = null; // TODO: Initialize to an appropriate value
-            List<string> errorsExpected = null; // TODO: Initialize to an appropriate value
-            int expected = 0; // TODO: Initialize to an appropriate value
+            Random rand = new Random();
+            string ProductColor_name = "Diarrhea Green " + rand.Next(10000); // TODO: Initialize to an appropriate value
+            List<string> errors = new List<string>(); // TODO: Initialize to an appropriate value
+            List<string> errorsExpected = new List<string>(); // TODO: Initialize to an appropriate value
+
             int actual;
-            actual = DALProductColor.CreateProductColor(product_color_name, ref errors);
-            Assert.AreEqual(errorsExpected, errors);
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            actual = DALProductColor.CreateProductColor(ProductColor_name, ref errors);
+            ProductColorInfo pi = DALProductColor.ReadProductColorDetail(actual, ref errors);
+            Assert.AreEqual(pi.product_color_name, ProductColor_name);
+            Assert.AreEqual(pi.product_color_id, actual);
         }
 
         /// <summary>
-        ///A test for ReadProductColorDetail
-        ///</summary>
-        [TestMethod()]
-        public void ReadProductColorDetailTest()
-        {
-            int product_color_id = 0; // TODO: Initialize to an appropriate value
-            List<string> errors = null; // TODO: Initialize to an appropriate value
-            List<string> errorsExpected = null; // TODO: Initialize to an appropriate value
-            ProductColorInfo expected = null; // TODO: Initialize to an appropriate value
-            ProductColorInfo actual;
-            actual = DALProductColor.ReadProductColorDetail(product_color_id, ref errors);
-            Assert.AreEqual(errorsExpected, errors);
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
-        }
-
-        /// <summary>
-        ///A test for ReadProductColorList
-        ///</summary>
-        [TestMethod()]
-        public void ReadProductColorListTest()
-        {
-            List<string> errors = null; // TODO: Initialize to an appropriate value
-            List<string> errorsExpected = null; // TODO: Initialize to an appropriate value
-            List<ProductColorInfo> expected = null; // TODO: Initialize to an appropriate value
-            List<ProductColorInfo> actual;
-            actual = DALProductColor.ReadProductColorList(ref errors);
-            Assert.AreEqual(errorsExpected, errors);
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
-        }
-
-        /// <summary>
-        ///A test for UpdateProductColor
+        ///A test for UpdateProductCutting
         ///</summary>
         [TestMethod()]
         public void UpdateProductColorTest()
         {
-            int product_color_id = 1; // TODO: Initialize to an appropriate value
-            string product_color_name = "Tumeric Yellow"; // TODO: Initialize to an appropriate value
-            List<string> errors = new List<string>(); // TODO: Initialize to an appropriate value
-            List<string> errorsExpected = new List<string>(); // TODO: Initialize to an appropriate value
-            int expected = 1; // TODO: Initialize to an appropriate value
-            int actual;
-            actual = DALProductColor.UpdateProductColor(product_color_id, product_color_name, ref errors);
-            Assert.AreEqual(expected, actual);
+            int myId = 1;
+            Random rand = new Random();
+            ProductColorInfo Color = new ProductColorInfo(myId, "Sanrio Pink " + rand.Next(10000));
+            List<string> errors = new List<string>();
+            int result = DALProductColor.UpdateProductColor(Color.product_color_id, Color.product_color_name, ref errors);
+            Assert.AreEqual(0, errors.Count);
+            Assert.AreNotEqual(-1, result);
+
+            ProductColorInfo verifyColor = DALProductColor.ReadProductColorDetail(myId, ref errors);
+            Assert.AreEqual(0, errors.Count);
+
+            Assert.AreEqual(Color.product_color_id, verifyColor.product_color_id);
+            Assert.AreEqual(Color.product_color_name, verifyColor.product_color_name);
         }
     }
 }

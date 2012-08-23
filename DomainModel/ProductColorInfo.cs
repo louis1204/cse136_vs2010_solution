@@ -7,13 +7,13 @@ namespace DomainModel
 {
     public class ProductColorInfo
     {
-        private int product_Color_id { get; set; }
-        private String product_Color_name { get; set; }
+        public int product_color_id { get; set; }
+        public String product_color_name { get; set; }
 
-        public ProductColorInfo(int product_Color_id_in, String product_Color_name_in)
+        public ProductColorInfo(int product_color_id_in, String product_color_name_in)
         {
-            this.product_Color_id = product_Color_id_in;
-            this.product_Color_name = product_Color_name_in;
+            this.product_color_id = product_color_id_in;
+            this.product_color_name = product_color_name_in;
         }
     }
 }

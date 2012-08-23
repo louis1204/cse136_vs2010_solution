@@ -23,6 +23,7 @@ namespace DAL
 
                 SqlDataAdapter mySA = new SqlDataAdapter(strSQL, conn);
                 mySA.SelectCommand.CommandType = CommandType.StoredProcedure;
+
                 mySA.SelectCommand.Parameters.Add(new SqlParameter("@product_cutting_name", SqlDbType.VarChar, 50));
 
                 SqlParameter ProductCuttingIdParmOut = new SqlParameter("@product_cutting_id_output", SqlDbType.Int);
@@ -33,20 +34,23 @@ namespace DAL
 
                 DataSet myDS = new DataSet();
                 mySA.Fill(myDS);
-                return 1;
+
+                return (int)ProductCuttingIdParmOut.Value; // ADDED
+
+                //return 1;
             }
 
             catch (Exception e)
             {
                 System.Diagnostics.Debug.Write("THIS IS THE ERROR: " + e.ToString());
                 errors.Add("Error: " + e.ToString());
-                return -1;
             }
             finally
             {
                 conn.Dispose();
                 conn = null;
             }
+            return -1;
         }
 
         public static ProductCuttingInfo ReadProductCuttingDetail(int product_cutting_id, ref List<string> errors)
@@ -70,8 +74,9 @@ namespace DAL
                 if (myDS.Tables[0].Rows.Count == 0)
                     return null;
 
-                ProductCutting = new ProductCuttingInfo((int)myDS.Tables[0].Rows[0]["product_cutting_id"],
+                ProductCutting = new ProductCuttingInfo(int.Parse(myDS.Tables[0].Rows[0]["product_cutting_id"].ToString()),
                     myDS.Tables[0].Rows[0]["product_cutting_name"].ToString());
+                return ProductCutting;
             }
             catch (Exception e)
             {
@@ -82,14 +87,13 @@ namespace DAL
                 conn.Dispose();
                 conn = null;
             }
-
-            return ProductCutting;
+            return null;
         }
 
         public static List<ProductCuttingInfo> ReadProductCuttingList(ref List<string> errors)
         {
             SqlConnection conn = new SqlConnection(connection_string);
-            ProductCuttingInfo ProductCutting = null;
+            ProductCuttingInfo Product = null;
             List<ProductCuttingInfo> ProductCuttingList = new List<ProductCuttingInfo>();
 
             try
@@ -107,9 +111,9 @@ namespace DAL
 
                 for (int i = 0; i < myDS.Tables[0].Rows.Count; i++)
                 {
-                    ProductCutting = new ProductCuttingInfo((int)myDS.Tables[0].Rows[i]["product_cutting_id"],
+                    Product = new ProductCuttingInfo(int.Parse(myDS.Tables[0].Rows[i]["product_cutting_id"].ToString()),
                         myDS.Tables[0].Rows[i]["product_cutting_name"].ToString());
-                    ProductCuttingList.Add(ProductCutting);
+                    ProductCuttingList.Add(Product);
                 }
             }
             catch (Exception e)
@@ -149,7 +153,6 @@ namespace DAL
             {
                 System.Diagnostics.Debug.Write("THIS IS THE ERROR: " + e.ToString());
                 errors.Add("Error: " + e.ToString());
-                return -1;
             }
 
             finally
@@ -157,6 +160,7 @@ namespace DAL
                 conn.Dispose();
                 conn = null;
             }
+            return -1;
         }
     }
 }

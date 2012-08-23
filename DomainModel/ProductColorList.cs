@@ -7,7 +7,7 @@ namespace DomainModel
 {
     public class ProductColorList
     {
-        List<ProductColorInfo> ProductColors = new List<ProductColorInfo>();
+        public List<ProductColorInfo> ProductColors = new List<ProductColorInfo>();
 
         public ProductColorList()
         {
