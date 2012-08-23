@@ -86,6 +86,22 @@ namespace DALTest
             Assert.AreEqual(product_cutting_name, verifyCutting.product_cutting_name);
         }
 
+        [TestMethod]
+        public void ReadAllProductCuttingTest()
+        {
+            List<string> errors = new List<string>(); // TODO: Initialize to an appropriate value
+            List<string> errorsExpected = new List<string>(); // TODO: Initialize to an appropriate value
+            List<ProductCuttingInfo> ProductCuttingList1 = DALProductCutting.ReadProductCuttingList(ref errors);
+            List<ProductCuttingInfo> ProductCuttingList2 = DALProductCutting.ReadProductCuttingList(ref errors);
+
+            Assert.AreEqual(ProductCuttingList1.Count, ProductCuttingList2.Count);
+            Assert.AreEqual(errors.Count, 0);
+            for (int i = 0; i < ProductCuttingList1.Count; i++)
+            {
+                Assert.AreEqual(ProductCuttingList1[i].product_cutting_id, ProductCuttingList2[i].product_cutting_id);
+                Assert.AreEqual(ProductCuttingList1[i].product_cutting_name, ProductCuttingList2[i].product_cutting_name);
+            }
+        }
         /// <summary>
         ///A test for UpdateProductCutting
         ///</summary>

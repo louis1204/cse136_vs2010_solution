@@ -105,9 +105,32 @@ namespace DALTest
             Assert.AreEqual(pv.condition, ProductVariationInfo.condition);
         }
 
-        /// <summary>
-        ///A test for UpdateProductVariationInfo
-        ///</summary>
+        [TestMethod]
+        public void ReadAllPVTest()
+        {
+            List<string> errors = new List<string>(); // TODO: Initialize to an appropriate value
+            List<string> errorsExpected = new List<string>(); // TODO: Initialize to an appropriate value
+            List<ProductVariationInfo> pvList1 = DALProductVariationInfo.ReadPVList(ref errors);
+            List<ProductVariationInfo> pvList2 = DALProductVariationInfo.ReadPVList(ref errors);
+
+            Assert.AreEqual(pvList1.Count, pvList2.Count);
+            Assert.AreEqual(errors.Count, 0);
+            for (int i = 0; i < pvList1.Count; i++)
+            {
+                Assert.AreEqual(pvList1[i].product_variation_id, pvList2[i].product_variation_id);
+                Assert.AreEqual(pvList1[i].product_id, pvList2[i].product_id);
+                Assert.AreEqual(pvList1[i].product_brand_id, pvList2[i].product_brand_id);
+                Assert.AreEqual(pvList1[i].product_cutting_id, pvList2[i].product_cutting_id);
+                Assert.AreEqual(pvList1[i].product_color_id, pvList2[i].product_color_id);
+                Assert.AreEqual(pvList1[i].product_type_id, pvList2[i].product_type_id);
+                Assert.AreEqual(pvList1[i].sex, pvList2[i].sex);
+                Assert.AreEqual(pvList1[i].size, pvList2[i].size);
+                Assert.AreEqual(pvList1[i].stock, pvList2[i].stock);
+                Assert.AreEqual(pvList1[i].price, pvList2[i].price);
+                Assert.AreEqual(pvList1[i].condition, pvList2[i].condition);
+            }
+        }
+
         [TestMethod()]
         public void UpdateProductVariationInfoTest()
         {
@@ -118,17 +141,7 @@ namespace DALTest
             List<string> errors = new List<string>(); // TODO: Initialize to an appropriate value
             List<string> errorsExpected = new List<string>(); // TODO: Initialize to an appropriate value
             int result = DALProductVariationInfo.UpdateProductVariationInfo(ProductVariationInfo, ref errors);
-            ProductVariationInfo pv = new ProductVariationInfo(DALProductVariationInfo.ReadPVDetail(1, ref errors).product_variation_id,
-                DALProductVariationInfo.ReadPVDetail(1, ref errors).product_id,
-                DALProductVariationInfo.ReadPVDetail(1, ref errors).product_brand_id,
-                DALProductVariationInfo.ReadPVDetail(1, ref errors).product_cutting_id,
-                DALProductVariationInfo.ReadPVDetail(1, ref errors).product_color_id,
-                DALProductVariationInfo.ReadPVDetail(1, ref errors).product_type_id,
-                DALProductVariationInfo.ReadPVDetail(1, ref errors).sex,
-                DALProductVariationInfo.ReadPVDetail(1, ref errors).size,
-                DALProductVariationInfo.ReadPVDetail(1, ref errors).stock,
-                DALProductVariationInfo.ReadPVDetail(1, ref errors).price,
-                DALProductVariationInfo.ReadPVDetail(1, ref errors).condition);
+            ProductVariationInfo pv = DALProductVariationInfo.ReadPVDetail(result, ref errors);
             Assert.AreEqual(1, result);
             Assert.AreEqual(pv.product_variation_id, 1);
             Assert.AreEqual(pv.product_id, 2);

@@ -84,6 +84,23 @@ namespace DALTest
             Assert.AreEqual(pi.brand_id, actual);
         }
 
+        [TestMethod]
+        public void ReadAllBrandTest()
+        {
+            List<string> errors = new List<string>(); // TODO: Initialize to an appropriate value
+            List<string> errorsExpected = new List<string>(); // TODO: Initialize to an appropriate value
+            List<BrandInfo> BrandList1 = DALBrand.ReadBrandList(ref errors);
+            List<BrandInfo> BrandList2 = DALBrand.ReadBrandList(ref errors);
+
+            Assert.AreEqual(BrandList1.Count, BrandList2.Count);
+            Assert.AreEqual(errors.Count, 0);
+            for (int i = 0; i < BrandList1.Count; i++)
+            {
+                Assert.AreEqual(BrandList1[i].brand_id, BrandList2[i].brand_id);
+                Assert.AreEqual(BrandList1[i].brand_name, BrandList2[i].brand_name);
+            }
+        }
+
         /// <summary>
         ///A test for UpdateProductCutting
         ///</summary>

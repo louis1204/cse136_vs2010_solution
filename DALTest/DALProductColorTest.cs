@@ -84,6 +84,22 @@ namespace DALTest
             Assert.AreEqual(pi.product_color_id, actual);
         }
 
+        [TestMethod]
+        public void ReadAllProductColorTest()
+        {
+            List<string> errors = new List<string>(); // TODO: Initialize to an appropriate value
+            List<string> errorsExpected = new List<string>(); // TODO: Initialize to an appropriate value
+            List<ProductColorInfo> ProductColorList1 = DALProductColor.ReadProductColorList(ref errors);
+            List<ProductColorInfo> ProductColorList2 = DALProductColor.ReadProductColorList(ref errors);
+
+            Assert.AreEqual(ProductColorList1.Count, ProductColorList2.Count);
+            Assert.AreEqual(errors.Count, 0);
+            for (int i = 0; i < ProductColorList1.Count; i++)
+            {
+                Assert.AreEqual(ProductColorList1[i].product_color_id, ProductColorList2[i].product_color_id);
+                Assert.AreEqual(ProductColorList1[i].product_color_name, ProductColorList2[i].product_color_name);
+            }
+        }
         /// <summary>
         ///A test for UpdateProductCutting
         ///</summary>

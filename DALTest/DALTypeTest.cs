@@ -86,6 +86,23 @@ namespace DALTest
             Assert.AreEqual(product_type_name, verifyType.product_type_name);
         }
 
+        [TestMethod]
+        public void ReadAllProductTypeTest()
+        {
+            List<string> errors = new List<string>(); // TODO: Initialize to an appropriate value
+            List<string> errorsExpected = new List<string>(); // TODO: Initialize to an appropriate value
+            List<ProductTypeInfo> ProductTypeList1 = DALType.ReadProductTypeList(ref errors);
+            List<ProductTypeInfo> ProductTypeList2 = DALType.ReadProductTypeList(ref errors);
+
+            Assert.AreEqual(ProductTypeList1.Count, ProductTypeList2.Count);
+            Assert.AreEqual(errors.Count, 0);
+            for (int i = 0; i < ProductTypeList1.Count; i++)
+            {
+                Assert.AreEqual(ProductTypeList1[i].product_type_id, ProductTypeList2[i].product_type_id);
+                Assert.AreEqual(ProductTypeList1[i].product_type_name, ProductTypeList2[i].product_type_name);
+            }
+        }
+
         /// <summary>
         ///A test for UpdateProductType
         ///</summary>
