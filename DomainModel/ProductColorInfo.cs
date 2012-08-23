@@ -7,8 +7,8 @@ namespace DomainModel
 {
     public class ProductColorInfo
     {
-        int product_Color_id { get; set; }
-        String product_Color_name { get; set; }
+        private int product_Color_id { get; set; }
+        private String product_Color_name { get; set; }
 
         public ProductColorInfo(int product_Color_id_in, String product_Color_name_in)
         {

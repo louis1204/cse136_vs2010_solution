@@ -67,6 +67,100 @@ namespace DAL
             }
         }
 
+        public static ProductVariationInfo ReadPVDetail(int product_variation_id, ref List<string> errors)
+        {
+            SqlConnection conn = new SqlConnection(connection_string);
+            ProductVariationInfo pv = null;
+
+            try
+            {
+                string strSQL = "read_pv";
+
+                SqlDataAdapter mySA = new SqlDataAdapter(strSQL, conn);
+                mySA.SelectCommand.CommandType = CommandType.StoredProcedure;
+                mySA.SelectCommand.Parameters.Add(new SqlParameter("@product_variation_id", SqlDbType.Int));
+
+                mySA.SelectCommand.Parameters["@product_variation_id"].Value = product_variation_id;
+
+                DataSet myDS = new DataSet();
+                mySA.Fill(myDS);
+
+                if (myDS.Tables[0].Rows.Count == 0)
+                    return null;
+
+                pv = new ProductVariationInfo((int)myDS.Tables[0].Rows[0]["product_variation_id"],
+                    (int)myDS.Tables[0].Rows[0]["product_id"],
+                    (int)myDS.Tables[0].Rows[0]["product_brand_id"],
+                    (int)myDS.Tables[0].Rows[0]["product_cutting_id"],
+                    (int)myDS.Tables[0].Rows[0]["product_color_id"],
+                    (int)myDS.Tables[0].Rows[0]["product_type_id"],
+                    (char)myDS.Tables[0].Rows[0]["sex"],
+                    myDS.Tables[0].Rows[0]["size"].ToString(),
+                    (int)myDS.Tables[0].Rows[0]["stock"],
+                    (float)myDS.Tables[0].Rows[0]["price"],
+                    (char)myDS.Tables[0].Rows[0]["condition"]);
+            }
+            catch (Exception e)
+            {
+                errors.Add("Error: " + e.ToString());
+            }
+            finally
+            {
+                conn.Dispose();
+                conn = null;
+            }
+
+            return pv;
+        }
+
+        public static List<ProductVariationInfo> ReadPVList(ref List<string> errors)
+        {
+            SqlConnection conn = new SqlConnection(connection_string);
+            ProductVariationInfo pv = null;
+            List<ProductVariationInfo> pvList = new List<ProductVariationInfo>();
+
+            try
+            {
+                string strSQL = "read_all_pv";
+
+                SqlDataAdapter mySA = new SqlDataAdapter(strSQL, conn);
+                mySA.SelectCommand.CommandType = CommandType.StoredProcedure;
+
+                DataSet myDS = new DataSet();
+                mySA.Fill(myDS);
+
+                if (myDS.Tables[0].Rows.Count == 0)
+                    return null;
+
+                for (int i = 0; i < myDS.Tables[0].Rows.Count; i++)
+                {
+                    pv = new ProductVariationInfo((int)myDS.Tables[0].Rows[i]["product_variation_id"],
+                        (int)myDS.Tables[0].Rows[i]["product_id"],
+                        (int)myDS.Tables[0].Rows[i]["product_brand_id"],
+                        (int)myDS.Tables[0].Rows[i]["product_cutting_id"],
+                        (int)myDS.Tables[0].Rows[i]["product_color_id"],
+                        (int)myDS.Tables[0].Rows[i]["product_type_id"],
+                        (char)myDS.Tables[0].Rows[i]["sex"],
+                        myDS.Tables[0].Rows[i]["size"].ToString(),
+                        (int)myDS.Tables[0].Rows[i]["stock"],
+                        (float)myDS.Tables[0].Rows[i]["price"],
+                        (char)myDS.Tables[0].Rows[i]["condition"]);
+                    pvList.Add(pv);
+                }
+            }
+            catch (Exception e)
+            {
+                errors.Add("Error: " + e.ToString());
+            }
+            finally
+            {
+                conn.Dispose();
+                conn = null;
+            }
+
+            return pvList;
+        }
+
         public static int UpdateProductVariationInfo(ProductVariationInfo ProductVariationInfo, ref List<string> errors)
         {
             SqlConnection conn = new SqlConnection(connection_string);
@@ -130,171 +224,6 @@ namespace DAL
                 mySA.SelectCommand.Parameters.Add(new SqlParameter("@product_variation_id", SqlDbType.Int));
 
                 mySA.SelectCommand.Parameters["@product_variation_id"].Value = product_variation_id;
-
-                DataSet myDS = new DataSet();
-                mySA.Fill(myDS);
-                return 1;
-            }
-
-            catch (Exception e)
-            {
-                System.Diagnostics.Debug.Write("THIS IS THE ERROR: " + e.ToString());
-                errors.Add("Error: " + e.ToString());
-                return -1;
-            }
-            finally
-            {
-                conn.Dispose();
-                conn = null;
-            }
-        }
-
-        public static int UpdateProduct(int product_id, string product_name, ref List<string> errors)
-        {
-            SqlConnection conn = new SqlConnection(connection_string);
-            try
-            {
-                string strSQL = "update_product";
-
-                SqlDataAdapter mySA = new SqlDataAdapter(strSQL, conn);
-                mySA.SelectCommand.CommandType = CommandType.StoredProcedure;
-                mySA.SelectCommand.Parameters.Add(new SqlParameter("@product_id", SqlDbType.Int));
-                mySA.SelectCommand.Parameters.Add(new SqlParameter("@product_name", SqlDbType.VarChar, 255));
-
-                mySA.SelectCommand.Parameters["@product_id"].Value = product_id;
-                mySA.SelectCommand.Parameters["@product_name"].Value = product_name;
-
-                DataSet myDS = new DataSet();
-                mySA.Fill(myDS);
-                return 1;
-            }
-
-            catch (Exception e)
-            {
-                System.Diagnostics.Debug.Write("THIS IS THE ERROR: " + e.ToString());
-                errors.Add("Error: " + e.ToString());
-                return -1;
-            }
-            finally
-            {
-                conn.Dispose();
-                conn = null;
-            }
-        }
-
-        public static int UpdateBrand(int brand_id, string brand_name, ref List<string> errors)
-        {
-            SqlConnection conn = new SqlConnection(connection_string);
-            try
-            {
-                string strSQL = "update_brand";
-
-                SqlDataAdapter mySA = new SqlDataAdapter(strSQL, conn);
-                mySA.SelectCommand.CommandType = CommandType.StoredProcedure;
-                mySA.SelectCommand.Parameters.Add(new SqlParameter("@brand_id", SqlDbType.Int));
-                mySA.SelectCommand.Parameters.Add(new SqlParameter("@brand_name", SqlDbType.VarChar, 60));
-
-                mySA.SelectCommand.Parameters["@brand_id"].Value = brand_id;
-                mySA.SelectCommand.Parameters["@brand_name"].Value = brand_name;
-
-                DataSet myDS = new DataSet();
-                mySA.Fill(myDS);
-                return 1;
-            }
-
-            catch (Exception e)
-            {
-                System.Diagnostics.Debug.Write("THIS IS THE ERROR: " + e.ToString());
-                errors.Add("Error: " + e.ToString());
-                return -1;
-            }
-            finally
-            {
-                conn.Dispose();
-                conn = null;
-            }
-        }
-
-        public static int UpdateProductCutting(int product_cutting_id, string product_cutting_name, ref List<string> errors)
-        {
-            SqlConnection conn = new SqlConnection(connection_string);
-            try
-            {
-                string strSQL = "update_product_cutting";
-
-                SqlDataAdapter mySA = new SqlDataAdapter(strSQL, conn);
-                mySA.SelectCommand.CommandType = CommandType.StoredProcedure;
-                mySA.SelectCommand.Parameters.Add(new SqlParameter("@product_cutting_id", SqlDbType.Int));
-                mySA.SelectCommand.Parameters.Add(new SqlParameter("@product_cutting_name", SqlDbType.VarChar, 50));
-
-                mySA.SelectCommand.Parameters["@product_cutting_id"].Value = product_cutting_id;
-                mySA.SelectCommand.Parameters["@product_cutting_name"].Value = product_cutting_name;
-
-                DataSet myDS = new DataSet();
-                mySA.Fill(myDS);
-                return 1;
-            }
-
-            catch (Exception e)
-            {
-                System.Diagnostics.Debug.Write("THIS IS THE ERROR: " + e.ToString());
-                errors.Add("Error: " + e.ToString());
-                return -1;
-            }
-            finally
-            {
-                conn.Dispose();
-                conn = null;
-            }
-        }
-
-        public static int UpdateProductColor(int product_color_id, string product_color_name, ref List<string> errors)
-        {
-            SqlConnection conn = new SqlConnection(connection_string);
-            try
-            {
-                string strSQL = "update_product_color";
-
-                SqlDataAdapter mySA = new SqlDataAdapter(strSQL, conn);
-                mySA.SelectCommand.CommandType = CommandType.StoredProcedure;
-                mySA.SelectCommand.Parameters.Add(new SqlParameter("@product_color_id", SqlDbType.Int));
-                mySA.SelectCommand.Parameters.Add(new SqlParameter("@product_color_name", SqlDbType.VarChar, 50));
-
-                mySA.SelectCommand.Parameters["@product_color_id"].Value = product_color_id;
-                mySA.SelectCommand.Parameters["@product_color_name"].Value = product_color_name;
-
-                DataSet myDS = new DataSet();
-                mySA.Fill(myDS);
-                return 1;
-            }
-
-            catch (Exception e)
-            {
-                System.Diagnostics.Debug.Write("THIS IS THE ERROR: " + e.ToString());
-                errors.Add("Error: " + e.ToString());
-                return -1;
-            }
-            finally
-            {
-                conn.Dispose();
-                conn = null;
-            }
-        }
-
-        public static int UpdateProductType(int product_type_id, string product_type_name, ref List<string> errors)
-        {
-            SqlConnection conn = new SqlConnection(connection_string);
-            try
-            {
-                string strSQL = "update_product_type";
-
-                SqlDataAdapter mySA = new SqlDataAdapter(strSQL, conn);
-                mySA.SelectCommand.CommandType = CommandType.StoredProcedure;
-                mySA.SelectCommand.Parameters.Add(new SqlParameter("@product_type_id", SqlDbType.Int));
-                mySA.SelectCommand.Parameters.Add(new SqlParameter("@product_type_name", SqlDbType.VarChar, 30));
-
-                mySA.SelectCommand.Parameters["@product_type_id"].Value = product_type_id;
-                mySA.SelectCommand.Parameters["@product_type_name"].Value = product_type_name;
 
                 DataSet myDS = new DataSet();
                 mySA.Fill(myDS);

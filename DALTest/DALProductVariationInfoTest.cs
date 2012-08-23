@@ -75,11 +75,24 @@ namespace DALTest
             char gender = 'M';
             char condition = 'a';
 
-            ProductVariationInfo ProductVariationInfo = new ProductVariationInfo(1, 1, 1, 1, 1, 1, gender, "L", 1, (float)1, condition);// TODO: Initialize to an appropriate value
+            ProductVariationInfo ProductVariationInfo = new ProductVariationInfo(1, 1, 1, 1, 1, 1, gender, "L", 1, (float)1.0, condition);// TODO: Initialize to an appropriate value
             List<string> errors = new List<string>(); // TODO: Initialize to an appropriate value
             List<string> errorsExpected = new List<string>(); // TODO: Initialize to an appropriate value
             int result = DALProductVariationInfo.CreatePV(ProductVariationInfo, ref errors);
+
+            ProductVariationInfo pv = DALProductVariationInfo.ReadPVDetail(1, ref errors);
             int expected = 1;
+            Assert.AreEqual(pv.product_variation_id, 1);
+            Assert.AreEqual(pv.product_id, 1);
+            Assert.AreEqual(pv.product_brand_id, 1);
+            Assert.AreEqual(pv.product_cutting_id, 1);
+            Assert.AreEqual(pv.product_color_id, 1);
+            Assert.AreEqual(pv.product_type_id, 1);
+            Assert.AreEqual(pv.sex, gender);
+            Assert.AreEqual(pv.size, "L");
+            Assert.AreEqual(pv.stock, 1);
+            Assert.AreEqual(pv.price, (float)1.0);
+            Assert.AreEqual(pv.condition, condition);
             Assert.AreEqual(expected, result);
         }
 
@@ -92,11 +105,23 @@ namespace DALTest
             char gender = 'M';
             char condition = 'a';
 
-            ProductVariationInfo ProductVariationInfo = new ProductVariationInfo(1, 1, 1, 1, 1, 1, gender, "L", 1, (float)1.0, condition); // TODO: Initialize to an appropriate value
+            ProductVariationInfo ProductVariationInfo = new ProductVariationInfo(1, 2, 2, 2, 2, 2, gender, "L", 2, (float)1.0, condition); // TODO: Initialize to an appropriate value
             List<string> errors = new List<string>(); // TODO: Initialize to an appropriate value
             List<string> errorsExpected = new List<string>(); // TODO: Initialize to an appropriate value
             int result = DALProductVariationInfo.UpdateProductVariationInfo(ProductVariationInfo, ref errors);
+            ProductVariationInfo pv = DALProductVariationInfo.ReadPVDetail(1, ref errors);
             Assert.AreEqual(1, result);
+            Assert.AreEqual(pv.product_variation_id, 1);
+            Assert.AreEqual(pv.product_id, 2);
+            Assert.AreEqual(pv.product_brand_id, 2);
+            Assert.AreEqual(pv.product_cutting_id, 2);
+            Assert.AreEqual(pv.product_color_id, 2);
+            Assert.AreEqual(pv.product_type_id, 2);
+            Assert.AreEqual(pv.sex, gender);
+            Assert.AreEqual(pv.size, "L");
+            Assert.AreEqual(pv.stock, 2);
+            Assert.AreEqual(pv.price, (float)1.0);
+            Assert.AreEqual(pv.condition, condition);
         }
 
         /// <summary>
@@ -111,87 +136,9 @@ namespace DALTest
             int expected = 1; // TODO: Initialize to an appropriate value
             int actual;
             actual = DALProductVariationInfo.DeleteProductVariationInfo(product_variation_id, ref errors);
+            ProductVariationInfo pv = DALProductVariationInfo.ReadPVDetail(50, ref errors);
             Assert.AreEqual(expected, actual);
-        }
-
-        /// <summary>
-        ///A test for UpdateProduct
-        ///</summary>
-        [TestMethod()]
-        public void UpdateProductTest()
-        {
-            int product_id = 1; // TODO: Initialize to an appropriate value
-            string product_name = "Hello Kitty"; // TODO: Initialize to an appropriate value
-            List<string> errors = new List<string>(); // TODO: Initialize to an appropriate value
-            List<string> errorsExpected = new List<string>(); // TODO: Initialize to an appropriate value
-            int expected = 1; // TODO: Initialize to an appropriate value
-            int actual;
-            actual = DALProductVariationInfo.UpdateProduct(product_id, product_name, ref errors);
-            Assert.AreEqual(expected, actual);
-        }
-
-        /// <summary>
-        ///A test for UpdateBrand
-        ///</summary>
-        [TestMethod()]
-        public void UpdateBrandTest()
-        {
-            int brand_id = 1; // TODO: Initialize to an appropriate value
-            string brand_name = "Hello Kitty"; // TODO: Initialize to an appropriate value
-            List<string> errors = new List<string>(); // TODO: Initialize to an appropriate value
-            List<string> errorsExpected = new List<string>(); // TODO: Initialize to an appropriate value
-            int expected = 1; // TODO: Initialize to an appropriate value
-            int actual;
-            actual = DALProductVariationInfo.UpdateBrand(brand_id, brand_name, ref errors);
-            Assert.AreEqual(expected, actual);
-        }
-
-        /// <summary>
-        ///A test for UpdateProductColor
-        ///</summary>
-        [TestMethod()]
-        public void UpdateProductColorTest()
-        {
-            int product_color_id = 1; // TODO: Initialize to an appropriate value
-            string product_color_name = "Tumeric Yellow"; // TODO: Initialize to an appropriate value
-            List<string> errors = new List<string>(); // TODO: Initialize to an appropriate value
-            List<string> errorsExpected = new List<string>(); // TODO: Initialize to an appropriate value
-            int expected = 1; // TODO: Initialize to an appropriate value
-            int actual;
-            actual = DALProductVariationInfo.UpdateProductColor(product_color_id, product_color_name, ref errors);
-            Assert.AreEqual(expected, actual);
-        }
-
-        /// <summary>
-        ///A test for UpdateProductCutting
-        ///</summary>
-        [TestMethod()]
-        public void UpdateProductCuttingTest()
-        {
-            int product_cutting_id = 1; // TODO: Initialize to an appropriate value
-            string product_cutting_name = "Midget"; // TODO: Initialize to an appropriate value
-            List<string> errors = new List<string>(); // TODO: Initialize to an appropriate value
-            List<string> errorsExpected = new List<string>(); // TODO: Initialize to an appropriate value
-            int expected = 1; // TODO: Initialize to an appropriate value
-            int actual;
-            actual = DALProductVariationInfo.UpdateProductCutting(product_cutting_id, product_cutting_name, ref errors);
-            Assert.AreEqual(expected, actual);
-        }
-
-        /// <summary>
-        ///A test for UpdateProductType
-        ///</summary>
-        [TestMethod()]
-        public void UpdateProductTypeTest()
-        {
-            int product_type_id = 1; // TODO: Initialize to an appropriate value
-            string product_type_name = "Football"; // TODO: Initialize to an appropriate value
-            List<string> errors = new List<string>(); // TODO: Initialize to an appropriate value
-            List<string> errorsExpected = new List<string>(); // TODO: Initialize to an appropriate value
-            int expected = 1; // TODO: Initialize to an appropriate value
-            int actual;
-            actual = DALProductVariationInfo.UpdateProductType(product_type_id, product_type_name, ref errors);
-            Assert.AreEqual(expected, actual);
+            Assert.AreEqual('d', pv.condition);
         }
     }
 }

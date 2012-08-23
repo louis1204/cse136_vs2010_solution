@@ -8,7 +8,7 @@
     <ProjectGuid>{4BC7CC26-2421-40C6-B51E-30CC2248D80B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>cse136</RootNamespace>
+    <RootNamespace>DAL</RootNamespace>
     <AssemblyName>cse136</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -60,7 +60,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DALBrand.cs" />
+    <Compile Include="DALProduct.cs" />
+    <Compile Include="DALProductColor.cs" />
+    <Compile Include="DALProductCutting.cs" />
     <Compile Include="DALProductVariation.cs" />
+    <Compile Include="DALType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
