@@ -55,6 +55,11 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLBrandTest.cs" />
+    <Compile Include="BLProductColorTest.cs" />
+    <Compile Include="BLProductCuttingTest.cs" />
+    <Compile Include="BLProductTest.cs" />
+    <Compile Include="BLProductTypeTest.cs" />
     <Compile Include="BLProductVariationTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

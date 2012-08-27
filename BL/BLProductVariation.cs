@@ -10,91 +10,124 @@ namespace BL
 {
     public static class BLProductVariation
     {
-        public static void CreatePV(ProductVariationInfo productVariation, ref List<string> errors)
+        public static int CreatePV(ProductVariationInfo productVariation, ref List<string> errors)
         {
+
             if (productVariation == null)
             {
                 errors.Add("Product Variation cannot be null");
+                return -1;
             }
-
-            else if (productVariation.product_id <= 0)
+            System.Diagnostics.Debug.WriteLine("THIS IS THE PID:" + productVariation.product_id);
+            if (productVariation.product_id <= 0 || productVariation.product_id > DALProduct.ReadProductList(ref errors).Count)
             {
                 errors.Add("Invalid product_id");
             }
 
-            else if (productVariation.product_brand_id <= 0)
+            if (productVariation.product_brand_id <= 0 || productVariation.product_brand_id > DALBrand.ReadBrandList(ref errors).Count)
             {
-                errors.Add("Invalid product_brand_d");
+                errors.Add("Invalid product_brand_id");
             }
-            else if (productVariation.product_cutting_id <= 0)
+            if (productVariation.product_cutting_id <= 0 || productVariation.product_cutting_id > DALProductCutting.ReadProductCuttingList(ref errors).Count)
             {
                 errors.Add("Invalid product_cutting_id");
             }
-            else if (productVariation.product_color_id <= 0)
+            if (productVariation.product_color_id <= 0 || productVariation.product_color_id > DALProductColor.ReadProductColorList(ref errors).Count)
             {
                 errors.Add("Invalid product_color_id");
             }
-            else if (productVariation.sex != 'F' || productVariation.sex != 'M' || productVariation.sex != 'U')
+            if (productVariation.sex != 'F' && productVariation.sex != 'M' && productVariation.sex != 'U')
             {
                 errors.Add("Invalid sex");
             }
-            else if (productVariation.size != "XS" || productVariation.size != "S" || productVariation.size != "M" || productVariation.size != "L" || productVariation.size != "XL" || productVariation.size != "XXL")
+            if (productVariation.size != "XS" && productVariation.size != "S" && productVariation.size != "M" && productVariation.size != "L" && productVariation.size != "XL" && productVariation.size != "XXL")
             {
                 errors.Add("Invalid size");
             }
-            else if (productVariation.stock < 0)
+            if (productVariation.stock < 0)
             {
                 errors.Add("Invalid stock");
             }
-            else if (productVariation.price < 0)
+            if (productVariation.price < 0)
             {
                 errors.Add("Invalid price");
             }
-            else if (productVariation.condition != 'a' || productVariation.condition != 's' || productVariation.condition != 'd')
+            if (productVariation.condition != 'a' && productVariation.condition != 's' && productVariation.condition != 'd')
             {
                 errors.Add("Invalid condition");
             }
 
             if (errors.Count > 0)
-                return;
+            {
+                for( int i = 0; i < errors.Count; i++)
+                {
+                    System.Diagnostics.Debug.WriteLine("THIS IS THE ERROR:" + errors[i]);
+                }
+                return -1;
+            }
 
-            DALProductVariationInfo.CreatePV(productVariation, ref errors);
+            return DALProductVariationInfo.CreatePV(productVariation, ref errors);
         }
 
-        public static void UpdatePV(ProductVariationInfo productVariation, ref List<string> errors)
+        public static ProductVariationInfo ReadPV(int productVariationId, ref List<string> errors)
+        {
+            if (productVariationId <= 0 || productVariationId > DALProductVariationInfo.ReadPVList(ref errors).Count)
+            {
+                System.Diagnostics.Debug.WriteLine("REACHED here is the id: " + productVariationId);
+                errors.Add("Invalid product variation id");
+            }
+
+            if (errors.Count > 0)
+            {
+                for (int i = 0; i < errors.Count; i++)
+                {
+                    System.Diagnostics.Debug.WriteLine("THIS IS THE ERROR: " + errors[i]);
+                }
+                return null;
+            }
+
+            return DALProductVariationInfo.ReadPVDetail(productVariationId, ref errors);
+        }
+
+        public static List<ProductVariationInfo> ReadAllPV(ref List<string> errors)
+        {
+            return DALProductVariationInfo.ReadPVList(ref errors);
+        }
+
+        public static int UpdatePV(ProductVariationInfo productVariation, ref List<string> errors)
         {
             if (productVariation == null)
             {
                 errors.Add("Product Variation cannot be null");
             }
 
-            else if (productVariation.product_variation_id <= 0)
+            else if (productVariation.product_variation_id <= 0 || productVariation.product_variation_id > DALProductVariationInfo.ReadPVList(ref errors).Count)
             {
-                errors.Add("Invalid product_variation_id");
+                errors.Add("Invalid product variation id");
             }
 
-            else if (productVariation.product_id <= 0)
+            else if (productVariation.product_id <= 0 || productVariation.product_id > DALProduct.ReadProductList(ref errors).Count)
             {
                 errors.Add("Invalid product_id");
             }
 
-            else if (productVariation.product_brand_id <= 0)
+            else if (productVariation.product_brand_id <= 0 || productVariation.product_brand_id > DALBrand.ReadBrandList(ref errors).Count)
             {
                 errors.Add("Invalid product_brand_d");
             }
-            else if (productVariation.product_cutting_id <= 0)
+            else if (productVariation.product_cutting_id <= 0 || productVariation.product_cutting_id > DALProductCutting.ReadProductCuttingList(ref errors).Count)
             {
                 errors.Add("Invalid product_cutting_id");
             }
-            else if (productVariation.product_color_id <= 0)
+            else if (productVariation.product_color_id <= 0 || productVariation.product_color_id > DALProductColor.ReadProductColorList(ref errors).Count)
             {
                 errors.Add("Invalid product_color_id");
             }
-            else if (productVariation.sex != 'F' || productVariation.sex != 'M' || productVariation.sex != 'U')
+            else if (productVariation.sex != 'F' && productVariation.sex != 'M' && productVariation.sex != 'U')
             {
                 errors.Add("Invalid sex");
             }
-            else if (productVariation.size != "XS" || productVariation.size != "S" || productVariation.size != "M" || productVariation.size != "L" || productVariation.size != "XL" || productVariation.size != "XXL")
+            else if (productVariation.size != "XS" && productVariation.size != "S" && productVariation.size != "M" && productVariation.size != "L" && productVariation.size != "XL" && productVariation.size != "XXL")
             {
                 errors.Add("Invalid size");
             }
@@ -106,93 +139,28 @@ namespace BL
             {
                 errors.Add("Invalid price");
             }
-            else if (productVariation.condition != 'a' || productVariation.condition != 's' || productVariation.condition != 'd')
+            else if (productVariation.condition != 'a' && productVariation.condition != 's' && productVariation.condition != 'd')
             {
                 errors.Add("Invalid condition");
             }
 
             if (errors.Count > 0)
-                return;
+                return -1;
 
-            DALProductVariationInfo.UpdateProductVariationInfo(productVariation, ref errors);
+            return DALProductVariationInfo.UpdateProductVariationInfo(productVariation, ref errors);
         }
 
         public static void DeletePV(int productVariationId, ref List<string> errors)
         {
-            if (productVariationId <= 0)
+            if (productVariationId <= 0 || productVariationId > DALProductVariationInfo.ReadPVList(ref errors).Count)
             {
-                errors.Add("Product Variation cannot be less than 0");
+                errors.Add("Invalid product variation id");
             }
 
             if (errors.Count > 0)
                 return;
 
             DALProductVariationInfo.DeleteProductVariationInfo(productVariationId, ref errors);
-        }
-
-        public static void UpdateProduct(int productId, string productName, ref List<string> errors)
-        {
-            if (productId <= 0)
-            {
-                errors.Add("Product Id cannot be less than 0");
-            }
-
-            if (errors.Count > 0)
-                return;
-
-            DALProduct.UpdateProduct(productId, productName, ref errors);
-        }
-
-        public static void UpdateBrand(int brandId, string brandName, ref List<string> errors)
-        {
-            if (brandId <= 0)
-            {
-                errors.Add("brand Id cannot be less than 0");
-            }
-
-            if (errors.Count > 0)
-                return;
-
-            DALBrand.UpdateBrand(brandId, brandName, ref errors);
-        }
-
-        public static void UpdateProductColor(int productColorId, string productColorName, ref List<string> errors)
-        {
-            if (productColorId <= 0)
-            {
-                errors.Add("productColorId cannot be less than 0");
-            }
-
-            if (errors.Count > 0)
-                return;
-
-            DALProductColor.UpdateProductColor(productColorId, productColorName, ref errors);
-        }
-
-        public static void UpdateProductCutting(int productCuttingId, string productCuttingName, ref List<string> errors)
-        {
-            if (productCuttingId <= 0)
-            {
-                errors.Add("productCuttingId cannot be less than 0");
-            }
-
-            if (errors.Count > 0)
-                return;
-
-            DALProductCutting.UpdateProductCutting(productCuttingId, productCuttingName, ref errors);
-        }
-
-        public static void UpdateProductType(int productTypeId, string productTypeName, ref List<string> errors)
-        {
-            if (productTypeId <= 0)
-            {
-                errors.Add("productTypeId cannot be less than 0");
-            }
-
-            if (errors.Count > 0)
-                return;
-
-            DALType.UpdateProductType(productTypeId, productTypeName, ref errors);
         }
     }
 }

@@ -41,6 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLBrand.cs" />
+    <Compile Include="BLProduct.cs" />
+    <Compile Include="BLProductColor.cs" />
+    <Compile Include="BLProductCutting.cs" />
+    <Compile Include="BLProductType.cs" />
     <Compile Include="BLProductVariation.cs" />
     <Compile Include="ErrorLogging.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

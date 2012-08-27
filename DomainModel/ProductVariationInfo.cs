@@ -41,7 +41,7 @@ namespace DomainModel
             char sex_in, string size_in, int stock_in, float price_in, char condition_in)
         {
             this.product_variation_id = product_variation_id_in;
-            this.product_id = product_color_id_in;
+            this.product_id = product_id_in;
             this.product_brand_id = product_brand_id_in;
             this.product_cutting_id = product_cutting_id_in;
             this.product_color_id = product_color_id_in;
