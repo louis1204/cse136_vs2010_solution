@@ -36,6 +36,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Services" />
+    <Reference Include="System.Data.Services.Client" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -55,9 +58,12 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="SLAuth.svc" />
-    <Content Include="SLSchedule.svc" />
-    <Content Include="SLStudent.svc" />
+    <Content Include="SLBrand.svc" />
+    <Content Include="SLProduct.svc" />
+    <Content Include="SLProductColor.svc" />
+    <Content Include="SLProductCutting.svc" />
+    <Content Include="SLProductType.svc" />
+    <Content Include="SLProductVariation.svc" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -69,18 +75,30 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ISLAuth.cs" />
-    <Compile Include="ISLSchedule.cs" />
-    <Compile Include="SLAuth.svc.cs">
-      <DependentUpon>SLAuth.svc</DependentUpon>
+    <Compile Include="ISLBrand.cs" />
+    <Compile Include="ISLProduct.cs" />
+    <Compile Include="ISLProductColor.cs" />
+    <Compile Include="ISLProductCutting.cs" />
+    <Compile Include="ISLProductType.cs" />
+    <Compile Include="ISLProductVariation.cs" />
+    <Compile Include="SLBrand.svc.cs">
+      <DependentUpon>SLBrand.svc</DependentUpon>
     </Compile>
-    <Compile Include="SLSchedule.svc.cs">
-      <DependentUpon>SLSchedule.svc</DependentUpon>
+    <Compile Include="SLProduct.svc.cs">
+      <DependentUpon>SLProduct.svc</DependentUpon>
     </Compile>
-    <Compile Include="SLStudent.svc.cs">
-      <DependentUpon>SLStudent.svc</DependentUpon>
+    <Compile Include="SLProductColor.svc.cs">
+      <DependentUpon>SLProductColor.svc</DependentUpon>
     </Compile>
-    <Compile Include="ISLStudent.cs" />
+    <Compile Include="SLProductCutting.svc.cs">
+      <DependentUpon>SLProductCutting.svc</DependentUpon>
+    </Compile>
+    <Compile Include="SLProductType.svc.cs">
+      <DependentUpon>SLProductType.svc</DependentUpon>
+    </Compile>
+    <Compile Include="SLProductVariation.svc.cs">
+      <DependentUpon>SLProductVariation.svc</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
