@@ -145,7 +145,13 @@ namespace BL
             }
 
             if (errors.Count > 0)
+            {
+                for (int i = 0; i < errors.Count; i++)
+                {
+                    System.Diagnostics.Debug.WriteLine("THIS IS THE ERROR: " + errors[i]);
+                }
                 return -1;
+            }
 
             return DALProductVariationInfo.UpdateProductVariationInfo(productVariation, ref errors);
         }

@@ -1,0 +1,572 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="e62f5056-7896-4f3a-b1d1-d245007b9d54" name="Louis@LOUIS-HP 2012-08-27 18:10:22" runUser="Louis-HP\Louis" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="53e514f0-4a59-4535-81eb-4649f33ffbf9">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="Louis_LOUIS-HP 2012-08-27 18_10_22">
+      <DeploymentItem filename="C:\Users\Louis\Documents\School\UCSD\cse136\cse136_vs2010_solution\cse136\bin\Debug\cse136.dll" />
+      <DeploymentItem filename="C:\Users\Louis\Documents\School\UCSD\cse136\cse136_vs2010_solution\DomainModel\bin\Debug\DomainModel.dll" />
+      <DeploymentItem filename="C:\Users\Louis\Documents\School\UCSD\cse136\cse136_vs2010_solution\BL\bin\Debug\BL.dll" />
+      <DeploymentItem filename="C:\Users\Louis\Documents\School\UCSD\cse136\cse136_vs2010_solution\MVC3\bin\MVC3.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-08-27T18:10:22.9800941-07:00" queuing="2012-08-27T18:10:23.2901118-07:00" start="2012-08-27T18:10:23.3201135-07:00" finish="2012-08-27T18:10:26.4532927-07:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="64" executed="64" passed="63" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="BrandUpdateErrorTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\bltest\bin\debug\bltest.dll" id="e838b5ac-738c-c97e-c3d6-f1fb0daa2370">
+      <Execution id="c8ec1400-a9d8-4c0d-86bc-f0ff3ca7e899" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/BLTest/bin/Debug/BLTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BLTest.BLBrandTest, BLTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="BrandUpdateErrorTest" />
+    </UnitTest>
+    <UnitTest name="CreateProductTypeNullErrorTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\bltest\bin\debug\bltest.dll" id="7c829374-b2b7-a64c-0106-8a1c527f9eee">
+      <Execution id="0f64fcef-ec4f-47f1-9ab9-4c37baeb48c6" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/BLTest/bin/Debug/BLTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BLTest.BLProductTypeTest, BLTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CreateProductTypeNullErrorTest" />
+    </UnitTest>
+    <UnitTest name="CreateProductColorTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\daltest\bin\debug\daltest.dll" id="6b18c41e-9b98-699a-6cd9-609e14952373">
+      <Execution id="6d9fb196-92bf-435f-bb4b-f88c4623166d" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/DALTest/bin/Debug/DALTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="DALTest.DALProductColorTest, DALTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CreateProductColorTest" />
+    </UnitTest>
+    <UnitTest name="CreateProductCuttingNullErrorTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\bltest\bin\debug\bltest.dll" id="bdcd5694-6f47-8e9c-4f0a-b5a3d00cbbdc">
+      <Execution id="3c891b50-af8a-4e96-8d8f-673fa1cb1517" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/BLTest/bin/Debug/BLTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BLTest.BLProductCuttingTest, BLTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CreateProductCuttingNullErrorTest" />
+    </UnitTest>
+    <UnitTest name="CreateBrandTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\bltest\bin\debug\bltest.dll" id="f7826c58-01e2-4c82-f47f-08228e891502">
+      <Execution id="d2bca6e7-638a-45c8-8bc2-24efa3dcb6e3" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/BLTest/bin/Debug/BLTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BLTest.BLBrandTest, BLTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CreateBrandTest" />
+    </UnitTest>
+    <UnitTest name="CreateProductTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\bltest\bin\debug\bltest.dll" id="a5af5316-0907-aef9-72aa-1e7958fc3974">
+      <Execution id="05f3a1eb-5d53-4929-a9f7-ec62ca5f347a" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/BLTest/bin/Debug/BLTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BLTest.BLProductTest, BLTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CreateProductTest" />
+    </UnitTest>
+    <UnitTest name="UpdateProductTypeTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\bltest\bin\debug\bltest.dll" id="749e2125-91f3-366c-3cc9-5d757c5d89fc">
+      <Execution id="9c951bbd-b339-4305-a48b-f1c32e124e4e" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/BLTest/bin/Debug/BLTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BLTest.BLProductTypeTest, BLTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="UpdateProductTypeTest" />
+    </UnitTest>
+    <UnitTest name="ReadAllPVTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\daltest\bin\debug\daltest.dll" id="39a2e8d3-569e-2be2-3617-2b697cf73be3">
+      <Execution id="b26f5718-96df-4d11-a93a-120ddee16ba3" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/DALTest/bin/Debug/DALTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="DALTest.DALProductVariationInfoTest, DALTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ReadAllPVTest" />
+    </UnitTest>
+    <UnitTest name="UpdateProductTypeTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\daltest\bin\debug\daltest.dll" id="54e7777a-c6ad-8aae-0fca-0734abbb2233">
+      <Execution id="66fed45c-59f8-4b48-be6a-268ce25aaa3d" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/DALTest/bin/Debug/DALTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="DALTest.DALTypeTest, DALTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="UpdateProductTypeTest" />
+    </UnitTest>
+    <UnitTest name="CreatePVTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\bltest\bin\debug\bltest.dll" id="32befc5b-2805-679f-e132-a2c900e50a08">
+      <Execution id="4fcbb6e3-bdaa-4db2-b161-df1c10eaed52" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/BLTest/bin/Debug/BLTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BLTest.BLProductVariationTest, BLTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CreatePVTest" />
+    </UnitTest>
+    <UnitTest name="ProductCuttingUpdateErrorTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\bltest\bin\debug\bltest.dll" id="2de277d9-37a5-c97d-c930-1d6c85ec007a">
+      <Execution id="733dd78b-572f-4f9e-a7cd-81bda0453579" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/BLTest/bin/Debug/BLTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BLTest.BLProductCuttingTest, BLTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ProductCuttingUpdateErrorTest" />
+    </UnitTest>
+    <UnitTest name="CreateProductTypeTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\daltest\bin\debug\daltest.dll" id="38819b2b-c49c-ae4c-8ed9-952641081eaf">
+      <Execution id="7dc58de7-4e6c-4217-80ed-ef0f343a1488" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/DALTest/bin/Debug/DALTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="DALTest.DALTypeTest, DALTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CreateProductTypeTest" />
+    </UnitTest>
+    <UnitTest name="UpdateProductVariationInfoTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\bltest\bin\debug\bltest.dll" id="17a47e80-72b2-0437-6c34-884341a72cbe">
+      <Execution id="3f8cac73-60b9-44b6-9988-b2716ec9eee2" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/BLTest/bin/Debug/BLTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BLTest.BLProductVariationTest, BLTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="UpdateProductVariationInfoTest" />
+    </UnitTest>
+    <UnitTest name="CreateProductColorErrorTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\bltest\bin\debug\bltest.dll" id="1381d89d-e61a-d0f1-323e-009145c998cd">
+      <Execution id="a9a54882-0ec5-4b55-903b-505b31570158" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/BLTest/bin/Debug/BLTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BLTest.BLProductColorTest, BLTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CreateProductColorErrorTest" />
+    </UnitTest>
+    <UnitTest name="CreateProductColorNullErrorTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\bltest\bin\debug\bltest.dll" id="72a23555-32b2-8606-9cd7-3ffb7f93b94d">
+      <Execution id="5e23e043-2948-44da-85c3-861bab110e1d" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/BLTest/bin/Debug/BLTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BLTest.BLProductColorTest, BLTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CreateProductColorNullErrorTest" />
+    </UnitTest>
+    <UnitTest name="ProductCuttingReadErrorTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\bltest\bin\debug\bltest.dll" id="b22f890b-2fb2-8bc9-6072-6c13741d1a72">
+      <Execution id="745b20e3-804b-4596-ba3c-a7e969c15399" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/BLTest/bin/Debug/BLTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BLTest.BLProductCuttingTest, BLTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ProductCuttingReadErrorTest" />
+    </UnitTest>
+    <UnitTest name="CreatePVTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\daltest\bin\debug\daltest.dll" id="c76098cd-5f49-f576-d094-a3b9b8dc9118">
+      <Execution id="70d8a58f-fee4-402e-a5c2-440c942e94c4" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/DALTest/bin/Debug/DALTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="DALTest.DALProductVariationInfoTest, DALTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CreatePVTest" />
+    </UnitTest>
+    <UnitTest name="UpdateProductCuttingTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\daltest\bin\debug\daltest.dll" id="df90cdea-c5c0-d0c6-d7f1-abca45aafb69">
+      <Execution id="2d2d858d-5ef4-4be7-b341-75e068ead26d" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/DALTest/bin/Debug/DALTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="DALTest.DALProductCuttingTest, DALTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="UpdateProductCuttingTest" />
+    </UnitTest>
+    <UnitTest name="UpdateProductBrandTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\daltest\bin\debug\daltest.dll" id="ddbc9751-ea78-3907-b0dd-bbebacabbc90">
+      <Execution id="f6e06613-dff1-4a05-b4e1-be446ae4589e" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/DALTest/bin/Debug/DALTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="DALTest.DALBrandTest, DALTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="UpdateProductBrandTest" />
+    </UnitTest>
+    <UnitTest name="ProductVariationDeleteErrorTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\bltest\bin\debug\bltest.dll" id="a7d7b29b-200e-e950-acdb-f74fb0c8329a">
+      <Execution id="efd07701-61e1-4825-9c86-a829537a23a6" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/BLTest/bin/Debug/BLTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BLTest.BLProductVariationTest, BLTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ProductVariationDeleteErrorTest" />
+    </UnitTest>
+    <UnitTest name="CreateProductCuttingTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\daltest\bin\debug\daltest.dll" id="4ee29c4c-716b-1b25-cc47-e7d557e9b20f">
+      <Execution id="088e977d-3d39-42e5-b9f6-d64b948a5fae" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/DALTest/bin/Debug/DALTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="DALTest.DALProductCuttingTest, DALTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CreateProductCuttingTest" />
+    </UnitTest>
+    <UnitTest name="CreateProductColorTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\bltest\bin\debug\bltest.dll" id="306047c5-8044-ee12-21be-5249fd0ab8bc">
+      <Execution id="c9f494db-5a2d-4dfd-930e-775b558d8af3" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/BLTest/bin/Debug/BLTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BLTest.BLProductColorTest, BLTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CreateProductColorTest" />
+    </UnitTest>
+    <UnitTest name="CreateProductErrorTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\bltest\bin\debug\bltest.dll" id="4984de8b-0f11-84fe-96e4-b08c00e8db25">
+      <Execution id="5f6e7130-bbdf-4980-8830-d37bfd9bd402" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/BLTest/bin/Debug/BLTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BLTest.BLProductTest, BLTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CreateProductErrorTest" />
+    </UnitTest>
+    <UnitTest name="ReadAllProductTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\daltest\bin\debug\daltest.dll" id="39ec5642-081d-ef93-52a6-7125803da287">
+      <Execution id="41228a0b-1202-46fb-8dd3-b262f118da79" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/DALTest/bin/Debug/DALTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="DALTest.DALProductTest, DALTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ReadAllProductTest" />
+    </UnitTest>
+    <UnitTest name="ProductColorUpdateErrorTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\bltest\bin\debug\bltest.dll" id="9cf39b8e-04c2-b861-736b-953b0b495874">
+      <Execution id="3269e3ad-9fb5-42cc-ad10-64862591b862" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/BLTest/bin/Debug/BLTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BLTest.BLProductColorTest, BLTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ProductColorUpdateErrorTest" />
+    </UnitTest>
+    <UnitTest name="CreateProductCuttingErrorTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\bltest\bin\debug\bltest.dll" id="906cdd9a-e41c-b869-1786-a4ffe476ad69">
+      <Execution id="48b2378d-7870-4728-a38e-2957ddbbeb49" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/BLTest/bin/Debug/BLTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BLTest.BLProductCuttingTest, BLTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CreateProductCuttingErrorTest" />
+    </UnitTest>
+    <UnitTest name="ReadAllProductTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\bltest\bin\debug\bltest.dll" id="0a828938-db60-83a2-bc54-b0d9d2623a89">
+      <Execution id="53a7c029-0960-465a-a511-4c341e310466" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/BLTest/bin/Debug/BLTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BLTest.BLProductTest, BLTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ReadAllProductTest" />
+    </UnitTest>
+    <UnitTest name="DeleteProductVariationInfoTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\daltest\bin\debug\daltest.dll" id="52df322f-98b6-4e57-d285-dc4d7f1b9314">
+      <Execution id="fa9a38f6-7460-4a7c-af58-637a6eefc1d8" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/DALTest/bin/Debug/DALTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="DALTest.DALProductVariationInfoTest, DALTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="DeleteProductVariationInfoTest" />
+    </UnitTest>
+    <UnitTest name="ProductUpdateErrorTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\bltest\bin\debug\bltest.dll" id="c6b026e9-3960-4229-9874-a43b265d5ac5">
+      <Execution id="905ad0d1-2da5-49b3-8f27-0075c71b09ec" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/BLTest/bin/Debug/BLTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BLTest.BLProductTest, BLTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ProductUpdateErrorTest" />
+    </UnitTest>
+    <UnitTest name="CreateStudentTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\mvc3.tests\bin\debug\mvc3.tests.dll" id="0a9faab6-c2ff-6cfa-e314-2f6d98eb74e4">
+      <Execution id="c1354f4a-82e9-4692-b989-c80994dc58d2" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/MVC3.Tests/bin/Debug/MVC3.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="MVC3.Tests.Controllers.StudentControllerTest, MVC3.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CreateStudentTest" />
+    </UnitTest>
+    <UnitTest name="CreateBrandNullErrorTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\bltest\bin\debug\bltest.dll" id="1f1e50dc-302d-5d54-d1b6-de3ac7cc0579">
+      <Execution id="77758d2c-16ba-4610-825f-3200e2f528ec" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/BLTest/bin/Debug/BLTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BLTest.BLBrandTest, BLTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CreateBrandNullErrorTest" />
+    </UnitTest>
+    <UnitTest name="CreateBrandErrorTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\bltest\bin\debug\bltest.dll" id="8440b3dd-4629-ecb3-bea3-283361475284">
+      <Execution id="bc59e344-badc-426f-bf80-9816bfa17533" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/BLTest/bin/Debug/BLTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BLTest.BLBrandTest, BLTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CreateBrandErrorTest" />
+    </UnitTest>
+    <UnitTest name="ReadAllProductTypeTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\bltest\bin\debug\bltest.dll" id="527f0874-7efa-38fb-4cdb-7845b6fdc52f">
+      <Execution id="98e58fc5-4860-43c2-9ae0-45d119ae5694" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/BLTest/bin/Debug/BLTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BLTest.BLProductTypeTest, BLTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ReadAllProductTypeTest" />
+    </UnitTest>
+    <UnitTest name="ProductTypeReadErrorTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\bltest\bin\debug\bltest.dll" id="87cd62b0-6032-0378-4d78-97f7b2cf2151">
+      <Execution id="895615f7-eb3a-4541-a65e-682846ca4220" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/BLTest/bin/Debug/BLTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BLTest.BLProductTypeTest, BLTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ProductTypeReadErrorTest" />
+    </UnitTest>
+    <UnitTest name="ProductVariationUpdateErrorTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\bltest\bin\debug\bltest.dll" id="8ddb55d2-cc76-8371-0cab-349758d0faba">
+      <Execution id="69fa4836-cc4b-457b-a284-861dbb0c91af" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/BLTest/bin/Debug/BLTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BLTest.BLProductVariationTest, BLTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ProductVariationUpdateErrorTest" />
+    </UnitTest>
+    <UnitTest name="UpdateProductColorTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\daltest\bin\debug\daltest.dll" id="02a0d96a-b36f-259d-191b-5b35b5a8f08e">
+      <Execution id="40da80ea-061e-4bd0-b07f-71fc6f3a7f9c" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/DALTest/bin/Debug/DALTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="DALTest.DALProductColorTest, DALTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="UpdateProductColorTest" />
+    </UnitTest>
+    <UnitTest name="UpdateProductCuttingTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\bltest\bin\debug\bltest.dll" id="ad76f5b9-eef6-7da3-02e0-bcb403ffa630">
+      <Execution id="69a51329-2c87-46cb-8467-2a48d34c3d62" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/BLTest/bin/Debug/BLTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BLTest.BLProductCuttingTest, BLTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="UpdateProductCuttingTest" />
+    </UnitTest>
+    <UnitTest name="ReadAllBrandTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\daltest\bin\debug\daltest.dll" id="e852a1f2-fb34-ffdc-ed5c-718cafd085e2">
+      <Execution id="2c089981-076f-4560-b23a-204db4a750c4" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/DALTest/bin/Debug/DALTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="DALTest.DALBrandTest, DALTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ReadAllBrandTest" />
+    </UnitTest>
+    <UnitTest name="DeleteProductVariationInfoTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\bltest\bin\debug\bltest.dll" id="51e7e7bf-6ccc-542c-0d91-d03ec1c8332e">
+      <Execution id="b9c8802f-aadf-4806-9960-0ba36add5f26" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/BLTest/bin/Debug/BLTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BLTest.BLProductVariationTest, BLTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="DeleteProductVariationInfoTest" />
+    </UnitTest>
+    <UnitTest name="CreateProductVariationErrorTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\bltest\bin\debug\bltest.dll" id="2c820968-7c91-03d3-a299-ef437a4adae9">
+      <Execution id="e7ee2aa7-90a5-4bfb-ac04-89e829c0ecdb" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/BLTest/bin/Debug/BLTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BLTest.BLProductVariationTest, BLTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CreateProductVariationErrorTest" />
+    </UnitTest>
+    <UnitTest name="UpdateProductVariationInfoTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\daltest\bin\debug\daltest.dll" id="c68b8238-9415-4bac-14f0-0a40a7e90643">
+      <Execution id="7a78b355-1e7d-4a6b-9889-461946607f7f" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/DALTest/bin/Debug/DALTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="DALTest.DALProductVariationInfoTest, DALTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="UpdateProductVariationInfoTest" />
+    </UnitTest>
+    <UnitTest name="ProductVariationReadErrorTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\bltest\bin\debug\bltest.dll" id="769129ee-601e-ba5f-360d-d3013c602f01">
+      <Execution id="81bec917-e372-433c-a3bb-38b8f545643e" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/BLTest/bin/Debug/BLTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BLTest.BLProductVariationTest, BLTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ProductVariationReadErrorTest" />
+    </UnitTest>
+    <UnitTest name="ReadAllProductColorTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\daltest\bin\debug\daltest.dll" id="cd8ccf9f-8213-ce86-61d5-8fae292b70cc">
+      <Execution id="b7fe152e-0418-48be-9fb2-8cdfbf8df857" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/DALTest/bin/Debug/DALTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="DALTest.DALProductColorTest, DALTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ReadAllProductColorTest" />
+    </UnitTest>
+    <UnitTest name="UpdateProductTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\bltest\bin\debug\bltest.dll" id="fceb51c8-60ab-9dba-9bc5-68eec453d8bc">
+      <Execution id="73ca0d66-5bfd-4e73-b78f-45899f9415dd" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/BLTest/bin/Debug/BLTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BLTest.BLProductTest, BLTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="UpdateProductTest" />
+    </UnitTest>
+    <UnitTest name="ReadAllBrandTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\bltest\bin\debug\bltest.dll" id="44c316ef-e570-09f1-f2c1-54180c893f98">
+      <Execution id="27f6ad10-1045-4f52-b1f1-1102e4895b25" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/BLTest/bin/Debug/BLTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BLTest.BLBrandTest, BLTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ReadAllBrandTest" />
+    </UnitTest>
+    <UnitTest name="UpdateProductTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\daltest\bin\debug\daltest.dll" id="d3145b4d-1fba-fbb6-489d-880aca3a67d3">
+      <Execution id="4d97b36c-3956-48f2-97c2-3562f4c12e4f" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/DALTest/bin/Debug/DALTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="DALTest.DALProductTest, DALTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="UpdateProductTest" />
+    </UnitTest>
+    <UnitTest name="CreateProductNullErrorTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\bltest\bin\debug\bltest.dll" id="d2636e01-07d3-8d97-7e57-ab6725f5e972">
+      <Execution id="16e4551b-2d21-4d3c-b475-872bef52b492" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/BLTest/bin/Debug/BLTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BLTest.BLProductTest, BLTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CreateProductNullErrorTest" />
+    </UnitTest>
+    <UnitTest name="ReadAllProductCuttingTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\bltest\bin\debug\bltest.dll" id="6567eec0-603e-0c1c-b63c-38e9a20c4df4">
+      <Execution id="f2a7d129-5d04-4aab-ad04-c13f829c7125" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/BLTest/bin/Debug/BLTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BLTest.BLProductCuttingTest, BLTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ReadAllProductCuttingTest" />
+    </UnitTest>
+    <UnitTest name="CreateProductTypeTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\bltest\bin\debug\bltest.dll" id="1e60bab5-dba5-e699-f6b8-0811bd4de6e3">
+      <Execution id="60da5243-174a-4030-b378-fe6ebea032ca" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/BLTest/bin/Debug/BLTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BLTest.BLProductTypeTest, BLTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CreateProductTypeTest" />
+    </UnitTest>
+    <UnitTest name="ReadAllProductColorTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\bltest\bin\debug\bltest.dll" id="53956050-dfb2-bc6f-a53b-1e274204bdd8">
+      <Execution id="0730636b-76de-4927-bab9-1122e5673fff" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/BLTest/bin/Debug/BLTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BLTest.BLProductColorTest, BLTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ReadAllProductColorTest" />
+    </UnitTest>
+    <UnitTest name="CreateProductTypeErrorTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\bltest\bin\debug\bltest.dll" id="bfb23467-9ed6-2af2-a378-dc1e9bbf5b26">
+      <Execution id="e6371f77-6fc3-4bde-aeed-5e4a9c829417" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/BLTest/bin/Debug/BLTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BLTest.BLProductTypeTest, BLTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CreateProductTypeErrorTest" />
+    </UnitTest>
+    <UnitTest name="BrandReadErrorTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\bltest\bin\debug\bltest.dll" id="cddde496-20c6-4b8e-d5cd-072a15f2fccb">
+      <Execution id="fe3b4a85-78e1-4e19-97c8-78ef5474aaf6" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/BLTest/bin/Debug/BLTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BLTest.BLBrandTest, BLTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="BrandReadErrorTest" />
+    </UnitTest>
+    <UnitTest name="ProductReadErrorTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\bltest\bin\debug\bltest.dll" id="a91e9ed3-5646-12d6-93c6-af2db48c7e59">
+      <Execution id="b68f80e7-aac0-42ca-bd98-b414b5e908a6" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/BLTest/bin/Debug/BLTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BLTest.BLProductTest, BLTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ProductReadErrorTest" />
+    </UnitTest>
+    <UnitTest name="ProductColorReadErrorTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\bltest\bin\debug\bltest.dll" id="a371c641-f9b0-857d-8d7a-ba50f3ebff43">
+      <Execution id="35448ed4-a32a-414c-b7d0-b02e253d3ddb" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/BLTest/bin/Debug/BLTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BLTest.BLProductColorTest, BLTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ProductColorReadErrorTest" />
+    </UnitTest>
+    <UnitTest name="UpdateBrandTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\bltest\bin\debug\bltest.dll" id="6724fe7d-3a6e-82e1-5e9c-bfae58cb851f">
+      <Execution id="cca0d934-30da-4117-9f54-71a6a6b0ba39" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/BLTest/bin/Debug/BLTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BLTest.BLBrandTest, BLTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="UpdateBrandTest" />
+    </UnitTest>
+    <UnitTest name="Index" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\mvc3.tests\bin\debug\mvc3.tests.dll" id="12e3c4c9-0e7f-4fb6-44e9-504011a51fde">
+      <Execution id="e3843e94-26cd-45cb-81a3-93fedf47b87f" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/MVC3.Tests/bin/Debug/MVC3.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="MVC3.Tests.Controllers.HomeControllerTest, MVC3.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Index" />
+    </UnitTest>
+    <UnitTest name="ReadAllProductCuttingTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\daltest\bin\debug\daltest.dll" id="5129d0b1-e05a-ba39-3d08-819bb36e9c7a">
+      <Execution id="cf90d96c-8353-4c1c-a332-20247488aa96" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/DALTest/bin/Debug/DALTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="DALTest.DALProductCuttingTest, DALTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ReadAllProductCuttingTest" />
+    </UnitTest>
+    <UnitTest name="ReadAllPVTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\bltest\bin\debug\bltest.dll" id="83def0be-13ed-eb0c-cf34-39cb5d72d47e">
+      <Execution id="68d87573-d628-403a-9bca-dd625aee1639" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/BLTest/bin/Debug/BLTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BLTest.BLProductVariationTest, BLTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ReadAllPVTest" />
+    </UnitTest>
+    <UnitTest name="ReadAllProductTypeTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\daltest\bin\debug\daltest.dll" id="48998be3-5bf2-451d-90c6-e1f4233cc9d1">
+      <Execution id="a3b05b9f-283f-4606-88d2-c07314c6a13f" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/DALTest/bin/Debug/DALTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="DALTest.DALTypeTest, DALTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ReadAllProductTypeTest" />
+    </UnitTest>
+    <UnitTest name="ProductTypeUpdateErrorTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\bltest\bin\debug\bltest.dll" id="c67b2499-e7a4-2b19-624b-77fbc4aeac92">
+      <Execution id="8a0fa0fc-b179-490f-a4b4-748536486cfa" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/BLTest/bin/Debug/BLTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BLTest.BLProductTypeTest, BLTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ProductTypeUpdateErrorTest" />
+    </UnitTest>
+    <UnitTest name="CreateBrandTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\daltest\bin\debug\daltest.dll" id="f164ed89-d296-5ff9-08d7-a7e4a1f0d9d7">
+      <Execution id="8bbcc9d8-f229-42e3-a7ab-746629f3f893" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/DALTest/bin/Debug/DALTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="DALTest.DALBrandTest, DALTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CreateBrandTest" />
+    </UnitTest>
+    <UnitTest name="CreateProductCuttingTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\bltest\bin\debug\bltest.dll" id="4068bac0-9c67-8bcf-fe66-d8581e88d686">
+      <Execution id="534b4dd6-c379-426a-b7d6-67c1c2753e50" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/BLTest/bin/Debug/BLTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BLTest.BLProductCuttingTest, BLTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CreateProductCuttingTest" />
+    </UnitTest>
+    <UnitTest name="UpdateProductColorTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\bltest\bin\debug\bltest.dll" id="dc348301-aaee-9d57-e85e-e7bdc8bf9c91">
+      <Execution id="d7c78659-c8c1-4849-839b-cfc7ea81d285" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/BLTest/bin/Debug/BLTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BLTest.BLProductColorTest, BLTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="UpdateProductColorTest" />
+    </UnitTest>
+    <UnitTest name="CreateProductTest" storage="c:\users\louis\documents\school\ucsd\cse136\cse136_vs2010_solution\daltest\bin\debug\daltest.dll" id="ed374848-8a67-3fea-eaa8-78dc7d5d1593">
+      <Execution id="f918dd02-a314-40b0-970b-9056697ce633" />
+      <TestMethod codeBase="C:/Users/Louis/Documents/School/UCSD/cse136/cse136_vs2010_solution/DALTest/bin/Debug/DALTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="DALTest.DALProductTest, DALTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CreateProductTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="02a0d96a-b36f-259d-191b-5b35b5a8f08e" executionId="40da80ea-061e-4bd0-b07f-71fc6f3a7f9c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0a828938-db60-83a2-bc54-b0d9d2623a89" executionId="53a7c029-0960-465a-a511-4c341e310466" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0a9faab6-c2ff-6cfa-e314-2f6d98eb74e4" executionId="c1354f4a-82e9-4692-b989-c80994dc58d2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="12e3c4c9-0e7f-4fb6-44e9-504011a51fde" executionId="e3843e94-26cd-45cb-81a3-93fedf47b87f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1381d89d-e61a-d0f1-323e-009145c998cd" executionId="a9a54882-0ec5-4b55-903b-505b31570158" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="17a47e80-72b2-0437-6c34-884341a72cbe" executionId="3f8cac73-60b9-44b6-9988-b2716ec9eee2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1e60bab5-dba5-e699-f6b8-0811bd4de6e3" executionId="60da5243-174a-4030-b378-fe6ebea032ca" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1f1e50dc-302d-5d54-d1b6-de3ac7cc0579" executionId="77758d2c-16ba-4610-825f-3200e2f528ec" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2c820968-7c91-03d3-a299-ef437a4adae9" executionId="e7ee2aa7-90a5-4bfb-ac04-89e829c0ecdb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2de277d9-37a5-c97d-c930-1d6c85ec007a" executionId="733dd78b-572f-4f9e-a7cd-81bda0453579" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="306047c5-8044-ee12-21be-5249fd0ab8bc" executionId="c9f494db-5a2d-4dfd-930e-775b558d8af3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="32befc5b-2805-679f-e132-a2c900e50a08" executionId="4fcbb6e3-bdaa-4db2-b161-df1c10eaed52" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="38819b2b-c49c-ae4c-8ed9-952641081eaf" executionId="7dc58de7-4e6c-4217-80ed-ef0f343a1488" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="39a2e8d3-569e-2be2-3617-2b697cf73be3" executionId="b26f5718-96df-4d11-a93a-120ddee16ba3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="39ec5642-081d-ef93-52a6-7125803da287" executionId="41228a0b-1202-46fb-8dd3-b262f118da79" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4068bac0-9c67-8bcf-fe66-d8581e88d686" executionId="534b4dd6-c379-426a-b7d6-67c1c2753e50" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="44c316ef-e570-09f1-f2c1-54180c893f98" executionId="27f6ad10-1045-4f52-b1f1-1102e4895b25" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="48998be3-5bf2-451d-90c6-e1f4233cc9d1" executionId="a3b05b9f-283f-4606-88d2-c07314c6a13f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4984de8b-0f11-84fe-96e4-b08c00e8db25" executionId="5f6e7130-bbdf-4980-8830-d37bfd9bd402" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4ee29c4c-716b-1b25-cc47-e7d557e9b20f" executionId="088e977d-3d39-42e5-b9f6-d64b948a5fae" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5129d0b1-e05a-ba39-3d08-819bb36e9c7a" executionId="cf90d96c-8353-4c1c-a332-20247488aa96" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="51e7e7bf-6ccc-542c-0d91-d03ec1c8332e" executionId="b9c8802f-aadf-4806-9960-0ba36add5f26" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="527f0874-7efa-38fb-4cdb-7845b6fdc52f" executionId="98e58fc5-4860-43c2-9ae0-45d119ae5694" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="52df322f-98b6-4e57-d285-dc4d7f1b9314" executionId="fa9a38f6-7460-4a7c-af58-637a6eefc1d8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="53956050-dfb2-bc6f-a53b-1e274204bdd8" executionId="0730636b-76de-4927-bab9-1122e5673fff" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="54e7777a-c6ad-8aae-0fca-0734abbb2233" executionId="66fed45c-59f8-4b48-be6a-268ce25aaa3d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6567eec0-603e-0c1c-b63c-38e9a20c4df4" executionId="f2a7d129-5d04-4aab-ad04-c13f829c7125" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6724fe7d-3a6e-82e1-5e9c-bfae58cb851f" executionId="cca0d934-30da-4117-9f54-71a6a6b0ba39" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6b18c41e-9b98-699a-6cd9-609e14952373" executionId="6d9fb196-92bf-435f-bb4b-f88c4623166d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="72a23555-32b2-8606-9cd7-3ffb7f93b94d" executionId="5e23e043-2948-44da-85c3-861bab110e1d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="749e2125-91f3-366c-3cc9-5d757c5d89fc" executionId="9c951bbd-b339-4305-a48b-f1c32e124e4e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="769129ee-601e-ba5f-360d-d3013c602f01" executionId="81bec917-e372-433c-a3bb-38b8f545643e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7c829374-b2b7-a64c-0106-8a1c527f9eee" executionId="0f64fcef-ec4f-47f1-9ab9-4c37baeb48c6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="83def0be-13ed-eb0c-cf34-39cb5d72d47e" executionId="68d87573-d628-403a-9bca-dd625aee1639" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8440b3dd-4629-ecb3-bea3-283361475284" executionId="bc59e344-badc-426f-bf80-9816bfa17533" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="87cd62b0-6032-0378-4d78-97f7b2cf2151" executionId="895615f7-eb3a-4541-a65e-682846ca4220" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8ddb55d2-cc76-8371-0cab-349758d0faba" executionId="69fa4836-cc4b-457b-a284-861dbb0c91af" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="906cdd9a-e41c-b869-1786-a4ffe476ad69" executionId="48b2378d-7870-4728-a38e-2957ddbbeb49" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9cf39b8e-04c2-b861-736b-953b0b495874" executionId="3269e3ad-9fb5-42cc-ad10-64862591b862" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a371c641-f9b0-857d-8d7a-ba50f3ebff43" executionId="35448ed4-a32a-414c-b7d0-b02e253d3ddb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a5af5316-0907-aef9-72aa-1e7958fc3974" executionId="05f3a1eb-5d53-4929-a9f7-ec62ca5f347a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a7d7b29b-200e-e950-acdb-f74fb0c8329a" executionId="efd07701-61e1-4825-9c86-a829537a23a6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a91e9ed3-5646-12d6-93c6-af2db48c7e59" executionId="b68f80e7-aac0-42ca-bd98-b414b5e908a6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ad76f5b9-eef6-7da3-02e0-bcb403ffa630" executionId="69a51329-2c87-46cb-8467-2a48d34c3d62" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b22f890b-2fb2-8bc9-6072-6c13741d1a72" executionId="745b20e3-804b-4596-ba3c-a7e969c15399" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="bdcd5694-6f47-8e9c-4f0a-b5a3d00cbbdc" executionId="3c891b50-af8a-4e96-8d8f-673fa1cb1517" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="bfb23467-9ed6-2af2-a378-dc1e9bbf5b26" executionId="e6371f77-6fc3-4bde-aeed-5e4a9c829417" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c67b2499-e7a4-2b19-624b-77fbc4aeac92" executionId="8a0fa0fc-b179-490f-a4b4-748536486cfa" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c68b8238-9415-4bac-14f0-0a40a7e90643" executionId="7a78b355-1e7d-4a6b-9889-461946607f7f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c6b026e9-3960-4229-9874-a43b265d5ac5" executionId="905ad0d1-2da5-49b3-8f27-0075c71b09ec" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c76098cd-5f49-f576-d094-a3b9b8dc9118" executionId="70d8a58f-fee4-402e-a5c2-440c942e94c4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cd8ccf9f-8213-ce86-61d5-8fae292b70cc" executionId="b7fe152e-0418-48be-9fb2-8cdfbf8df857" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cddde496-20c6-4b8e-d5cd-072a15f2fccb" executionId="fe3b4a85-78e1-4e19-97c8-78ef5474aaf6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d2636e01-07d3-8d97-7e57-ab6725f5e972" executionId="16e4551b-2d21-4d3c-b475-872bef52b492" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d3145b4d-1fba-fbb6-489d-880aca3a67d3" executionId="4d97b36c-3956-48f2-97c2-3562f4c12e4f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="dc348301-aaee-9d57-e85e-e7bdc8bf9c91" executionId="d7c78659-c8c1-4849-839b-cfc7ea81d285" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ddbc9751-ea78-3907-b0dd-bbebacabbc90" executionId="f6e06613-dff1-4a05-b4e1-be446ae4589e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="df90cdea-c5c0-d0c6-d7f1-abca45aafb69" executionId="2d2d858d-5ef4-4be7-b341-75e068ead26d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e838b5ac-738c-c97e-c3d6-f1fb0daa2370" executionId="c8ec1400-a9d8-4c0d-86bc-f0ff3ca7e899" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e852a1f2-fb34-ffdc-ed5c-718cafd085e2" executionId="2c089981-076f-4560-b23a-204db4a750c4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ed374848-8a67-3fea-eaa8-78dc7d5d1593" executionId="f918dd02-a314-40b0-970b-9056697ce633" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f164ed89-d296-5ff9-08d7-a7e4a1f0d9d7" executionId="8bbcc9d8-f229-42e3-a7ab-746629f3f893" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f7826c58-01e2-4c82-f47f-08228e891502" executionId="d2bca6e7-638a-45c8-8bc2-24efa3dcb6e3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fceb51c8-60ab-9dba-9bc5-68eec453d8bc" executionId="73ca0d66-5bfd-4e73-b78f-45899f9415dd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="40da80ea-061e-4bd0-b07f-71fc6f3a7f9c" testId="02a0d96a-b36f-259d-191b-5b35b5a8f08e" testName="UpdateProductColorTest" computerName="LOUIS-HP" duration="00:00:00.0439928" startTime="2012-08-27T18:10:23.3261139-07:00" endTime="2012-08-27T18:10:23.8491438-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="40da80ea-061e-4bd0-b07f-71fc6f3a7f9c">
+    </UnitTestResult>
+    <UnitTestResult executionId="53a7c029-0960-465a-a511-4c341e310466" testId="0a828938-db60-83a2-bc54-b0d9d2623a89" testName="ReadAllProductTest" computerName="LOUIS-HP" duration="00:00:00.0418085" startTime="2012-08-27T18:10:23.8531440-07:00" endTime="2012-08-27T18:10:24.2321657-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="53a7c029-0960-465a-a511-4c341e310466">
+    </UnitTestResult>
+    <UnitTestResult executionId="c1354f4a-82e9-4692-b989-c80994dc58d2" testId="0a9faab6-c2ff-6cfa-e314-2f6d98eb74e4" testName="CreateStudentTest" computerName="LOUIS-HP" duration="00:00:00.6537722" startTime="2012-08-27T18:10:24.2351659-07:00" endTime="2012-08-27T18:10:25.2232224-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c1354f4a-82e9-4692-b989-c80994dc58d2">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method MVC3.Tests.Controllers.StudentControllerTest.CreateStudentTest threw exception: 
+System.NullReferenceException: Object reference not set to an instance of an object.</Message>
+          <StackTrace>    at MVC3.Tests.Controllers.StudentControllerTest.CreateStudentTest() in C:\Users\Louis\Documents\School\UCSD\cse136\cse136_vs2010_solution\MVC3.Tests\Controllers\StudentControllerTest.cs:line 46
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="e3843e94-26cd-45cb-81a3-93fedf47b87f" testId="12e3c4c9-0e7f-4fb6-44e9-504011a51fde" testName="Index" computerName="LOUIS-HP" duration="00:00:00.0410276" startTime="2012-08-27T18:10:25.2262226-07:00" endTime="2012-08-27T18:10:25.2732252-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e3843e94-26cd-45cb-81a3-93fedf47b87f">
+    </UnitTestResult>
+    <UnitTestResult executionId="a9a54882-0ec5-4b55-903b-505b31570158" testId="1381d89d-e61a-d0f1-323e-009145c998cd" testName="CreateProductColorErrorTest" computerName="LOUIS-HP" duration="00:00:00.0134335" startTime="2012-08-27T18:10:25.2762254-07:00" endTime="2012-08-27T18:10:25.2952265-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a9a54882-0ec5-4b55-903b-505b31570158">
+    </UnitTestResult>
+    <UnitTestResult executionId="3f8cac73-60b9-44b6-9988-b2716ec9eee2" testId="17a47e80-72b2-0437-6c34-884341a72cbe" testName="UpdateProductVariationInfoTest" computerName="LOUIS-HP" duration="00:00:00.0339759" startTime="2012-08-27T18:10:25.2992267-07:00" endTime="2012-08-27T18:10:25.3382290-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3f8cac73-60b9-44b6-9988-b2716ec9eee2">
+    </UnitTestResult>
+    <UnitTestResult executionId="60da5243-174a-4030-b378-fe6ebea032ca" testId="1e60bab5-dba5-e699-f6b8-0811bd4de6e3" testName="CreateProductTypeTest" computerName="LOUIS-HP" duration="00:00:00.0141466" startTime="2012-08-27T18:10:25.3422292-07:00" endTime="2012-08-27T18:10:25.3612303-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="60da5243-174a-4030-b378-fe6ebea032ca">
+      <Output>
+        <DebugTrace>RESULT:27
+RESULT:27
+RESULT:Super deep v turtle neck 448
+</DebugTrace>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="77758d2c-16ba-4610-825f-3200e2f528ec" testId="1f1e50dc-302d-5d54-d1b6-de3ac7cc0579" testName="CreateBrandNullErrorTest" computerName="LOUIS-HP" duration="00:00:00.0013703" startTime="2012-08-27T18:10:25.3642305-07:00" endTime="2012-08-27T18:10:25.3712309-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="77758d2c-16ba-4610-825f-3200e2f528ec">
+    </UnitTestResult>
+    <UnitTestResult executionId="e7ee2aa7-90a5-4bfb-ac04-89e829c0ecdb" testId="2c820968-7c91-03d3-a299-ef437a4adae9" testName="CreateProductVariationErrorTest" computerName="LOUIS-HP" duration="00:00:00.0175495" startTime="2012-08-27T18:10:25.3742310-07:00" endTime="2012-08-27T18:10:25.3962323-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e7ee2aa7-90a5-4bfb-ac04-89e829c0ecdb">
+      <Output>
+        <DebugTrace>THIS IS THE PID:49
+THIS IS THE ERROR:Invalid product_id
+THIS IS THE ERROR:Invalid product_brand_id
+THIS IS THE ERROR:Invalid product_cutting_id
+THIS IS THE ERROR:Invalid product_color_id
+THIS IS THE ERROR:Invalid sex
+THIS IS THE ERROR:Invalid size
+THIS IS THE ERROR:Invalid stock
+THIS IS THE ERROR:Invalid price
+THIS IS THE ERROR:Invalid condition
+</DebugTrace>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="733dd78b-572f-4f9e-a7cd-81bda0453579" testId="2de277d9-37a5-c97d-c930-1d6c85ec007a" testName="ProductCuttingUpdateErrorTest" computerName="LOUIS-HP" duration="00:00:00.0051811" startTime="2012-08-27T18:10:25.4012326-07:00" endTime="2012-08-27T18:10:25.4112331-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="733dd78b-572f-4f9e-a7cd-81bda0453579">
+    </UnitTestResult>
+    <UnitTestResult executionId="c9f494db-5a2d-4dfd-930e-775b558d8af3" testId="306047c5-8044-ee12-21be-5249fd0ab8bc" testName="CreateProductColorTest" computerName="LOUIS-HP" duration="00:00:00.0104255" startTime="2012-08-27T18:10:25.4142333-07:00" endTime="2012-08-27T18:10:25.4302342-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c9f494db-5a2d-4dfd-930e-775b558d8af3">
+      <Output>
+        <DebugTrace>RESULT:36
+RESULT:36
+RESULT:Sanrio Pink 197
+</DebugTrace>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="4fcbb6e3-bdaa-4db2-b161-df1c10eaed52" testId="32befc5b-2805-679f-e132-a2c900e50a08" testName="CreatePVTest" computerName="LOUIS-HP" duration="00:00:00.0192559" startTime="2012-08-27T18:10:25.4342345-07:00" endTime="2012-08-27T18:10:25.4602359-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4fcbb6e3-bdaa-4db2-b161-df1c10eaed52">
+      <Output>
+        <DebugTrace>THIS IS THE PID:1
+RESULT:126
+RESULT:1
+RESULT:1
+RESULT:1
+RESULT:1
+RESULT:1
+RESULT:M
+RESULT:L
+RESULT:1
+RESULT:1
+RESULT:a
+</DebugTrace>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="7dc58de7-4e6c-4217-80ed-ef0f343a1488" testId="38819b2b-c49c-ae4c-8ed9-952641081eaf" testName="CreateProductTypeTest" computerName="LOUIS-HP" duration="00:00:00.0093805" startTime="2012-08-27T18:10:25.4642362-07:00" endTime="2012-08-27T18:10:25.4792370-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7dc58de7-4e6c-4217-80ed-ef0f343a1488">
+    </UnitTestResult>
+    <UnitTestResult executionId="b26f5718-96df-4d11-a93a-120ddee16ba3" testId="39a2e8d3-569e-2be2-3617-2b697cf73be3" testName="ReadAllPVTest" computerName="LOUIS-HP" duration="00:00:00.0178213" startTime="2012-08-27T18:10:25.4822372-07:00" endTime="2012-08-27T18:10:25.5052385-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b26f5718-96df-4d11-a93a-120ddee16ba3">
+    </UnitTestResult>
+    <UnitTestResult executionId="41228a0b-1202-46fb-8dd3-b262f118da79" testId="39ec5642-081d-ef93-52a6-7125803da287" testName="ReadAllProductTest" computerName="LOUIS-HP" duration="00:00:00.0085385" startTime="2012-08-27T18:10:25.5082387-07:00" endTime="2012-08-27T18:10:25.5232395-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="41228a0b-1202-46fb-8dd3-b262f118da79">
+    </UnitTestResult>
+    <UnitTestResult executionId="534b4dd6-c379-426a-b7d6-67c1c2753e50" testId="4068bac0-9c67-8bcf-fe66-d8581e88d686" testName="CreateProductCuttingTest" computerName="LOUIS-HP" duration="00:00:00.0121417" startTime="2012-08-27T18:10:25.5272398-07:00" endTime="2012-08-27T18:10:25.5452408-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="534b4dd6-c379-426a-b7d6-67c1c2753e50">
+    </UnitTestResult>
+    <UnitTestResult executionId="27f6ad10-1045-4f52-b1f1-1102e4895b25" testId="44c316ef-e570-09f1-f2c1-54180c893f98" testName="ReadAllBrandTest" computerName="LOUIS-HP" duration="00:00:00.0056389" startTime="2012-08-27T18:10:25.5482410-07:00" endTime="2012-08-27T18:10:25.5592416-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="27f6ad10-1045-4f52-b1f1-1102e4895b25">
+    </UnitTestResult>
+    <UnitTestResult executionId="a3b05b9f-283f-4606-88d2-c07314c6a13f" testId="48998be3-5bf2-451d-90c6-e1f4233cc9d1" testName="ReadAllProductTypeTest" computerName="LOUIS-HP" duration="00:00:00.0070092" startTime="2012-08-27T18:10:25.5742425-07:00" endTime="2012-08-27T18:10:25.5862432-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a3b05b9f-283f-4606-88d2-c07314c6a13f">
+    </UnitTestResult>
+    <UnitTestResult executionId="5f6e7130-bbdf-4980-8830-d37bfd9bd402" testId="4984de8b-0f11-84fe-96e4-b08c00e8db25" testName="CreateProductErrorTest" computerName="LOUIS-HP" duration="00:00:00.0105955" startTime="2012-08-27T18:10:25.5892433-07:00" endTime="2012-08-27T18:10:25.6052442-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5f6e7130-bbdf-4980-8830-d37bfd9bd402">
+    </UnitTestResult>
+    <UnitTestResult executionId="088e977d-3d39-42e5-b9f6-d64b948a5fae" testId="4ee29c4c-716b-1b25-cc47-e7d557e9b20f" testName="CreateProductCuttingTest" computerName="LOUIS-HP" duration="00:00:00.0114456" startTime="2012-08-27T18:10:25.6082444-07:00" endTime="2012-08-27T18:10:25.6252454-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="088e977d-3d39-42e5-b9f6-d64b948a5fae">
+    </UnitTestResult>
+    <UnitTestResult executionId="cf90d96c-8353-4c1c-a332-20247488aa96" testId="5129d0b1-e05a-ba39-3d08-819bb36e9c7a" testName="ReadAllProductCuttingTest" computerName="LOUIS-HP" duration="00:00:00.0064385" startTime="2012-08-27T18:10:25.6282456-07:00" endTime="2012-08-27T18:10:25.6412463-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cf90d96c-8353-4c1c-a332-20247488aa96">
+    </UnitTestResult>
+    <UnitTestResult executionId="b9c8802f-aadf-4806-9960-0ba36add5f26" testId="51e7e7bf-6ccc-542c-0d91-d03ec1c8332e" testName="DeleteProductVariationInfoTest" computerName="LOUIS-HP" duration="00:00:00.0194879" startTime="2012-08-27T18:10:25.6442465-07:00" endTime="2012-08-27T18:10:25.6692479-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b9c8802f-aadf-4806-9960-0ba36add5f26">
+      <Output>
+        <DebugTrace>THIS IS THE PID:1
+THIS IS THE ID: 127
+</DebugTrace>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="98e58fc5-4860-43c2-9ae0-45d119ae5694" testId="527f0874-7efa-38fb-4cdb-7845b6fdc52f" testName="ReadAllProductTypeTest" computerName="LOUIS-HP" duration="00:00:00.0050164" startTime="2012-08-27T18:10:25.6722481-07:00" endTime="2012-08-27T18:10:25.6822486-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="98e58fc5-4860-43c2-9ae0-45d119ae5694">
+    </UnitTestResult>
+    <UnitTestResult executionId="fa9a38f6-7460-4a7c-af58-637a6eefc1d8" testId="52df322f-98b6-4e57-d285-dc4d7f1b9314" testName="DeleteProductVariationInfoTest" computerName="LOUIS-HP" duration="00:00:00.0147959" startTime="2012-08-27T18:10:25.6852488-07:00" endTime="2012-08-27T18:10:25.7052500-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fa9a38f6-7460-4a7c-af58-637a6eefc1d8">
+    </UnitTestResult>
+    <UnitTestResult executionId="0730636b-76de-4927-bab9-1122e5673fff" testId="53956050-dfb2-bc6f-a53b-1e274204bdd8" testName="ReadAllProductColorTest" computerName="LOUIS-HP" duration="00:00:00.0049986" startTime="2012-08-27T18:10:25.7082501-07:00" endTime="2012-08-27T18:10:25.7182507-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0730636b-76de-4927-bab9-1122e5673fff">
+    </UnitTestResult>
+    <UnitTestResult executionId="66fed45c-59f8-4b48-be6a-268ce25aaa3d" testId="54e7777a-c6ad-8aae-0fca-0734abbb2233" testName="UpdateProductTypeTest" computerName="LOUIS-HP" duration="00:00:00.0062395" startTime="2012-08-27T18:10:25.7212509-07:00" endTime="2012-08-27T18:10:25.7322515-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="66fed45c-59f8-4b48-be6a-268ce25aaa3d">
+    </UnitTestResult>
+    <UnitTestResult executionId="f2a7d129-5d04-4aab-ad04-c13f829c7125" testId="6567eec0-603e-0c1c-b63c-38e9a20c4df4" testName="ReadAllProductCuttingTest" computerName="LOUIS-HP" duration="00:00:00.0047513" startTime="2012-08-27T18:10:25.7362517-07:00" endTime="2012-08-27T18:10:25.7452522-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f2a7d129-5d04-4aab-ad04-c13f829c7125">
+    </UnitTestResult>
+    <UnitTestResult executionId="cca0d934-30da-4117-9f54-71a6a6b0ba39" testId="6724fe7d-3a6e-82e1-5e9c-bfae58cb851f" testName="UpdateBrandTest" computerName="LOUIS-HP" duration="00:00:00.0096500" startTime="2012-08-27T18:10:25.7492525-07:00" endTime="2012-08-27T18:10:25.7632533-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cca0d934-30da-4117-9f54-71a6a6b0ba39">
+    </UnitTestResult>
+    <UnitTestResult executionId="6d9fb196-92bf-435f-bb4b-f88c4623166d" testId="6b18c41e-9b98-699a-6cd9-609e14952373" testName="CreateProductColorTest" computerName="LOUIS-HP" duration="00:00:00.0061003" startTime="2012-08-27T18:10:25.7662534-07:00" endTime="2012-08-27T18:10:25.7772541-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6d9fb196-92bf-435f-bb4b-f88c4623166d">
+    </UnitTestResult>
+    <UnitTestResult executionId="5e23e043-2948-44da-85c3-861bab110e1d" testId="72a23555-32b2-8606-9cd7-3ffb7f93b94d" testName="CreateProductColorNullErrorTest" computerName="LOUIS-HP" duration="00:00:00.0031655" startTime="2012-08-27T18:10:25.7812543-07:00" endTime="2012-08-27T18:10:25.7892548-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5e23e043-2948-44da-85c3-861bab110e1d">
+    </UnitTestResult>
+    <UnitTestResult executionId="9c951bbd-b339-4305-a48b-f1c32e124e4e" testId="749e2125-91f3-366c-3cc9-5d757c5d89fc" testName="UpdateProductTypeTest" computerName="LOUIS-HP" duration="00:00:00.0081293" startTime="2012-08-27T18:10:25.7932550-07:00" endTime="2012-08-27T18:10:25.8062557-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9c951bbd-b339-4305-a48b-f1c32e124e4e">
+    </UnitTestResult>
+    <UnitTestResult executionId="81bec917-e372-433c-a3bb-38b8f545643e" testId="769129ee-601e-ba5f-360d-d3013c602f01" testName="ProductVariationReadErrorTest" computerName="LOUIS-HP" duration="00:00:00.0093595" startTime="2012-08-27T18:10:25.8092559-07:00" endTime="2012-08-27T18:10:25.8232567-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="81bec917-e372-433c-a3bb-38b8f545643e">
+      <Output>
+        <DebugTrace>REACHED here is the id: 128
+THIS IS THE ERROR: Invalid product variation id
+REACHED here is the id: -1
+THIS IS THE ERROR: Invalid product variation id
+THIS IS THE ERROR: Invalid product variation id
+</DebugTrace>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="0f64fcef-ec4f-47f1-9ab9-4c37baeb48c6" testId="7c829374-b2b7-a64c-0106-8a1c527f9eee" testName="CreateProductTypeNullErrorTest" computerName="LOUIS-HP" duration="00:00:00.0039655" startTime="2012-08-27T18:10:25.8272569-07:00" endTime="2012-08-27T18:10:25.8352574-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0f64fcef-ec4f-47f1-9ab9-4c37baeb48c6">
+    </UnitTestResult>
+    <UnitTestResult executionId="68d87573-d628-403a-9bca-dd625aee1639" testId="83def0be-13ed-eb0c-cf34-39cb5d72d47e" testName="ReadAllPVTest" computerName="LOUIS-HP" duration="00:00:00.0109258" startTime="2012-08-27T18:10:25.8392576-07:00" endTime="2012-08-27T18:10:25.8552585-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="68d87573-d628-403a-9bca-dd625aee1639">
+    </UnitTestResult>
+    <UnitTestResult executionId="bc59e344-badc-426f-bf80-9816bfa17533" testId="8440b3dd-4629-ecb3-bea3-283361475284" testName="CreateBrandErrorTest" computerName="LOUIS-HP" duration="00:00:00.0082939" startTime="2012-08-27T18:10:25.8642591-07:00" endTime="2012-08-27T18:10:25.8772598-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bc59e344-badc-426f-bf80-9816bfa17533">
+    </UnitTestResult>
+    <UnitTestResult executionId="895615f7-eb3a-4541-a65e-682846ca4220" testId="87cd62b0-6032-0378-4d78-97f7b2cf2151" testName="ProductTypeReadErrorTest" computerName="LOUIS-HP" duration="00:00:00.0046742" startTime="2012-08-27T18:10:25.8812600-07:00" endTime="2012-08-27T18:10:25.8912606-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="895615f7-eb3a-4541-a65e-682846ca4220">
+    </UnitTestResult>
+    <UnitTestResult executionId="69fa4836-cc4b-457b-a284-861dbb0c91af" testId="8ddb55d2-cc76-8371-0cab-349758d0faba" testName="ProductVariationUpdateErrorTest" computerName="LOUIS-HP" duration="00:00:00.0111136" startTime="2012-08-27T18:10:25.8952608-07:00" endTime="2012-08-27T18:10:25.9102617-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="69fa4836-cc4b-457b-a284-861dbb0c91af">
+      <Output>
+        <DebugTrace>THIS IS THE ERROR: Invalid product variation id
+THIS IS THE ERROR: Invalid product variation id
+THIS IS THE ERROR: Invalid product variation id
+</DebugTrace>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="48b2378d-7870-4728-a38e-2957ddbbeb49" testId="906cdd9a-e41c-b869-1786-a4ffe476ad69" testName="CreateProductCuttingErrorTest" computerName="LOUIS-HP" duration="00:00:00.0081672" startTime="2012-08-27T18:10:25.9142619-07:00" endTime="2012-08-27T18:10:25.9272627-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="48b2378d-7870-4728-a38e-2957ddbbeb49">
+    </UnitTestResult>
+    <UnitTestResult executionId="3269e3ad-9fb5-42cc-ad10-64862591b862" testId="9cf39b8e-04c2-b861-736b-953b0b495874" testName="ProductColorUpdateErrorTest" computerName="LOUIS-HP" duration="00:00:00.0046965" startTime="2012-08-27T18:10:25.9312629-07:00" endTime="2012-08-27T18:10:25.9402634-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3269e3ad-9fb5-42cc-ad10-64862591b862">
+    </UnitTestResult>
+    <UnitTestResult executionId="35448ed4-a32a-414c-b7d0-b02e253d3ddb" testId="a371c641-f9b0-857d-8d7a-ba50f3ebff43" testName="ProductColorReadErrorTest" computerName="LOUIS-HP" duration="00:00:00.0042016" startTime="2012-08-27T18:10:25.9442636-07:00" endTime="2012-08-27T18:10:25.9532641-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="35448ed4-a32a-414c-b7d0-b02e253d3ddb">
+    </UnitTestResult>
+    <UnitTestResult executionId="05f3a1eb-5d53-4929-a9f7-ec62ca5f347a" testId="a5af5316-0907-aef9-72aa-1e7958fc3974" testName="CreateProductTest" computerName="LOUIS-HP" duration="00:00:00.0103515" startTime="2012-08-27T18:10:25.9562643-07:00" endTime="2012-08-27T18:10:25.9712652-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="05f3a1eb-5d53-4929-a9f7-ec62ca5f347a">
+      <Output>
+        <DebugTrace>RESULT:50
+RESULT:50
+RESULT:50
+</DebugTrace>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="efd07701-61e1-4825-9c86-a829537a23a6" testId="a7d7b29b-200e-e950-acdb-f74fb0c8329a" testName="ProductVariationDeleteErrorTest" computerName="LOUIS-HP" duration="00:00:00.0088249" startTime="2012-08-27T18:10:25.9752654-07:00" endTime="2012-08-27T18:10:25.9892662-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="efd07701-61e1-4825-9c86-a829537a23a6">
+    </UnitTestResult>
+    <UnitTestResult executionId="b68f80e7-aac0-42ca-bd98-b414b5e908a6" testId="a91e9ed3-5646-12d6-93c6-af2db48c7e59" testName="ProductReadErrorTest" computerName="LOUIS-HP" duration="00:00:00.0045760" startTime="2012-08-27T18:10:25.9922664-07:00" endTime="2012-08-27T18:10:26.0022669-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b68f80e7-aac0-42ca-bd98-b414b5e908a6">
+    </UnitTestResult>
+    <UnitTestResult executionId="69a51329-2c87-46cb-8467-2a48d34c3d62" testId="ad76f5b9-eef6-7da3-02e0-bcb403ffa630" testName="UpdateProductCuttingTest" computerName="LOUIS-HP" duration="00:00:00.0079856" startTime="2012-08-27T18:10:26.0052671-07:00" endTime="2012-08-27T18:10:26.0182679-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="69a51329-2c87-46cb-8467-2a48d34c3d62">
+    </UnitTestResult>
+    <UnitTestResult executionId="745b20e3-804b-4596-ba3c-a7e969c15399" testId="b22f890b-2fb2-8bc9-6072-6c13741d1a72" testName="ProductCuttingReadErrorTest" computerName="LOUIS-HP" duration="00:00:00.0043538" startTime="2012-08-27T18:10:26.0312686-07:00" endTime="2012-08-27T18:10:26.0412692-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="745b20e3-804b-4596-ba3c-a7e969c15399">
+    </UnitTestResult>
+    <UnitTestResult executionId="3c891b50-af8a-4e96-8d8f-673fa1cb1517" testId="bdcd5694-6f47-8e9c-4f0a-b5a3d00cbbdc" testName="CreateProductCuttingNullErrorTest" computerName="LOUIS-HP" duration="00:00:00.0033444" startTime="2012-08-27T18:10:26.0442693-07:00" endTime="2012-08-27T18:10:26.0542699-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3c891b50-af8a-4e96-8d8f-673fa1cb1517">
+    </UnitTestResult>
+    <UnitTestResult executionId="e6371f77-6fc3-4bde-aeed-5e4a9c829417" testId="bfb23467-9ed6-2af2-a378-dc1e9bbf5b26" testName="CreateProductTypeErrorTest" computerName="LOUIS-HP" duration="00:00:00.0070521" startTime="2012-08-27T18:10:26.0572701-07:00" endTime="2012-08-27T18:10:26.0692708-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e6371f77-6fc3-4bde-aeed-5e4a9c829417">
+    </UnitTestResult>
+    <UnitTestResult executionId="8a0fa0fc-b179-490f-a4b4-748536486cfa" testId="c67b2499-e7a4-2b19-624b-77fbc4aeac92" testName="ProductTypeUpdateErrorTest" computerName="LOUIS-HP" duration="00:00:00.0057393" startTime="2012-08-27T18:10:26.0732710-07:00" endTime="2012-08-27T18:10:26.0832716-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8a0fa0fc-b179-490f-a4b4-748536486cfa">
+    </UnitTestResult>
+    <UnitTestResult executionId="7a78b355-1e7d-4a6b-9889-461946607f7f" testId="c68b8238-9415-4bac-14f0-0a40a7e90643" testName="UpdateProductVariationInfoTest" computerName="LOUIS-HP" duration="00:00:00.0086594" startTime="2012-08-27T18:10:26.0872718-07:00" endTime="2012-08-27T18:10:26.1012726-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7a78b355-1e7d-4a6b-9889-461946607f7f">
+    </UnitTestResult>
+    <UnitTestResult executionId="905ad0d1-2da5-49b3-8f27-0075c71b09ec" testId="c6b026e9-3960-4229-9874-a43b265d5ac5" testName="ProductUpdateErrorTest" computerName="LOUIS-HP" duration="00:00:00.0049156" startTime="2012-08-27T18:10:26.1042728-07:00" endTime="2012-08-27T18:10:26.1142734-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="905ad0d1-2da5-49b3-8f27-0075c71b09ec">
+    </UnitTestResult>
+    <UnitTestResult executionId="70d8a58f-fee4-402e-a5c2-440c942e94c4" testId="c76098cd-5f49-f576-d094-a3b9b8dc9118" testName="CreatePVTest" computerName="LOUIS-HP" duration="00:00:00.0106219" startTime="2012-08-27T18:10:26.1182736-07:00" endTime="2012-08-27T18:10:26.1342745-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="70d8a58f-fee4-402e-a5c2-440c942e94c4">
+      <Output>
+        <DebugTrace>RESULT:128
+RESULT:1
+RESULT:1
+RESULT:1
+RESULT:1
+RESULT:1
+RESULT:M
+RESULT:L
+RESULT:1
+RESULT:1
+RESULT:a
+</DebugTrace>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="b7fe152e-0418-48be-9fb2-8cdfbf8df857" testId="cd8ccf9f-8213-ce86-61d5-8fae292b70cc" testName="ReadAllProductColorTest" computerName="LOUIS-HP" duration="00:00:00.0067567" startTime="2012-08-27T18:10:26.1382747-07:00" endTime="2012-08-27T18:10:26.1512755-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b7fe152e-0418-48be-9fb2-8cdfbf8df857">
+    </UnitTestResult>
+    <UnitTestResult executionId="fe3b4a85-78e1-4e19-97c8-78ef5474aaf6" testId="cddde496-20c6-4b8e-d5cd-072a15f2fccb" testName="BrandReadErrorTest" computerName="LOUIS-HP" duration="00:00:00.0043524" startTime="2012-08-27T18:10:26.1542756-07:00" endTime="2012-08-27T18:10:26.1632762-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fe3b4a85-78e1-4e19-97c8-78ef5474aaf6">
+    </UnitTestResult>
+    <UnitTestResult executionId="16e4551b-2d21-4d3c-b475-872bef52b492" testId="d2636e01-07d3-8d97-7e57-ab6725f5e972" testName="CreateProductNullErrorTest" computerName="LOUIS-HP" duration="00:00:00.0044399" startTime="2012-08-27T18:10:26.1672764-07:00" endTime="2012-08-27T18:10:26.1762769-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="16e4551b-2d21-4d3c-b475-872bef52b492">
+    </UnitTestResult>
+    <UnitTestResult executionId="4d97b36c-3956-48f2-97c2-3562f4c12e4f" testId="d3145b4d-1fba-fbb6-489d-880aca3a67d3" testName="UpdateProductTest" computerName="LOUIS-HP" duration="00:00:00.0073011" startTime="2012-08-27T18:10:26.1802771-07:00" endTime="2012-08-27T18:10:26.1932779-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4d97b36c-3956-48f2-97c2-3562f4c12e4f">
+    </UnitTestResult>
+    <UnitTestResult executionId="d7c78659-c8c1-4849-839b-cfc7ea81d285" testId="dc348301-aaee-9d57-e85e-e7bdc8bf9c91" testName="UpdateProductColorTest" computerName="LOUIS-HP" duration="00:00:00.0082975" startTime="2012-08-27T18:10:26.1962780-07:00" endTime="2012-08-27T18:10:26.2102788-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d7c78659-c8c1-4849-839b-cfc7ea81d285">
+    </UnitTestResult>
+    <UnitTestResult executionId="f6e06613-dff1-4a05-b4e1-be446ae4589e" testId="ddbc9751-ea78-3907-b0dd-bbebacabbc90" testName="UpdateProductBrandTest" computerName="LOUIS-HP" duration="00:00:00.0090052" startTime="2012-08-27T18:10:26.2132790-07:00" endTime="2012-08-27T18:10:26.2272798-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f6e06613-dff1-4a05-b4e1-be446ae4589e">
+    </UnitTestResult>
+    <UnitTestResult executionId="2d2d858d-5ef4-4be7-b341-75e068ead26d" testId="df90cdea-c5c0-d0c6-d7f1-abca45aafb69" testName="UpdateProductCuttingTest" computerName="LOUIS-HP" duration="00:00:00.0060704" startTime="2012-08-27T18:10:26.2312800-07:00" endTime="2012-08-27T18:10:26.2422807-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2d2d858d-5ef4-4be7-b341-75e068ead26d">
+    </UnitTestResult>
+    <UnitTestResult executionId="c8ec1400-a9d8-4c0d-86bc-f0ff3ca7e899" testId="e838b5ac-738c-c97e-c3d6-f1fb0daa2370" testName="BrandUpdateErrorTest" computerName="LOUIS-HP" duration="00:00:00.0047161" startTime="2012-08-27T18:10:26.2452808-07:00" endTime="2012-08-27T18:10:26.2562815-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c8ec1400-a9d8-4c0d-86bc-f0ff3ca7e899">
+    </UnitTestResult>
+    <UnitTestResult executionId="2c089981-076f-4560-b23a-204db4a750c4" testId="e852a1f2-fb34-ffdc-ed5c-718cafd085e2" testName="ReadAllBrandTest" computerName="LOUIS-HP" duration="00:00:00.0062971" startTime="2012-08-27T18:10:26.2592816-07:00" endTime="2012-08-27T18:10:26.2702823-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2c089981-076f-4560-b23a-204db4a750c4">
+    </UnitTestResult>
+    <UnitTestResult executionId="f918dd02-a314-40b0-970b-9056697ce633" testId="ed374848-8a67-3fea-eaa8-78dc7d5d1593" testName="CreateProductTest" computerName="LOUIS-HP" duration="00:00:00.0088035" startTime="2012-08-27T18:10:26.2752826-07:00" endTime="2012-08-27T18:10:26.2922835-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f918dd02-a314-40b0-970b-9056697ce633">
+    </UnitTestResult>
+    <UnitTestResult executionId="8bbcc9d8-f229-42e3-a7ab-746629f3f893" testId="f164ed89-d296-5ff9-08d7-a7e4a1f0d9d7" testName="CreateBrandTest" computerName="LOUIS-HP" duration="00:00:00.0074126" startTime="2012-08-27T18:10:26.2952837-07:00" endTime="2012-08-27T18:10:26.3082844-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8bbcc9d8-f229-42e3-a7ab-746629f3f893">
+    </UnitTestResult>
+    <UnitTestResult executionId="d2bca6e7-638a-45c8-8bc2-24efa3dcb6e3" testId="f7826c58-01e2-4c82-f47f-08228e891502" testName="CreateBrandTest" computerName="LOUIS-HP" duration="00:00:00.0081931" startTime="2012-08-27T18:10:26.3122847-07:00" endTime="2012-08-27T18:10:26.3252854-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d2bca6e7-638a-45c8-8bc2-24efa3dcb6e3">
+      <Output>
+        <DebugTrace>RESULT:36
+RESULT:36
+RESULT:Sanrio 634
+</DebugTrace>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="73ca0d66-5bfd-4e73-b78f-45899f9415dd" testId="fceb51c8-60ab-9dba-9bc5-68eec453d8bc" testName="UpdateProductTest" computerName="LOUIS-HP" duration="00:00:00.0103006" startTime="2012-08-27T18:10:26.3282856-07:00" endTime="2012-08-27T18:10:26.3432865-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="73ca0d66-5bfd-4e73-b78f-45899f9415dd">
+    </UnitTestResult>
+  </Results>
+</TestRun>
